@@ -6,7 +6,7 @@ export default function Admin() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apply`, {
+      const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/apply`, {
         cache: 'no-store',
       });
       const data = await resp.json();
