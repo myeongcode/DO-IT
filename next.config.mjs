@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `https://yonsei-do-it.vercel.app/:path*`,
-      },
-    ];
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
