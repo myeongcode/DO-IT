@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const getApplicants = async () => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/apply`, {
+    const res = await fetch(`/api/apply`, {
       cache: 'no-store',
     });
     const data = await res.json();
@@ -15,7 +15,7 @@ const getApplicants = async () => {
 };
 
 export default function Admin() {
-  const [applicants, setApplicants] = useState([]);
+  const [applicants, setApplicants] = useState();
 
   useEffect(() => {
     const fetchData = async () => {

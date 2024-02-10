@@ -23,7 +23,7 @@ export default function Recruit() {
       body: JSON.stringify(jsonData),
     };
 
-    fetch(`api/apply`, options)
+    fetch(`/api/apply`, options)
       .then((res) => res.json())
       .then((result) => {
         if (result) router.replace('/');
