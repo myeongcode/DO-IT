@@ -1,0 +1,20 @@
+.table {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-spacing: 50px;
+}
+
+.table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.table tbody tr:hover {
+  background-color: rgb(183, 183, 183);
+}
+
+.table td {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+}

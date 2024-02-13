@@ -36,6 +36,13 @@ export default function Recruit() {
 
   return (
     <form onSubmit={onSubmit}>
+      <h3>지원직군</h3>
+      <select name="category">
+        <option value="pm">PM (Project Manager)</option>
+        <option value="fe">FE (Front-end Developer)</option>
+        <option value="be">BE (Back-end Developer)</option>
+        <option value="de">DE (Project Designer)</option>
+      </select>
       <h3>관심분야</h3>
       <select name="field">
         <option value="web">WEB</option>
