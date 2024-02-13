@@ -12,6 +12,7 @@ const applicantSchema = new Schema({
   email: String,
   grade: String,
   semester: String,
+  category: String,
   attend: String,
   question_01: String,
   question_02: String,

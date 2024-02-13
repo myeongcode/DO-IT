@@ -1,4 +1,5 @@
 import '../../styles/globals.css';
+import Modal from './(components)/modal';
 import Navbar from './(components)/navigation';
 
 export const metadata = {
