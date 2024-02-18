@@ -16,7 +16,7 @@ export default function Home() {
         transition={{
           duration: 2,
         }}
-        className="flex justify-center py-40 w-3/4"
+        className="flex justify-center py-40 w-[70%]"
       >
         <div className="text-7xl relative text-nowrap leading-snug">
           <span className="absolute left-[-100px] top-[20px] text-6xl text-[#E1E8ED]">
@@ -53,7 +53,7 @@ export default function Home() {
           <span className="text-[#00B8FF]">{'}'}</span>
         </div>
       </motion.div>
-      <div className="flex flex-col w-3/4">
+      <div className="flex flex-col w-[70%]">
         <motion.div
           initial={{
             x: -50,
@@ -95,7 +95,7 @@ export default function Home() {
           </span>
         </motion.div>
       </div>
-      <div className="flex flex-col pt-40 w-3/4">
+      <div className="flex flex-col pt-40 w-[70%]">
         <span className="text-left text-5xl">
           WHAT DO {"'"}DO IT{"'"}
         </span>
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
         <hr />
       </div>
-      <div className="flex flex-col py-20 w-3/4">
+      <div className="flex flex-col py-20 w-[70%]">
         <span className="text-left text-5xl">GOALS</span>
         <div className="flex justify-end">
           <div className="flex flex-row w-3/4 py-20 space-x-8">
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center w-full bg-[#14171A]">
-        <div className="flex flex-row py-20 w-3/4 justify-between">
+        <div className="flex flex-row py-20 w-[70%] justify-between">
           <span className="text-left text-5xl text-white">AWARDS</span>
           <div className="text-white align-text-bottom">
             <span>2024</span>
