@@ -52,7 +52,7 @@ export default function Navbar() {
         }}
         animate={navHidden ? 'hidden' : 'visible'}
         transition={{
-          duration: 0.5,
+          duration: 0.8,
         }}
         className={
           'fixed justify-center box-border transition duration-75 items-center w-full z-20'
@@ -71,7 +71,7 @@ export default function Navbar() {
           }}
           animate={navHidden ? 'hidden' : 'visible'}
           transition={{
-            duration: 0.5,
+            duration: 0.8,
           }}
           className={'flex py-10 px-48 justify-between box-border w-full'}
         >
