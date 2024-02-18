@@ -5,17 +5,18 @@ export default function IntroLayout() {
     <div className="flex flex-col w-[70%]">
       <motion.div
         initial={{
-          x: -50,
+          y: 200,
           opacity: 0,
         }}
-        animate={{
-          x: 0,
+        whileInView={{
+          y: 0,
           opacity: 1,
         }}
         transition={{
-          duration: 1,
+          delay: 0.4,
+          duration: 0.6,
         }}
-        className="text-right justify-right py-16"
+        className="text-right justify-right py-20"
       >
         <span className="text-6xl text-[#657786] leading-snug">
           개인과 팀 모두가 함께 성장하는
@@ -25,17 +26,18 @@ export default function IntroLayout() {
       </motion.div>
       <motion.div
         initial={{
-          x: 50,
+          y: 200,
           opacity: 0,
         }}
-        animate={{
-          x: 0,
+        whileInView={{
+          y: 0,
           opacity: 1,
         }}
         transition={{
-          duration: 1,
+          delay: 0.6,
+          duration: 0.6,
         }}
-        className="text-left justify-right py-16"
+        className="text-left justify-right py-20"
       >
         <span className="text-6xl text-[#657786] leading-snug">
           새로운 도전과 협업의 경험으로
