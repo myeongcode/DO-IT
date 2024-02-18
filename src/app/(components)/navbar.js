@@ -24,8 +24,6 @@ export default function Navbar() {
   const pathname = usePathname() || '/';
   const [navHidden, setNavHidden] = useState(false);
 
-  console.log(pathname);
-
   useMotionValueEvent(scrollY, 'change', (current) => {
     if (current > 105) {
       setNavHidden(true);
@@ -33,8 +31,6 @@ export default function Navbar() {
       setNavHidden(false);
     }
   });
-
-  setTimeout(() => {});
 
   return (
     <div className="flex justify-center w-full">
@@ -48,7 +44,7 @@ export default function Navbar() {
           },
           hidden: {
             top: 20,
-            width: '80%',
+            width: '75%',
             boxShadow: '0px 0px 7px #DEDEDE',
             borderRadius: '15px',
             backgroundColor: '#ffffff',
