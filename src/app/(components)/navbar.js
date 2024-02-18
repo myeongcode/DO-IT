@@ -44,7 +44,7 @@ export default function Navbar() {
           },
           hidden: {
             top: 20,
-            width: '75%',
+            width: '70%',
             boxShadow: '0px 0px 7px #DEDEDE',
             borderRadius: '15px',
             backgroundColor: '#ffffff',
