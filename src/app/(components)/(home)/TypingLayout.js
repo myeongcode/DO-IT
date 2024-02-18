@@ -12,6 +12,7 @@ export default function TypingLayout() {
       }}
       transition={{
         duration: 2,
+        delay: 0.8,
       }}
       className="flex justify-center py-40 w-[70%]"
     >
