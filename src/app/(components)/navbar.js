@@ -42,6 +42,7 @@ export default function Navbar() {
         variants={{
           visible: {
             top: 0,
+            width: '100%',
             borderRadius: 0,
             backgroundColor: 'rgb(255, 255, 255, 0)',
           },
