@@ -1,110 +1,126 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-
-export default function Recruit() {
-  const [expProject, setExpProject] = useState(true);
-  const router = useRouter();
-
-  function onSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const jsonData = {};
-
-    formData.forEach((value, key) => {
-      jsonData[key] = value;
-    });
-
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(jsonData),
-    };
-
-    fetch(`/api/apply`, options)
-      .then((res) => res.json())
-      .then((result) => {
-        if (result) router.replace('/');
-      });
-  }
-
-  function onChange(e) {
-    setExpProject(JSON.parse(e.target.value));
-  }
-
+export default function RECRUIT() {
   return (
-    <form onSubmit={onSubmit}>
-      <h3>지원직군</h3>
-      <select name="category">
-        <option value="pm">PM (Project Manager)</option>
-        <option value="fe">FE (Front-end Developer)</option>
-        <option value="be">BE (Back-end Developer)</option>
-        <option value="de">DE (Project Designer)</option>
-      </select>
-      <h3>관심분야</h3>
-      <select name="field">
-        <option value="web">WEB</option>
-        <option value="app">APP</option>
-        <option value="game">GAME</option>
-      </select>
-      <h3>기본 인적사항</h3>
-      <h5>이름</h5>
-      <input type="text" name="name" required />
-      <h5>학번</h5>
-      <input type="text" name="std_id" required />
-      <h5>전공</h5>
-      <input type="text" name="major" required />
-      <h5>연락처</h5>
-      <input type="tel" name="phone_num" required />
-      <h5>이메일</h5>
-      <input type="email" name="email" required />
-      <h5>학년</h5>
-      <select name="grade">
-        <option value="1">1학년</option>
-        <option value="2">2학년</option>
-        <option value="3">3학년</option>
-        <option value="4">4학년</option>
-      </select>
-      <h5>학기</h5>
-      <select name="semester">
-        <option value="1">1학기</option>
-        <option value="2">2학기</option>
-      </select>
-      <h5>재학여부</h5>
-      <select name="attend">
-        <option value="true">재학 중</option>
-        <option value="false">휴학 중</option>
-      </select>
-      <h3>질문사항</h3>
-      <h5>
-        학업 외에 병행하고 있거나 향후 계획 중에 있는 활동이 있다면
-        서술해주세요. (동아리, 연구실, 아르바이트, 스터디, 복수전공, 연계전공
-        등) 없을경우, 없음으로 기재해주세요.
-      </h5>
-      <textarea name="question_01" required />
-      <h5>자기소개 및 지원동기</h5>
-      <textarea name="question_02" required />
-      <h5>
-        희망분야를 선택한 이유와 그 분야로 가기위해 했던 노력을 작성해주세요.
-      </h5>
-      <textarea name="question_03" required />
-      <h5>누군가와 함께 프로젝트를 진행한 경험이 있으신가요?</h5>
-      <select onChange={onChange} className="exp_project" name="question_04">
-        <option value="true">네, 협업한 적이 있습니다.</option>
-        <option value="false">아니요, 아직 없습니다.</option>
-      </select>
-      {expProject ? (
-        <h5>어떤 프로젝트에서 어떤 역할을 수행하셨습니까?</h5>
-      ) : (
-        <h5>
-          프로젝트를 잘 마무리하기 위한 자신만의 의지를 말씀해주시고, 한 학기의
-          각오를 적어주세요.
-        </h5>
-      )}
-      <textarea name="question_05" required />
-      <button type="submit">제출</button>
-    </form>
+    <div>
+      <div
+        style={{
+          height: '1210px',
+          backgroundColor: '#00B8FF',
+          textAlign: 'center',
+        }}
+      >
+
+        <img src="/Frist_Recruit.png" alt="" style={{
+          width: '1223px',
+          height: '189px',
+          marginTop: '234px',
+          alignItems: 'center',
+        }}
+        >
+        </img>
+
+        <p
+          style={{
+            color: '#FFFFFF',
+            textAlign: 'center',
+            fontFamily: 'Pretendard',
+            fontSize: '90px',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            lineHeight: 'normal',
+            letterSpacing: '-3.6px',
+            marginTop: '59px',
+            alignContent: 'center',
+          }}>
+          2.27 - 3.3
+        </p>
+
+        <p
+          style={{
+            marginTop: '218px',
+            alignContent: 'center',
+          }}
+        >
+          <svg
+            width="1320"
+            height="292"
+            viewBox="0 0 1320 292"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M166 292L70.4604 146.008L165.985 0H85.6176L30.457 84.8628L7.77386 119.753C-2.59129 135.696 -2.59129 156.304 7.77386 172.247L30.442 207.122L85.6026 292H166Z" fill="white" />
+            <path d="M1153 292L1249.12 146.008L1153.02 0H1233.87L1289.36 84.8628L1312.18 119.753C1322.61 135.696 1322.61 156.304 1312.18 172.247L1289.37 207.122L1233.88 292H1153Z" fill="white" />
+          </svg>
+
+          <img src="/notebook.png" alt="" style={{
+            width: '933.582px',
+            height: '563.1px',
+            marginTop: '-450px',
+          }}></img>
+        </p>
+      </div>
+
+      <div
+        style={{
+          height: '1400px',
+          backgroundColor: 'white',
+          textAlign: 'center',
+          fontSize: '50px',
+        }}
+      >
+
+      </div>
+      <div
+        style={{
+          height: '700px',
+          backgroundColor: 'white',
+          textAlign: 'center',
+          fontSize: '50px',
+        }}
+      >
+        Do it의 목표 컴포넌트
+      </div>
+      <div
+        style={{
+          height: '1400px',
+          backgroundColor: '#14171A',
+          textAlign: 'center',
+          fontSize: '50px',
+          color: 'white',
+        }}
+      >
+        Do it의 수상 컴포넌트
+      </div>
+      <div
+        style={{
+          height: '1200px',
+          backgroundColor: 'white',
+          textAlign: 'center',
+          fontSize: '50px',
+        }}
+      >
+        Do it의 프로젝트 컴포넌트
+      </div>
+      <div
+        style={{
+          height: '350px',
+          backgroundColor: '#00B8FF',
+          textAlign: 'center',
+          fontSize: '50px',
+          color: 'white',
+        }}
+      >
+        Do it의 지원하기 컴포넌트
+      </div>
+      <div
+        style={{
+          height: '300px',
+          backgroundColor: '#C8D3DA',
+          textAlign: 'center',
+          fontSize: '50px',
+        }}
+      >
+        Do it의 풋터 컴포넌트
+      </div>
+    </div>
   );
 }
