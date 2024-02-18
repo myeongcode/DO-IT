@@ -131,28 +131,26 @@ export default function AwardsLayout() {
           {tabs.map((item) => {
             return (
               <div key={item.year} className="divide-y divide-[#8c8e8f]">
-                <AnimatePresence>
-                  {item.element.map((element, index) => {
-                    return (
-                      activeTab === item.year && (
-                        <motion.div
-                          key={element.id}
-                          variants={fadeInAnimationLists}
-                          initial="initial"
-                          whileInView="animate"
-                          viewport={{
-                            once: true,
-                          }}
-                          custom={index}
-                          className="flex w-full justify-between py-6 text-white"
-                        >
-                          <span className="text-2xl">{element.awardName}</span>
-                          <span className="text-2xl">{element.award}</span>
-                        </motion.div>
-                      )
-                    );
-                  })}
-                </AnimatePresence>
+                {item.element.map((element, index) => {
+                  return (
+                    activeTab === item.year && (
+                      <motion.div
+                        key={element.id}
+                        variants={fadeInAnimationLists}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{
+                          once: true,
+                        }}
+                        custom={index}
+                        className="flex w-full justify-between py-6 text-white"
+                      >
+                        <span className="text-2xl">{element.awardName}</span>
+                        <span className="text-2xl">{element.award}</span>
+                      </motion.div>
+                    )
+                  );
+                })}
               </div>
             );
           })}
