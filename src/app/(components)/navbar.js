@@ -37,16 +37,12 @@ export default function Navbar() {
       <motion.nav
         variants={{
           visible: {
-            top: 0,
-            width: '100%',
-            borderRadius: 0,
             backgroundColor: 'rgb(255, 255, 255, 0)',
           },
           hidden: {
-            top: 20,
-            width: '70%',
-            // boxShadow: '0px 0px 7px #DEDEDE',
-            backgroundColor: '#ffffff',
+            backgroundColor: '#FFFFFFCE',
+            boxShadow: '0px 2px 10px #e7e7e7',
+            backdropFilter: 'blur(10px)',
           },
         }}
         animate={navHidden ? 'hidden' : 'visible'}
@@ -61,10 +57,10 @@ export default function Navbar() {
           variants={{
             visible: {},
             hidden: {
-              paddingTop: '20px',
-              paddingBottom: '20px',
-              paddingLeft: '100px',
-              paddingRight: '100px',
+              paddingTop: '30px',
+              paddingBottom: '30px',
+              paddingLeft: '250px',
+              paddingRight: '250px',
             },
           }}
           animate={navHidden ? 'hidden' : 'visible'}
