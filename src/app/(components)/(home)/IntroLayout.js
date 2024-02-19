@@ -12,6 +12,9 @@ export default function IntroLayout() {
           y: 0,
           opacity: 1,
         }}
+        viewport={{
+          once: true,
+        }}
         transition={{
           delay: 0.4,
           duration: 0.6,
@@ -32,6 +35,9 @@ export default function IntroLayout() {
         whileInView={{
           y: 0,
           opacity: 1,
+        }}
+        viewport={{
+          once: true,
         }}
         transition={{
           delay: 0.6,

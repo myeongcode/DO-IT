@@ -45,8 +45,7 @@ export default function Navbar() {
           hidden: {
             top: 20,
             width: '70%',
-            boxShadow: '0px 0px 7px #DEDEDE',
-            borderRadius: '15px',
+            // boxShadow: '0px 0px 7px #DEDEDE',
             backgroundColor: '#ffffff',
           },
         }}
@@ -64,7 +63,6 @@ export default function Navbar() {
             hidden: {
               paddingTop: '20px',
               paddingBottom: '20px',
-              borderRadius: '15px',
               paddingLeft: '100px',
               paddingRight: '100px',
             },

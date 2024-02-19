@@ -42,7 +42,7 @@ export default function Admin() {
   }
 
   return (
-    <div>
+    <div className="pt-[105px]">
       {showModal && (
         <Modal
           onShowModal={onShowModal}
