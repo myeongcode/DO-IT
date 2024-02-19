@@ -8,10 +8,9 @@ import Intro from './(components)/(home)/IntroLayout';
 import Activity from './(components)/(home)/ActivityLayout';
 import Goals from './(components)/(home)/GoalsLayout';
 import Awards from './(components)/(home)/AwardsLayout';
+import Project from './(components)/(home)/ProjectLayout';
 
 export default function Home() {
-  const [awardYear, setAwardYear] = useState();
-
   return (
     <div className="pt-[105px] flex flex-col w-full items-center overflow-visible">
       <Typing />
@@ -19,16 +18,7 @@ export default function Home() {
       <Activity />
       <Goals />
       <Awards />
-      <div className="flex flex-col items-center w-full">
-        <div className="w-[70%] py-28">
-          <div className="flex flex-row justify-between pb-32">
-            <span className="text-left text-6xl ">PROJECTS</span>
-            <div className="align-text-bottom">
-              <span>+</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project />
     </div>
   );
 }
