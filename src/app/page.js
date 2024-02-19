@@ -9,6 +9,7 @@ import Activity from './(components)/(home)/ActivityLayout';
 import Goals from './(components)/(home)/GoalsLayout';
 import Awards from './(components)/(home)/AwardsLayout';
 import Project from './(components)/(home)/ProjectLayout';
+import Apply from './(components)/(home)/ApplyLayout';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Goals />
       <Awards />
       <Project />
+      <Apply />
     </div>
   );
 }

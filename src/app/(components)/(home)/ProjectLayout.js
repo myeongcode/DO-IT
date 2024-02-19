@@ -3,6 +3,7 @@ import { motion, useMotionValue, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import useMeasure from 'react-use-measure';
+import Link from 'next/link';
 
 const slideImages = [
   {
@@ -79,22 +80,24 @@ export default function ProjectLayout() {
   }, [xTranslation, width, duration, rerender, mustFinish]);
 
   return (
-    <div className="flex flex-col items-center w-full  py-28">
+    <div className="flex flex-col items-center w-full  py-28 overflow-hidden">
       <div className="w-[70%]">
         <div className="flex flex-row justify-between pb-32">
           <span className="text-left text-6xl">PROJECTS</span>
-          <motion.button
-            whileHover={{
-              rotate: 180,
-            }}
-            transition={{
-              duration: 0.6,
-              ease: 'easeInOut',
-            }}
-            className="text-6xl"
-          >
-            <Image src="/plus_icon.png" width="50" height="50" alt="plus" />
-          </motion.button>
+          <Link href="/projects">
+            <motion.button
+              whileHover={{
+                rotate: 180,
+              }}
+              transition={{
+                duration: 0.6,
+                ease: 'easeInOut',
+              }}
+              className="text-6xl"
+            >
+              <Image src="/plus_icon.png" width="50" height="50" alt="plus" />
+            </motion.button>
+          </Link>
         </div>
       </div>
       <div className="flex items-center justify-center">

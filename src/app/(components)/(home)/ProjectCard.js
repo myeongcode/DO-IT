@@ -22,7 +22,12 @@ export default function ProjectCard({ item }) {
             <motion.div
               initial={{ y: 20 }}
               animate={{ y: 0 }}
-              exit={{ y: 20 }}
+              exit={{
+                y: 50,
+                transition: {
+                  duration: 0.6,
+                },
+              }}
               className="flex flex-col text-white z-10 text-start m-5 leading-7"
             >
               <h1 className="">{item.type}</h1>
