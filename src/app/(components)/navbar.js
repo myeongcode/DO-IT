@@ -67,7 +67,7 @@ export default function Navbar() {
           transition={{
             duration: 0.8,
           }}
-          className={'flex py-10 px-48 justify-between box-border w-full'}
+          className="flex py-10 px-48 justify-between box-border w-full"
         >
           <motion.div
             className="flex"
