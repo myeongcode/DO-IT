@@ -14,7 +14,7 @@ export default function TypingLayout() {
         duration: 2,
         delay: 0.8,
       }}
-      className="flex justify-center py-40 w-[70%]"
+      className="flex justify-center py-72 w-[70%]"
     >
       <div className="md:text-[40px] xl:text-[80px] relative text-nowrap leading-snug">
         <span className="absolute md:left-[-80px] md:top-[8px] md:text-4xl xl:left-[-100px]  xl:top-[26px] xl:text-6xl text-[#E1E8ED]">
