@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export default function Recruit() {
+export default function Apply() {
   const [expProject, setExpProject] = useState(true);
   const router = useRouter();
 
