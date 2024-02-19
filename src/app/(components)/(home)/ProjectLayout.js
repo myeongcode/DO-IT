@@ -47,14 +47,14 @@ export default function ProjectLayout() {
   let [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(0);
   const FAST_DURATION = 25;
-  const SLOW_DURATION = 75;
+  const SLOW_DURATION = 100000;
   const [duration, setDuration] = useState(FAST_DURATION);
   const [mustFinish, setMustFinish] = useState(false);
   const [rerender, setRerender] = useState(false);
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 8;
+    let finalPosition = -width / 3 - 8;
 
     if (mustFinish) {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
@@ -111,7 +111,7 @@ export default function ProjectLayout() {
             setDuration(FAST_DURATION);
           }}
         >
-          {[...slideImages, ...slideImages].map((item, idx) => {
+          {[...slideImages, ...slideImages, ...slideImages].map((item, idx) => {
             return <ProjectCard item={item} key={idx} />;
           })}
         </motion.div>
