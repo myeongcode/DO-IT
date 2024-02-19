@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function IntroLayout() {
   return (
-    <div className="flex flex-col w-[70%] pt-40">
+    <div className="flex flex-col w-[70%] pt-20">
       <motion.div
         initial={{
           y: 200,
