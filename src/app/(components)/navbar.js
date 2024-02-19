@@ -40,9 +40,9 @@ export default function Navbar() {
             backgroundColor: 'rgb(255, 255, 255, 0)',
           },
           hidden: {
-            backgroundColor: '#FFFFFFCE',
-            boxShadow: '0px 2px 10px #e7e7e7',
-            backdropFilter: 'blur(10px)',
+            backgroundColor: '#FFFFFFC5',
+            boxShadow: '0px 1px 1px #CECECE',
+            backdropFilter: 'blur(12px)',
           },
         }}
         animate={navHidden ? 'hidden' : 'visible'}
@@ -57,8 +57,8 @@ export default function Navbar() {
           variants={{
             visible: {},
             hidden: {
-              paddingTop: '30px',
-              paddingBottom: '30px',
+              paddingTop: '20px',
+              paddingBottom: '20px',
               paddingLeft: '250px',
               paddingRight: '250px',
             },

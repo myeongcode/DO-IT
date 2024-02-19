@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function IntroLayout() {
   return (
-    <div className="flex flex-col w-[70%]">
+    <div className="flex flex-col w-[70%] pt-40">
       <motion.div
         initial={{
           y: 200,
@@ -17,7 +17,7 @@ export default function IntroLayout() {
         }}
         transition={{
           delay: 0.4,
-          duration: 0.6,
+          duration: 1,
         }}
         className="text-right justify-right py-20"
       >
@@ -41,9 +41,9 @@ export default function IntroLayout() {
         }}
         transition={{
           delay: 0.6,
-          duration: 0.6,
+          duration: 1,
         }}
-        className="text-left justify-right py-20"
+        className="text-left justify-right py-20 pt-40"
       >
         <span className="text-6xl text-[#657786] leading-snug">
           새로운 도전과 협업의 경험으로
