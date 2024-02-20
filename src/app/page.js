@@ -9,7 +9,7 @@ import Apply from './(components)/(home)/ApplyLayout';
 
 export default function Home() {
   return (
-    <div className="pt-[105px] flex flex-col w-full items-center overflow-visible">
+    <div className="flex flex-col w-full items-center overflow-visible">
       <Typing />
       <Intro />
       <Activity />
