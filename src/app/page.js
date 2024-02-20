@@ -1,8 +1,4 @@
 'use client';
-
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { useState } from 'react';
 import Typing from './(components)/(home)/TypingLayout';
 import Intro from './(components)/(home)/IntroLayout';
 import Activity from './(components)/(home)/ActivityLayout';

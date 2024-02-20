@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 import useMeasure from 'react-use-measure';
 import Link from 'next/link';
 
-const slideImages = [
+const projectLists = [
   {
     id: 1,
     imgSrc: '/slide/1.png',
@@ -114,9 +114,11 @@ export default function ProjectLayout() {
             setDuration(FAST_DURATION);
           }}
         >
-          {[...slideImages, ...slideImages, ...slideImages].map((item, idx) => {
-            return <ProjectCard item={item} key={idx} />;
-          })}
+          {[...projectLists, ...projectLists, ...projectLists].map(
+            (item, idx) => {
+              return <ProjectCard item={item} key={idx} />;
+            }
+          )}
         </motion.div>
       </div>
     </div>

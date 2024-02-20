@@ -1,9 +1,11 @@
+'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
 export default function ProjectCard({ item }) {
   const [showOverlay, setShowOverlay] = useState(false);
+
   return (
     <motion.div
       onHoverStart={() => setShowOverlay(true)}
