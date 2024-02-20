@@ -23,6 +23,7 @@ export default function Navbar() {
   const { scrollY } = useScroll();
   const pathname = usePathname() || '/';
   const [navHidden, setNavHidden] = useState(false);
+  const [navPath, setNavPath] = useState('/');
 
   useMotionValueEvent(scrollY, 'change', (current) => {
     if (current > 105) {
@@ -31,6 +32,11 @@ export default function Navbar() {
       setNavHidden(false);
     }
   });
+
+  function onChangePath(e, path) {
+    setNavPath(path);
+    console.log(navPath);
+  }
 
   return (
     <div className="flex justify-center w-full">
@@ -152,8 +158,20 @@ export default function Navbar() {
                     },
                   }}
                   animate={isActive ? 'visible' : 'hidden'}
+                  className="flex flex-col justify-center items-center"
                 >
                   <Link href={item.path}>{item.name}</Link>
+                  {isActive ? (
+                    <motion.div
+                      initial={{
+                        width: '0%',
+                      }}
+                      animate={{
+                        width: '100%',
+                      }}
+                      className="h-[2px] bg-[#00B8FF]"
+                    />
+                  ) : null}
                 </motion.li>
               );
             })}
