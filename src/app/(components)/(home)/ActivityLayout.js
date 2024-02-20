@@ -1,12 +1,47 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function ActivityLayout() {
   return (
     <div className="flex flex-col pt-40 w-[70%]">
-      <span className="text-left text-6xl">
+      <motion.span
+        initial={{
+          x: -50,
+          opacity: 0,
+        }}
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.6,
+          duration: 1,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="text-left text-6xl"
+      >
         WHAT DO {"'"}DO IT{"'"}
-      </span>
-      <div className="w-full py-20">
+      </motion.span>
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.8,
+          duration: 1,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="w-full py-20"
+      >
         <Image
           src="/project-img.jpg"
           width={2400}
@@ -34,9 +69,26 @@ export default function ActivityLayout() {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="flex space-x-5 w-full">
-        <div className="w-1/2">
+        <motion.div
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 1,
+            duration: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="w-1/2"
+        >
           <Image
             src="/networking-img.jpg"
             width={2400}
@@ -56,8 +108,25 @@ export default function ActivityLayout() {
               </span>
             </div>
           </div>
-        </div>
-        <div className="w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 1.4,
+            duration: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="w-1/2"
+        >
           <Image
             src="/seminar-img.jpg"
             width={2400}
@@ -77,7 +146,7 @@ export default function ActivityLayout() {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <hr />
     </div>

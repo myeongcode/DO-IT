@@ -79,6 +79,9 @@ const fadeInAnimationLists = {
       delay: 0.05 * index,
     },
   }),
+  transition: {
+    delay: 0.8,
+  },
 };
 
 export default function AwardsLayout() {
@@ -90,7 +93,24 @@ export default function AwardsLayout() {
   }
 
   return (
-    <div className="flex flex-col items-center w-full bg-[#14171A] min-h-[1027px]">
+    <motion.div
+      initial={{
+        y: 100,
+        opacity: 0,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.6,
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="flex flex-col items-center w-full bg-[#14171A] min-h-[1027px]"
+    >
       <div className="w-[70%] py-28">
         <div className="flex flex-row justify-between pb-32">
           <span className="text-left text-6xl text-white">AWARDS</span>
@@ -156,6 +176,6 @@ export default function AwardsLayout() {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
