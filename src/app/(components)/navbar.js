@@ -262,7 +262,7 @@ export default function Navbar() {
                     },
                   }}
                   animate={isActive ? 'visible' : 'hidden'}
-                  className="flex flex-col justify-center items-center"
+                  className="flex flex-col justify-center items-center font-pretend"
                 >
                   <Link href={item.path}>{item.name}</Link>
                   {isActive ? (

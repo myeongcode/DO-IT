@@ -113,7 +113,7 @@ export default function AwardsLayout() {
     >
       <div className="w-[90%] md:w-[70%] py-10 md:py-28">
         <div className="flex flex-col md:flex-row justify-between pb-0 md:pb-32">
-          <span className="text-left text-[8.6vw] md:text-6xl text-white">
+          <span className="text-left text-[8.6vw] md:text-6xl text-white font-suit font-bold">
             AWARDS
           </span>
           <ul className="flex flex-row items-end text-white align-text-bottom py-4 md:py-0 justify-end">
@@ -122,17 +122,17 @@ export default function AwardsLayout() {
                 <motion.li
                   key={tab.year}
                   onClick={onChangeYear}
-                  className="flex relative m-3 text-2xl cursor-pointer"
+                  className="flex relative m-3 text-2xl cursor-pointer font-pretend"
                   variants={{
                     active: {
                       color: '#FFF',
                       fontSize: '30px',
-                      fontWeight: 600,
+                      fontWeight: 'bold',
                     },
                     inactive: {
                       color: '#657786',
                       fontSize: '24px',
-                      fontWeight: 400,
+                      fontWeight: 'medium',
                     },
                   }}
                   animate={activeTab === tab.year ? 'active' : 'inactive'}
@@ -165,7 +165,7 @@ export default function AwardsLayout() {
                           once: true,
                         }}
                         custom={index}
-                        className="flex flex-col md:flex-row w-full justify-between py-4 md:py-6 text-white"
+                        className="flex flex-col md:flex-row w-full justify-between py-4 md:py-6 text-white font-pretend font-medium"
                       >
                         <span className="text-[4vw] md:text-2xl pb-2 md:pb-0">
                           {element.awardName}

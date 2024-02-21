@@ -50,7 +50,7 @@ export default function Projects() {
         <ul className="flex w-full py-10 space-x-6">
           {categories.map((category, idx) => {
             return (
-              <li className="text-4xl text-white" key={idx}>
+              <li className="text-4xl text-white font-suit" key={idx}>
                 {category}
               </li>
             );

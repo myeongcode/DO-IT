@@ -30,10 +30,10 @@ export default function ProjectCard({ item }) {
                   duration: 0.6,
                 },
               }}
-              className="flex flex-col text-white z-10 text-start m-5 leading-7"
+              className="flex flex-col text-white z-10 text-start m-5 leading-7 font-suit"
             >
-              <h1 className="">{item.type}</h1>
-              <h1 className="font-semibold text-xl">{item.title}</h1>
+              <h1>{item.type}</h1>
+              <h1 className="font-extrabold text-xl">{item.title}</h1>
             </motion.div>
           </motion.div>
         )}

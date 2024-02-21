@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="flex w-full justify-center bg-[#C8D3DA]">
-      <div className="flex flex-col w-[90%] md:w-[70%] py-16">
+      <div className="flex flex-col w-[90%] md:w-[70%] py-16 font-pretend">
         <div className="pb-10">
           <span className="text-[#657786] text-[3.4vw] md:text-sm">
             DO IT (연세대학교 미래캠퍼스 IT 개발동아리)

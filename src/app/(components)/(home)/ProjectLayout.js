@@ -83,7 +83,9 @@ export default function ProjectLayout() {
     <div className="flex flex-col items-center w-full py-10  md:py-28 overflow-hidden">
       <div className="w-[90%] md:w-[70%]">
         <div className="flex flex-row justify-between pb-32 items-center">
-          <span className="text-left text-[8.6vw] md:text-6xl">PROJECTS</span>
+          <span className="text-left text-[8.6vw] md:text-6xl font-suit font-bold">
+            PROJECTS
+          </span>
           <Link href="/projects">
             <motion.button
               whileHover={{
@@ -123,7 +125,7 @@ export default function ProjectLayout() {
           {[...projectLists, ...projectLists, ...projectLists].map(
             (item, idx) => {
               return <ProjectCard item={item} key={idx} />;
-            }
+            },
           )}
         </motion.div>
       </div>

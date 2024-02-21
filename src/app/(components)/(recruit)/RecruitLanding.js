@@ -41,7 +41,7 @@ export default function RecruitLanding() {
           }}
           className="py-12 md:pb-[300px] xl:pb-[400px] z-10"
         >
-          <span className="text-7xl text-white">2.27 - 3.3</span>
+          <span className="text-7xl text-white font-pretend">2.27 - 3.3</span>
         </motion.div>
         <div className="absolute bottom-[-6px] md:bottom-[-20px] z-0">
           <Image
