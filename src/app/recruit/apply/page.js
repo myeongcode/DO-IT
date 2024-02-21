@@ -35,7 +35,7 @@ export default function Apply() {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="pt-[105px]">
       <h3>지원직군</h3>
       <select name="category">
         <option value="pm">PM (Project Manager)</option>

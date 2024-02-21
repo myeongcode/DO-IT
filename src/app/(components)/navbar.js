@@ -224,11 +224,11 @@ export default function Navbar() {
                 />
                 <path
                   d="M39.5773 24.9075L31.3912 12.4505L39.576 -0.00787354H32.6899L27.9636 7.23318L26.0201 10.2102C25.132 11.5706 25.132 13.329 26.0201 14.6894L27.9624 17.6652L32.6887 24.9075H39.5773Z"
-                  fill="#00B8FF"
+                  fill={pathname !== '/recruit' ? '#00B8FF' : '#FFFFFF'}
                 />
                 <path
                   d="M42.897 24.9075L51.0831 12.4505L42.8983 -0.00787354H49.7844L54.5107 7.23318L56.4542 10.2102C57.3423 11.5706 57.3423 13.329 56.4542 14.6894L54.512 17.6652L49.7856 24.9075H42.897Z"
-                  fill="#00B8FF"
+                  fill={pathname !== '/recruit' ? '#00B8FF' : '#FFFFFF'}
                 />
               </svg>
             </Link>
@@ -255,7 +255,7 @@ export default function Navbar() {
                   key={item.path}
                   variants={{
                     visible: {
-                      color: '#00B8FF',
+                      color: pathname !== '/recruit' ? '#00B8FF' : '#000',
                     },
                     hidden: {
                       color: pathname === '/' ? '#000' : '#FFF',
@@ -273,7 +273,9 @@ export default function Navbar() {
                       animate={{
                         width: '100%',
                       }}
-                      className="h-[2px] bg-[#00B8FF]"
+                      className={`h-[2px] ${
+                        pathname !== '/recruit' ? 'bg-[#00B8FF]' : 'bg-[#000]'
+                      }`}
                     />
                   ) : null}
                 </motion.li>
