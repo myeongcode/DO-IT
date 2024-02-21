@@ -109,12 +109,14 @@ export default function AwardsLayout() {
       viewport={{
         once: true,
       }}
-      className="flex flex-col items-center w-full bg-[#14171A] min-h-[1027px]"
+      className="flex flex-col items-center w-full bg-[#14171A] md:min-h-[1027px]"
     >
-      <div className="w-[70%] py-28">
-        <div className="flex flex-row justify-between pb-32">
-          <span className="text-left text-6xl text-white">AWARDS</span>
-          <ul className="flex flex-row items-end text-white align-text-bottom">
+      <div className="w-[90%] md:w-[70%] py-10 md:py-28">
+        <div className="flex flex-col md:flex-row justify-between pb-0 md:pb-32">
+          <span className="text-left text-[8.6vw] md:text-6xl text-white">
+            AWARDS
+          </span>
+          <ul className="flex flex-row items-end text-white align-text-bottom py-4 md:py-0 justify-end">
             {tabs.map((tab, idx) => {
               return (
                 <motion.li
@@ -163,10 +165,14 @@ export default function AwardsLayout() {
                           once: true,
                         }}
                         custom={index}
-                        className="flex w-full justify-between py-6 text-white"
+                        className="flex flex-col md:flex-row w-full justify-between py-4 md:py-6 text-white"
                       >
-                        <span className="text-2xl">{element.awardName}</span>
-                        <span className="text-2xl">{element.award}</span>
+                        <span className="text-[4vw] md:text-2xl pb-2 md:pb-0">
+                          {element.awardName}
+                        </span>
+                        <span className="text-[4vw] text-right md:text-2xl">
+                          {element.award}
+                        </span>
                       </motion.div>
                     )
                   );
