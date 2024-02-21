@@ -80,10 +80,10 @@ export default function ProjectLayout() {
   }, [xTranslation, width, duration, rerender, mustFinish]);
 
   return (
-    <div className="flex flex-col items-center w-full  py-28 overflow-hidden">
-      <div className="w-[70%]">
-        <div className="flex flex-row justify-between pb-32">
-          <span className="text-left text-6xl">PROJECTS</span>
+    <div className="flex flex-col items-center w-full py-10  md:py-28 overflow-hidden">
+      <div className="w-[90%] md:w-[70%]">
+        <div className="flex flex-row justify-between pb-32 items-center">
+          <span className="text-left text-[8.6vw] md:text-6xl">PROJECTS</span>
           <Link href="/projects">
             <motion.button
               whileHover={{
@@ -93,14 +93,20 @@ export default function ProjectLayout() {
                 duration: 0.6,
                 ease: 'easeInOut',
               }}
-              className="text-6xl"
+              className="flex items-center"
             >
-              <Image src="/plus_icon.png" width="50" height="50" alt="plus" />
+              <Image
+                src="/plus_icon.png"
+                width="50"
+                height="50"
+                alt="plus"
+                className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
+              />
             </motion.button>
           </Link>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="hidden md:flex items-center justify-center">
         <motion.div
           style={{ x: xTranslation }}
           className="grid grid-flow-col md:auto-cols-[200px] xl:auto-cols-max gap-6 overflow-hidden"
