@@ -127,12 +127,12 @@ export default function AwardsLayout() {
                     active: {
                       color: '#FFF',
                       fontSize: '30px',
-                      fontWeight: 'bold',
+                      fontWeight: 600,
                     },
                     inactive: {
                       color: '#657786',
                       fontSize: '24px',
-                      fontWeight: 'medium',
+                      fontWeight: 400,
                     },
                   }}
                   animate={activeTab === tab.year ? 'active' : 'inactive'}
