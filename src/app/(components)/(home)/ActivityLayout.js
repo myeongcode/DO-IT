@@ -58,14 +58,14 @@ export default function ActivityLayout() {
             <span className="text-[4.4vw] md:text-xl font-suit">프로젝트</span>
           </div>
           <div className="md:w-1/2">
-            <span className="text-[#657786] text-[3.6vw] md:text-base leading-[1.8] font-pretend">
+            <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
               모든 동아리 구성원이 한 학기동안 팀빌딩을 통해 프로젝트를
               진행하고, 중간발표를 통해 각 팀들의 진행상황을 공유하는 시간을
               가집니다.
             </span>
             <br />
             <br />
-            <span className="text-[#657786] text-[3.6vw] md:text-base leading-[1.8] font-pretend">
+            <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
               또한 성과 공유회 Dev IT. 에서 한학기에 진행한 프로젝트를 체험할 수
               있는 부스 행사와 프로젝트 진행 중 직면했던 문제점을 공유하고 원인
               분석과 해결 방안을 도출합니다.
@@ -110,7 +110,7 @@ export default function ActivityLayout() {
               </span>
             </div>
             <div className="md:py-10 md:pb-14">
-              <span className="text-[#657786] text-[3.6vw] md:text-base leading-[1.8] font-pretend">
+              <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
                 구성원 모두가 참여해 서로 교류하며 친목을 도모하는 네트워킹
                 데이를 진행합니다.
               </span>
@@ -151,7 +151,7 @@ export default function ActivityLayout() {
               <span className="text-[4.4vw] md:text-xl font-suit">세미나</span>
             </div>
             <div className="md:py-10 md:pb-14">
-              <span className="text-[#657786] text-[3.6vw] md:text-base leading-[1.8] font-pretend">
+              <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
                 선배/현직자 등을 초청해 직무, 업계 현황, 조언 등 동아리
                 구성원에게 도움이 되는 주제로 세미나를 개최합니다.
               </span>
