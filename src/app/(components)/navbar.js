@@ -47,6 +47,7 @@ export default function Navbar() {
               pathname === '/' ? '#CECECE' : '#313131'
             }`,
             backdropFilter: 'blur(12px)',
+            '-webkit-backdrop-filter': 'blur(14px)',
           },
         }}
         animate={navHidden ? 'hidden' : 'visible'}
@@ -149,11 +150,12 @@ export default function Navbar() {
           },
           hidden: {
             backgroundColor:
-              pathname === '/projects' ? '#00000035' : '#FFFFFF35',
+              pathname === '/projects' ? '#0000004D' : '#FFFFFF4D',
             boxShadow: `0px 1px 1px ${
               pathname === '/' ? '#CECECE' : '#313131'
             }`,
             backdropFilter: 'blur(14px)',
+            '-webkit-backdrop-filter': 'blur(14px)',
           },
         }}
         animate={navHidden ? 'hidden' : 'visible'}
