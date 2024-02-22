@@ -16,7 +16,7 @@ export default function TypingLayout() {
       }}
       className="flex justify-center py-40 w-[90%] md:w-[70%] h-screen items-center"
     >
-      <div className="text-[6vw] md:text-[40px] lg:text-[68px] 2xl:text-[100px] relative text-nowrap leading-snug left-[-20px] font-suit md:font-bold">
+      <div className="text-[6vw] md:text-[40px] lg:text-[68px] 2xl:text-[100px] relative text-nowrap whitespace-nowrap leading-snug left-[-20px] font-suit md:font-bold">
         <span className="absolute text-[5vw] left-[-6vw] top-[0.8vw] md:left-[-54px] md:top-[8px] md:text-4xl lg:left-[-82px] lg:top-[18px] lg:text-6xl 2xl:left-[-100px] 2xl:top-[32px] 2xl:text-7xl text-[#E1E8ED]">
           1
         </span>

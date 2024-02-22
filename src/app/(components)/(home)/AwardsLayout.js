@@ -76,7 +76,7 @@ const fadeInAnimationLists = {
     x: 0,
     transition: {
       duration: 0.8,
-      delay: 0.05 * index,
+      delay: 0.05 * index + 0.6,
     },
   }),
   transition: {
@@ -127,12 +127,12 @@ export default function AwardsLayout() {
                     active: {
                       color: '#FFF',
                       fontSize: '30px',
-                      fontWeight: 600,
+                      fontWeight: 'bold',
                     },
                     inactive: {
                       color: '#657786',
                       fontSize: '24px',
-                      fontWeight: 400,
+                      fontWeight: 'normal',
                     },
                   }}
                   animate={activeTab === tab.year ? 'active' : 'inactive'}
