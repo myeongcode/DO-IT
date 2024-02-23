@@ -13,7 +13,7 @@ export default function GoalsLayout() {
           opacity: 1,
         }}
         transition={{
-          delay: 0.6,
+          delay: 1,
           duration: 1,
         }}
         viewport={{
@@ -35,7 +35,7 @@ export default function GoalsLayout() {
               opacity: 1,
             }}
             transition={{
-              delay: 0.8,
+              delay: 1.2,
               duration: 1,
             }}
             viewport={{
@@ -62,7 +62,7 @@ export default function GoalsLayout() {
               opacity: 1,
             }}
             transition={{
-              delay: 1,
+              delay: 1.3,
               duration: 1,
             }}
             viewport={{
@@ -89,7 +89,7 @@ export default function GoalsLayout() {
               opacity: 1,
             }}
             transition={{
-              delay: 1.2,
+              delay: 1.4,
               duration: 1,
             }}
             viewport={{
