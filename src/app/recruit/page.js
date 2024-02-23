@@ -110,34 +110,50 @@ export default function Recruit() {
   return (
     <div className="flex flex-col w-full items-center overflow-hidden text-[#14171A] font-pretend">
       <RecruitLanding />
-      <div className="flex justify-center w-full py-40">
-        <div className="flex flex-col w-[70%]">
-          <div className="flex flex-col space-y-3 pb-40 font-suit font-bold">
-            <span className="text-6xl text-[#00B8FF]">DO IT.</span>
-            <span className="text-6xl">1기 신규부원 모집</span>
+      <div className="flex justify-center w-full py-20 md:py-40">
+        <div className="flex flex-col w-[90%] md:w-[70%]">
+          <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-bold text-[6vw] md:text-4xl xl:text-6xl">
+            <span className="text-[#00B8FF]">DO IT.</span>
+            <span>1기 신규부원 모집</span>
           </div>
           <div className="flex flex-col">
-            <div className="flex w-full justify-between py-20">
-              <span className="text-5xl font-suit">SCHEDULE</span>
-              <div className="flex flex-row w-3/5 justify-between">
-                <div className="flex flex-col space-y-3">
-                  <span className="text-5xl">2/27 - 3/3</span>
-                  <span className="text-xl text-[#657786]">서류 접수</span>
+            <div className="flex w-full justify-between  py-10 md:py-20">
+              <span className="text-[5vw] md:text-4xl xl:text-5xl font-suit">
+                SCHEDULE
+              </span>
+              <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row w-[50%] md:w-3/5 justify-between">
+                <div className="flex flex-row justify-between items-center md:flex-col md:space-y-3 md:items-start">
+                  <span className="text-[5vw] md:text-4xl xl:text-5xl">
+                    2/27 - 3/3
+                  </span>
+                  <span className="text-[4vw] md:text-base xl:text-xl text-[#657786]">
+                    서류 접수
+                  </span>
                 </div>
-                <div className="flex flex-col space-y-3">
-                  <span className="text-5xl">3/5 - 3/7</span>
-                  <span className="text-xl text-[#657786]">면접 진행</span>
+                <div className="flex flex-row justify-between items-center md:flex-col md:space-y-3 md:items-start">
+                  <span className="text-[5vw] md:text-4xl xl:text-5xl">
+                    3/5 - 3/7
+                  </span>
+                  <span className="text-[4vw] md:text-base xl:text-xl text-[#657786]">
+                    면접 진행
+                  </span>
                 </div>
-                <div className="flex flex-col space-y-3">
-                  <span className="text-5xl">3/9</span>
-                  <span className="text-xl text-[#657786]">최종 결과</span>
+                <div className="flex flex-row justify-between items-center md:flex-col md:space-y-3 md:items-start">
+                  <span className="text-[5vw] md:text-4xl xl:text-5xl">
+                    3/9
+                  </span>
+                  <span className="text-[4vw] md:text-base xl:text-xl text-[#657786]">
+                    최종 결과
+                  </span>
                 </div>
               </div>
             </div>
             <hr />
-            <div className="flex w-full justify-between py-20">
-              <span className="text-5xl font-suit">FIELDS</span>
-              <div className="flex flex-row w-3/5 pt-20">
+            <div className="flex flex-col md:flex-row w-full justify-between py-10 md:py-20">
+              <span className="text-[5vw] md:text-4xl xl:text-5xl font-suit">
+                FIELDS
+              </span>
+              <div className="flex flex-row w-full md:w-3/5 pt-10 md:pt-20">
                 <div className="flex flex-col w-full">
                   {fields.map((fieldItem) => {
                     return (
@@ -151,13 +167,15 @@ export default function Recruit() {
               </div>
             </div>
             <hr />
-            <div className="flex flex-col w-full justify-between py-20">
-              <span className="text-5xl font-suit">FAQ</span>
+            <div className="flex flex-col w-full justify-between py-10 md:py-20">
+              <span className="text-[5vw] md:text-4xl xl:text-5xl font-suit">
+                FAQ
+              </span>
               <div className="flex flex-col w-full">
-                <div className="flex flex-row space-x-14">
+                <div className="flex justify-center md:justify-start flex-row space-x-6 md:space-x-14">
                   {faqs.map((faq) => {
                     return (
-                      <div key={faq.id} className="flex py-16">
+                      <div key={faq.id} className="flex py-10 md:py-16">
                         <motion.button
                           variants={{
                             visible: {
@@ -173,7 +191,7 @@ export default function Recruit() {
                             faqCategory === faq.id ? 'visible' : 'disable'
                           }
                           onClick={(e) => onChangeFaq(e, faq.id)}
-                          className={`text-4xl  ${
+                          className={`text-[5vw] md:text-3xl xl:text-4xl  ${
                             faqCategory === faq.id
                               ? 'text-[#14171A] font-bold'
                               : 'text-[#8A9FB1]'
@@ -206,18 +224,18 @@ export default function Recruit() {
                               duration: 0.8,
                             }}
                             key={idx}
-                            className="flex flex-row justify-between py-6"
+                            className="flex flex-col md:flex-row justify-between py-4 md:py-6 space-y-2 md:space-y-0"
                           >
-                            <div className="flex flex-row  space-x-5 w-[40%]">
-                              <span className="text-3xl font-suit font-black text-[#8A9FB1] md:leading-[1.3]">
+                            <div className="flex flex-row  space-x-5 md:w-[40%]">
+                              <span className="text-[4vw] md:text-xl xl:text-3xl font-suit font-black text-[#8A9FB1] md:leading-[1.3]">
                                 Q
                               </span>
-                              <span className="text-3xl md:leading-[1.3]">
+                              <span className="text-[4vw] md:text-xl xl:text-3xl md:leading-[1.3]">
                                 {faqItem.q}
                               </span>
                             </div>
-                            <div className="flex w-[54%]">
-                              <span className="text-xl text-[#657786] md:leading-[1.5]">
+                            <div className="flex md:w-[54%]">
+                              <span className="text-[4vw] md:text-base xl:text-xl text-[#657786] md:leading-[1.5]">
                                 {faqItem.a}
                               </span>
                             </div>
@@ -230,31 +248,36 @@ export default function Recruit() {
               </div>
             </div>
             <hr />
-            <div className="flex flex-col w-full justify-between py-20">
-              <span className="text-5xl font-suit">MUST DO</span>
-              <div className="flex flex-row text-center justify-evenly space-x-6 pt-40">
-                <div className="flex flex-col space-y-20">
-                  <span className="text-5xl">2학기 이상 활동</span>
-                  <span className="text-xl md:leading-[1.8] text-[#657786]">
-                    개인적인 사정을 제외하고, 모든 동아리원은
-                    <br />
-                    반드시 2학기 이상 필수로 활동에 참여해야 합니다.
+            <div className="flex flex-col w-full justify-between py-10 md:py-20">
+              <span className="text-[5vw] md:text-4xl xl:text-5xl font-suit">
+                MUST DO
+              </span>
+              <div className="flex flex-col items-center md:flex-row text-center md:justify-evenly space-y-20 md:space-y-0 md:space-x-6 pt-20 md:pt-40">
+                <div className="flex flex-col w-2/4 space-y-10 md:space-y-20">
+                  <span className="text-[5vw] md:text-3xl xl:text-5xl">
+                    2학기 이상 활동
+                  </span>
+                  <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786]">
+                    개인적인 사정을 제외하고, 모든 동아리원은 반드시 2학기 이상
+                    필수로 활동에 참여해야 합니다.
                   </span>
                 </div>
-                <div className="flex flex-col space-y-20">
-                  <span className="text-5xl">프로젝트 필수 참여</span>
-                  <span className="text-xl md:leading-[1.8] text-[#657786]">
-                    프로젝트의 성공적인 마무리를 위해
-                    <br />
-                    모든 동아리원들이 적극적으로 참여해야 합니다.
+                <div className="flex flex-col w-2/4 space-y-10 md:space-y-20">
+                  <span className="text-[5vw] md:text-3xl xl:text-5xl">
+                    프로젝트 필수 참여
+                  </span>
+                  <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786]">
+                    프로젝트의 성공적인 마무리를 위해 모든 동아리원들이
+                    적극적으로 참여해야 합니다.
                   </span>
                 </div>
-                <div className="flex flex-col space-y-20">
-                  <span className="text-5xl">대면 활동</span>
-                  <span className="text-xl md:leading-[1.8] text-[#657786]">
-                    팀원들과의 원활한 소통, 프로젝트 진행을 위해서
-                    <br />
-                    대면활동을 원칙으로 진행합니다.
+                <div className="flex flex-col w-2/4 space-y-10 md:space-y-20">
+                  <span className="text-[5vw] md:text-3xl xl:text-5xl">
+                    대면 활동
+                  </span>
+                  <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786]">
+                    팀원들과의 원활한 소통, 프로젝트 진행을 위해서 대면활동을
+                    원칙으로 진행합니다.
                   </span>
                 </div>
               </div>
@@ -264,12 +287,12 @@ export default function Recruit() {
         </div>
       </div>
 
-      <Link href="/recruit/apply" className="text-3xl text-white">
+      <Link href="/recruit/apply">
         <motion.button
           whileHover={{
             scale: 1.05,
           }}
-          className="flex py-5 px-16 mb-40 bg-[#00B8FF] rounded-full"
+          className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 mb-20 md:mb-40 bg-[#00B8FF] rounded-full text-[4vw] md:text-2xl xl:text-3xl text-white"
         >
           지원하기
         </motion.button>

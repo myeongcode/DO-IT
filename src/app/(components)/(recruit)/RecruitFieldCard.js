@@ -12,10 +12,13 @@ export default function RecruitFieldCard({ fieldItem }) {
   return (
     <div onClick={onClickField} className="w-full font-pretend cursor-pointer">
       <div className="flex justify-between items-center py-10 z-20">
-        <span className="text-4xl">{fieldItem.field}</span>
+        <span className="text-[4vw] md:text-2xl xl:text-4xl">
+          {fieldItem.field}
+        </span>
         <div className="flex flex-row items-center space-x-6">
-          <span className="text-xl">{fieldItem.name}</span>
-
+          <span className="text-[4vw] md:text-base xl:text-xl">
+            {fieldItem.name}
+          </span>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             width="34"
@@ -63,9 +66,11 @@ export default function RecruitFieldCard({ fieldItem }) {
             }}
             animate={fieldsDetail ? 'visible' : 'disable'}
             exit="exit"
-            className="flex opacity-0 h-0 w-[75%] z-0"
+            className="flex opacity-0 h-0 md:w-[75%] z-0"
           >
-            <span className={`text-xl text-[#657786] md:leading-[1.8] pb-10`}>
+            <span
+              className={`text-[4vw] md:text-base xl:text-xl text-[#657786] md:leading-[1.8] pb-10`}
+            >
               {fieldItem.description}
             </span>
           </motion.div>
