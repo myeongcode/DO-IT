@@ -264,16 +264,16 @@ export default function Recruit() {
         </div>
       </div>
 
-      <motion.button
-        whileHover={{
-          scale: 1.05,
-        }}
-        className="flex py-5 px-16 mb-40 bg-[#00B8FF] rounded-full"
-      >
-        <Link href="/recruit/apply" className="text-3xl text-white">
+      <Link href="/recruit/apply" className="text-3xl text-white">
+        <motion.button
+          whileHover={{
+            scale: 1.05,
+          }}
+          className="flex py-5 px-16 mb-40 bg-[#00B8FF] rounded-full"
+        >
           지원하기
-        </Link>
-      </motion.button>
+        </motion.button>
+      </Link>
     </div>
   );
 }
