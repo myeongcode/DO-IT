@@ -289,10 +289,11 @@ export default function Recruit() {
 
       <Link href="/recruit/apply">
         <motion.button
-          whileHover={{
-            scale: 1.05,
-          }}
-          className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 mb-20 md:mb-40 bg-[#00B8FF] rounded-full text-[4vw] md:text-2xl xl:text-3xl text-white"
+          // whileHover={{
+          //   scale: 1.05,
+          // }}
+          disabled
+          className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 mb-20 md:mb-40 bg-[#00B8FF] rounded-full text-[4vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45"
         >
           지원하기
         </motion.button>
