@@ -10,7 +10,7 @@ export default function TermForm() {
         <div className="w-[40%] pt-10">
           <span className="text-3xl">개인정보 수집에 대한 동의</span>
         </div>
-        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-72 space-y-16">
           <div className="flex flex-row items-start justify-between pt-10">
             <label className="flex flex-row w-[30%] text-[#8A9FB1]">
               개인정보(인적사항) 수집

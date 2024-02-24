@@ -75,17 +75,17 @@ export default function Apply() {
 
         {/* Form */}
         <FieldsForm />
-        <CategoriesForm />
-        <InformForm />
-        <AttendForm />
-        <Q1Form />
-        <Q2Form />
-        <Q3Form />
-        <Q4Form />
-        <Q5Form />
-        <Q6Form />
-        <TermForm />
-        <div className="flex w-full justify-end font-pretend">
+        {/* <CategoriesForm /> */}
+        {/* <InformForm /> */}
+        {/* <AttendForm /> */}
+        {/* <Q1Form /> */}
+        {/* <Q2Form /> */}
+        {/* <Q3Form /> */}
+        {/* <Q4Form /> */}
+        {/* <Q5Form /> */}
+        {/* <Q6Form /> */}
+        {/* <TermForm /> */}
+        <div className="flex w-full justify-end font-pretend pt-20">
           <div className="flex flex-row text-2xl space-x-4">
             <motion.button
               whileHover={{
