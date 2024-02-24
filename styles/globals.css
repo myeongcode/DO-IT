@@ -21,3 +21,11 @@
 body {
   overflow-x: hidden;
 }
+
+input[type='file']::-webkit-file-upload-button {
+  display: none;
+}
+
+input[type='file'] {
+  color: #c8d3da;
+}
