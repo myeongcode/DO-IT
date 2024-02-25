@@ -72,7 +72,12 @@ export default function Modal({ onShowModal, selectedApplicant }) {
               <a href={selectedApplicant.q6Link}>{selectedApplicant.q6Link}</a>
             </p>
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
-              첨부파일 : {selectedApplicant.q6File}
+              첨부파일 :{' '}
+              <a href={selectedApplicant.q6File}>
+                {selectedApplicant.q6File !== ''
+                  ? `${selectedApplicant.name}님 포트폴리오`
+                  : null}
+              </a>
             </p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
