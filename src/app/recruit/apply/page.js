@@ -260,7 +260,6 @@ export default function Apply() {
                 <motion.button
                   onClick={(e) => {
                     e.preventDefault();
-                    setActiveBtn(false);
                     setCurrentStep((currStep) => currStep + 100 / 12);
                     setPage((currPage) => currPage + 1);
                   }}
