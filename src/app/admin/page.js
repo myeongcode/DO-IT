@@ -61,7 +61,7 @@ export default function Admin() {
               <td>이름</td>
               <td>학번</td>
               <td>전공</td>
-              <td>지원직군</td>
+              <td>카테고리</td>
               <td>희망분야</td>
             </tr>
           </thead>
@@ -71,10 +71,10 @@ export default function Admin() {
                 <tr key={applicant._id} onClick={() => onClickApplicant(idx)}>
                   <td>{applicant._id}</td>
                   <td>{applicant.name}</td>
-                  <td>{applicant.std_id}</td>
+                  <td>{applicant.stdID}</td>
                   <td>{applicant.major}</td>
-                  <td>{applicant.category.toUpperCase()}</td>
-                  <td>{applicant.field.toUpperCase()}</td>
+                  <td>{applicant.category}</td>
+                  <td>{applicant.field}</td>
                 </tr>
               );
             })}

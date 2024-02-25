@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { upload } from '@vercel/blob/client';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import FieldsForm from '@/app/(components)/(apply)/FieldsForm';
 import CategoriesForm from '@/app/(components)/(apply)/CategoriesForm';
 import InformForm from '@/app/(components)/(apply)/InformForm';
@@ -47,6 +47,51 @@ export default function Apply() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(100 / 12);
   const [page, setPage] = useState(0);
+  const [activeBtn, setActiveBtn] = useState(false);
+  const [response, setResponse] = useState();
+
+  useEffect(() => {
+    setActiveBtn(isPageValid(page));
+  }, [page, formData]);
+
+  function isPageValid(page) {
+    switch (page) {
+      case 0:
+        return formData.field !== '';
+      case 1:
+        return formData.category !== '';
+      case 2:
+        return (
+          formData.name !== '' &&
+          formData.stdID !== '' &&
+          formData.major !== '' &&
+          formData.phone !== '' &&
+          formData.email !== ''
+        );
+      case 3:
+        return (
+          formData.grade !== '' &&
+          formData.semester !== '' &&
+          formData.attend !== null
+        );
+      case 4:
+        return formData.q1 !== '';
+      case 5:
+        return formData.q2 !== '';
+      case 6:
+        return formData.q3 !== '';
+      case 7:
+        return formData.q4Exp !== null && formData.q4 !== '';
+      case 8:
+        return formData.q5 !== '';
+      case 9:
+        return true;
+      case 10:
+        return formData.informTerm === true && formData.portfolioTerm === true;
+      default:
+        return false;
+    }
+  }
 
   function PageDisplay() {
     if (page === 0) {
@@ -72,7 +117,7 @@ export default function Apply() {
     } else if (page === 10) {
       return <TermForm setFormData={setFormData} formData={formData} />;
     } else if (page === 11) {
-      return <CompleteForm setFormData={setFormData} formData={formData} />;
+      return <CompleteForm response={response} />;
     }
   }
 
@@ -80,7 +125,6 @@ export default function Apply() {
     e.preventDefault();
 
     const jsonData = formData;
-    console.log(jsonData);
 
     const options = {
       method: 'POST',
@@ -90,48 +134,13 @@ export default function Apply() {
       body: JSON.stringify(jsonData),
     };
 
-    // const response = await fetch(`/api/apply`, options)
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     if (result) {
-    //       return result;
-    //     }
-    //   });
-
-    //console.log(response);
-
-    // const formData = new FormData(e.target);
-    // const jsonData = {};
-    // const file = inputFileRef.current.files[0];
-
-    // const newBlob = await upload(file.name, file, {
-    //   access: 'public',
-    //   handleUploadUrl: '/api/apply/uploads',
-    // });
-
-    // setBlob(newBlob);
-
-    // formData.forEach((value, key) => {
-    //   jsonData[key] = value;
-    // });
-
-    // const options = {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(jsonData),
-    // };
-
-    // fetch(`/api/apply`, options)
-    //   .then((res) => res.json())
-    //   .then((result) => {
-    //     if (result) router.replace('/');
-    //   });
-  }
-
-  function onChange(e) {
-    setExpProject(JSON.parse(e.target.value));
+    const response = await fetch(`/api/apply`, options)
+      .then((res) => res.json())
+      .then((result) => {
+        if (result) {
+          setResponse(result);
+        }
+      });
   }
 
   return (
@@ -199,7 +208,8 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#00ADF2',
                   }}
-                  className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
+                  className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45"
+                  disabled={!activeBtn}
                 >
                   제출
                 </motion.button>
@@ -207,15 +217,17 @@ export default function Apply() {
                 <motion.button
                   onClick={(e) => {
                     e.preventDefault();
+                    setActiveBtn(false);
                     setCurrentStep((currStep) => currStep + 100 / 12);
                     setPage((currPage) => currPage + 1);
                   }}
                   whileHover={{
                     backgroundColor: '#00ADF2',
                   }}
-                  className={`py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] ${
+                  className={`py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45 ${
                     page === 11 ? 'hidden' : 'block'
                   }`}
+                  disabled={!activeBtn}
                 >
                   다음
                 </motion.button>
