@@ -8,5 +8,5 @@ module.exports = {
       pretend: ['Pretendard-Regular', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };
