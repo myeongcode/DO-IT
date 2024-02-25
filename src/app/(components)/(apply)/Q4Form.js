@@ -51,7 +51,7 @@ export default function Q4Form({ setFormData, formData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, q4: e.target.value })
                 }
-                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[300px]"
+                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[300px] text-[#14171A]"
                 placeholder="내용을 입력해주세요."
               />
             </div>

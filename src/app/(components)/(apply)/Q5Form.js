@@ -28,7 +28,7 @@ export default function Q5Form({ setFormData, formData }) {
               required
               value={formData.q5}
               onChange={(e) => setFormData({ ...formData, q5: e.target.value })}
-              className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[300px]"
+              className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[300px] text-[#14171A]"
               placeholder="내용을 입력해주세요."
             />
           </div>

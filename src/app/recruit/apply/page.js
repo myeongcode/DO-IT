@@ -47,7 +47,7 @@ export default function Apply() {
   const [blob, setBlob] = useState(null);
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(100 / 12);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(10);
   const [activeBtn, setActiveBtn] = useState(false);
   const [response, setResponse] = useState();
   const [file, setFile] = useState(undefined);
@@ -260,7 +260,6 @@ export default function Apply() {
                 <motion.button
                   onClick={(e) => {
                     e.preventDefault();
-                    setActiveBtn(false);
                     setCurrentStep((currStep) => currStep + 100 / 12);
                     setPage((currPage) => currPage + 1);
                   }}

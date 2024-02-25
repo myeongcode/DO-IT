@@ -1,4 +1,10 @@
 export default function InformForm({ setFormData, formData }) {
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  }
+
   return (
     <div className="flex flex-col w-full font-suit">
       <div className="w-full">
@@ -19,10 +25,11 @@ export default function InformForm({ setFormData, formData }) {
               type="text"
               required
               value={formData.name}
+              onKeyDown={handleKeyDown}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] text-[#14171A]"
               placeholder="이름을 입력해주세요."
             />
           </div>
@@ -33,10 +40,11 @@ export default function InformForm({ setFormData, formData }) {
               type="text"
               required
               value={formData.stdID}
+              onKeyDown={handleKeyDown}
               onChange={(e) =>
                 setFormData({ ...formData, stdID: e.target.value })
               }
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] text-[#14171A]"
               placeholder="학번을 입력해주세요."
             />
           </div>
@@ -47,10 +55,11 @@ export default function InformForm({ setFormData, formData }) {
               type="text"
               required
               value={formData.major}
+              onKeyDown={handleKeyDown}
               onChange={(e) =>
                 setFormData({ ...formData, major: e.target.value })
               }
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] text-[#14171A]"
               placeholder="전공을 입력해주세요."
             />
           </div>
@@ -61,10 +70,11 @@ export default function InformForm({ setFormData, formData }) {
               type="text"
               required
               value={formData.phone}
+              onKeyDown={handleKeyDown}
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
               }
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] text-[#14171A]"
               placeholder="연락처를 입력해주세요."
             />
           </div>
@@ -75,10 +85,11 @@ export default function InformForm({ setFormData, formData }) {
               type="text"
               required
               value={formData.email}
+              onKeyDown={handleKeyDown}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] text-[#14171A]"
               placeholder="이메일을 입력해주세요."
             />
           </div>

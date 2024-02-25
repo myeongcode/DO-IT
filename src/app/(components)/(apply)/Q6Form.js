@@ -53,20 +53,31 @@ export default function Q6Form({
               onChange={(e) =>
                 setFormData({ ...formData, q6Link: e.target.value })
               }
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] text-[#14171A]"
               placeholder="Github, Notion, Blog, Website 등"
             />
           </div>
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">파일 첨부</label>
+            <label
+              htmlFor="input-file"
+              className={`border-b p-2 w-[70%]  ${
+                formData.q6File !== '' ? 'text-[#14171A]' : 'text-[#C8D3DA]'
+              }`}
+            >
+              {formData.q6File !== ''
+                ? formData.q6File.name
+                : '선택된 파일 없음'}
+            </label>
             <input
+              id="input-file"
               name="q6File"
               type="file"
               onChange={(e) => {
                 onChangeFile(e);
                 setFormData({ ...formData, q6File: e.target.files[0] });
               }}
-              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
+              className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] hidden"
             />
           </div>
         </div>
