@@ -20,75 +20,73 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const { searchParams } = new URL(request.url);
-  const filename = searchParams.get('filename');
+  try {
+    const body = await request.json();
+    const {
+      field,
+      category,
+      name,
+      stdID,
+      major,
+      phone,
+      email,
+      grade,
+      semester,
+      attend,
+      q1,
+      q2,
+      q3,
+      q4Exp,
+      q4,
+      q5,
+      q6Link,
+      q6File,
+      informTerm,
+      portfolioTerm,
+    } = body;
 
-  if (filename) {
-    const blob = await put(filename, request.body, {
-      access: 'public',
+    const date = moment().format('YYYY-MM-DD HH:mm:ss');
+    const newApplicant = await Applicant.create({
+      field,
+      category,
+      name,
+      stdID,
+      major,
+      phone,
+      email,
+      grade,
+      semester,
+      attend,
+      q1,
+      q2,
+      q3,
+      q4Exp,
+      q4,
+      q5,
+      q6Link,
+      q6File,
+      informTerm,
+      portfolioTerm,
+      createdAt: date,
     });
-
-    return NextResponse.json(blob);
-  } else {
-    NextResponse.json({ message: 'No filename detected' });
+    console.log(
+      `새로운 ${newApplicant.name} 지원자 Data 생성 - ${newApplicant._id}`
+    );
+    return NextResponse.json(
+      {
+        message: '등록 완료!',
+      },
+      {
+        status: 201,
+      }
+    );
+  } catch (e) {
+    return NextResponse.json(
+      {
+        message: 'Error',
+        e,
+      },
+      { status: 500 }
+    );
   }
-
-  // try {
-  //   const body = await request.json();
-  //   const {
-  //     field,
-  //     name,
-  //     std_id,
-  //     major,
-  //     phone_num,
-  //     email,
-  //     grade,
-  //     semester,
-  //     attend,
-  //     category,
-  //     question_01,
-  //     question_02,
-  //     question_03,
-  //     question_04,
-  //     question_05,
-  //   } = body;
-  //   const date = moment().format('YYYY-MM-DD HH:mm:ss');
-  //   const newApplicant = await Applicant.create({
-  //     field,
-  //     name,
-  //     std_id,
-  //     major,
-  //     phone_num,
-  //     email,
-  //     grade,
-  //     semester,
-  //     attend,
-  //     category,
-  //     question_01,
-  //     question_02,
-  //     question_03,
-  //     question_04,
-  //     question_05,
-  //     createdAt: date,
-  //   });
-  //   console.log(
-  //     `새로운 ${newApplicant.name} 지원자 Data 생성 - ${newApplicant._id}`
-  //   );
-  //   return NextResponse.json(
-  //     {
-  //       message: '등록 완료!',
-  //     },
-  //     {
-  //       status: 201,
-  //     }
-  //   );
-  // } catch (e) {
-  //   return NextResponse.json(
-  //     {
-  //       message: 'Error',
-  //       e,
-  //     },
-  //     { status: 500 }
-  //   );
-  // }
 }
