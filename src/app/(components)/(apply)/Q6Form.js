@@ -1,6 +1,29 @@
 import { useEffect, useState } from 'react';
 
-export default function Q6Form({ setFormData, formData }) {
+export default function Q6Form({
+  setFormData,
+  formData,
+  setFile,
+  file,
+  setFileUrl,
+  fileUrl,
+}) {
+  function onChangeFile(e) {
+    const file = e.target.files?.[0];
+    setFile(file);
+
+    if (fileUrl) {
+      URL.revokeObjectURL(fileUrl);
+    }
+
+    if (file) {
+      const url = URL.createObjectURL(file);
+      setFileUrl(url);
+    } else {
+      setFileUrl(undefined);
+    }
+  }
+
   return (
     <div className="flex flex-col w-full font-suit">
       <div className="w-full">
@@ -39,10 +62,10 @@ export default function Q6Form({ setFormData, formData }) {
             <input
               name="q6File"
               type="file"
-              value={formData.q6File}
-              onChange={(e) =>
-                setFormData({ ...formData, q6File: e.target.value })
-              }
+              onChange={(e) => {
+                onChangeFile(e);
+                setFormData({ ...formData, q6File: e.target.files[0] });
+              }}
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
             />
           </div>

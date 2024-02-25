@@ -17,6 +17,7 @@ import Q6Form from '@/app/(components)/(apply)/Q6Form';
 import TermForm from '@/app/(components)/(apply)/TermForm';
 import CompleteForm from '@/app/(components)/(apply)/CompleteForm';
 import Link from 'next/link';
+import { getSignedURL } from '@/app/(model)/actions';
 
 export default function Apply() {
   const [formData, setFormData] = useState({
@@ -49,6 +50,8 @@ export default function Apply() {
   const [page, setPage] = useState(0);
   const [activeBtn, setActiveBtn] = useState(false);
   const [response, setResponse] = useState();
+  const [file, setFile] = useState(undefined);
+  const [fileUrl, setFileUrl] = useState(undefined);
 
   useEffect(() => {
     setActiveBtn(isPageValid(page));
@@ -113,7 +116,16 @@ export default function Apply() {
     } else if (page === 8) {
       return <Q5Form setFormData={setFormData} formData={formData} />;
     } else if (page === 9) {
-      return <Q6Form setFormData={setFormData} formData={formData} />;
+      return (
+        <Q6Form
+          setFormData={setFormData}
+          formData={formData}
+          setFile={setFile}
+          file={file}
+          setFileUrl={setFileUrl}
+          fileUrl={fileUrl}
+        />
+      );
     } else if (page === 10) {
       return <TermForm setFormData={setFormData} formData={formData} />;
     } else if (page === 11) {
@@ -121,26 +133,57 @@ export default function Apply() {
     }
   }
 
+  async function computeSHA256(file) {
+    const buffer = await file.arrayBuffer();
+    const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('');
+    return hashHex;
+  }
+
   async function onSubmit(e) {
     e.preventDefault();
-
     const jsonData = formData;
+    try {
+      if (file) {
+        const checksum = await computeSHA256(file);
+        const signedURLResult = await getSignedURL(
+          file.type,
+          file.size,
+          checksum,
+          formData.name
+        );
+        const url = signedURLResult.success.url;
+        jsonData.q6File = url.split('?')[0];
+        await fetch(url, {
+          method: 'PUT',
+          body: file,
+          headers: {
+            'Content-Type': file?.type,
+          },
+        });
+      }
 
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(jsonData),
-    };
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+      };
 
-    const response = await fetch(`/api/apply`, options)
-      .then((res) => res.json())
-      .then((result) => {
-        if (result) {
-          setResponse(result);
-        }
-      });
+      await fetch(`/api/apply`, options)
+        .then((res) => res.json())
+        .then((result) => {
+          if (result) {
+            setResponse(result);
+          }
+        });
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   return (
