@@ -8,6 +8,12 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    title: 'DO IT',
+    description: '연세대학교 미래캠퍼스 IT 개발동아리',
+    url: 'https://do-it.kr',
+    images: '/DO+IT_Logo_Black+Blue.png',
+  },
 };
 
 const projectLists = [
