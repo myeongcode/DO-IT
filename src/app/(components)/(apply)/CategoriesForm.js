@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 
 const categories = [
@@ -18,7 +19,13 @@ const categories = [
   },
 ];
 
-export default function CategoriesForm() {
+export default function CategoriesForm({ formData, setFormData }) {
+  const [selectedCategory, setSelectedCategory] = useState(formData.category);
+
+  useEffect(() => {
+    setFormData({ ...formData, category: selectedCategory });
+  }, [selectedCategory]);
+
   return (
     <div className="flex flex-col w-full font-suit">
       <div className="w-full">
@@ -31,9 +38,17 @@ export default function CategoriesForm() {
             <br /> 선택해주세요.
           </span>
         </div>
-        <div className="flex flex-row w-[60%] pt-10 justify-center space-x-6">
+        <div className="flex flex-row w-[60%] py-10 justify-center space-x-6 pb-60">
           {categories.map((category, idx) => {
-            return <CategoryCard category={category} key={idx} />;
+            return (
+              <CategoryCard
+                key={idx}
+                category={category}
+                index={idx}
+                setSelectedCategory={setSelectedCategory}
+                selectedCategory={selectedCategory}
+              />
+            );
           })}
         </div>
       </div>

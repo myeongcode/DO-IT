@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Q6Form() {
-  useEffect(() => {
-    const input = document.querySelector('input[type="file"]');
-  }, []);
-
+export default function Q6Form({ setFormData, formData }) {
   return (
     <div className="flex flex-col w-full font-suit">
       <div className="w-full">
@@ -24,12 +20,16 @@ export default function Q6Form() {
             첨부를 권장하고 있어요.
           </span>
         </div>
-        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-72">
+        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-64">
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">링크</label>
             <input
-              name="name"
+              name="q6Link"
               type="text"
+              value={formData.q6Link}
+              onChange={(e) =>
+                setFormData({ ...formData, q6Link: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
               placeholder="Github, Notion, Blog, Website 등"
             />
@@ -37,8 +37,12 @@ export default function Q6Form() {
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">파일 첨부</label>
             <input
-              name="name"
+              name="q6File"
               type="file"
+              value={formData.q6File}
+              onChange={(e) =>
+                setFormData({ ...formData, q6File: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
             />
           </div>
