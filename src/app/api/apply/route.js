@@ -1,6 +1,5 @@
 import Applicant from '@/app/(model)/applicants';
 import { NextResponse } from 'next/server';
-import { put } from '@vercel/blob';
 
 const moment = require('moment');
 
