@@ -7,39 +7,33 @@ const categories = ['ALL', 'APP', 'WEB', 'GAME'];
 const projectLists = [
   {
     id: 1,
-    imgSrc: '/slide/1.png',
+    imgSrc: '/slide/project-app-1.png',
     type: 'APP SERVICE',
-    title: 'Test 1',
+    title: 'NODE',
   },
   {
     id: 2,
-    imgSrc: '/slide/2.png',
+    imgSrc: '/slide/project-app-2.png',
     type: 'APP SERVICE',
-    title: 'Test 2',
+    title: '환경마크사전',
   },
   {
     id: 3,
-    imgSrc: '/slide/3.png',
+    imgSrc: '/slide/project-app-3.png',
     type: 'APP SERVICE',
-    title: 'Test 3',
+    title: 'Someone',
   },
   {
     id: 4,
-    imgSrc: '/slide/4.png',
+    imgSrc: '/slide/project-app-4.png',
     type: 'APP SERVICE',
-    title: 'Test 4',
+    title: 'MARU',
   },
   {
     id: 5,
-    imgSrc: '/slide/5.png',
-    type: 'APP SERVICE',
-    title: 'Test 5',
-  },
-  {
-    id: 6,
-    imgSrc: '/slide/6.png',
-    type: 'APP SERVICE',
-    title: 'Test 6',
+    imgSrc: '/slide/project-web-1.png',
+    type: 'WEB SERVICE',
+    title: '든든한끼',
   },
 ];
 
@@ -48,15 +42,15 @@ export default function Projects() {
     <div className="flex justify-center pt-[105px] w-full bg-[#14171A]">
       <div className="flex flex-col w-[70%] py-40">
         <ul className="flex w-full py-10 space-x-6">
-          {categories.map((category, idx) => {
+          {/* {categories.map((category, idx) => {
             return (
               <li className="text-4xl text-white font-suit" key={idx}>
                 {category}
               </li>
             );
-          })}
+          })} */}
         </ul>
-        <motion.div className="grid grid-cols-4 place-items-center gap-y-6">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 place-items-center gap-y-6">
           {projectLists.map((item, idx) => {
             return <ProjectCard key={idx} item={item} />;
           })}

@@ -10,7 +10,7 @@ export default function ProjectCard({ item }) {
     <motion.div
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
-      className="md:w-[200px] md:h-[380px] xl:w-[280px] xl:h-[460px] relative rounded-sm flex justify-center items-center"
+      className="w-[60vw] h-[100vw] md:w-[200px] md:h-[380px] xl:w-[280px] xl:h-[460px] relative rounded-sm flex justify-center items-center"
     >
       <AnimatePresence>
         {showOverlay && (

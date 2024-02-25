@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-export default function InformForm() {
+export default function InformForm({ setFormData, formData }) {
   return (
     <div className="flex flex-col w-full font-suit">
       <div className="w-full">
@@ -19,6 +17,11 @@ export default function InformForm() {
             <input
               name="name"
               type="text"
+              required
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
               placeholder="이름을 입력해주세요."
             />
@@ -26,8 +29,13 @@ export default function InformForm() {
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">학번</label>
             <input
-              name="std_id"
+              name="stdID"
               type="text"
+              required
+              value={formData.stdID}
+              onChange={(e) =>
+                setFormData({ ...formData, stdID: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
               placeholder="학번을 입력해주세요."
             />
@@ -37,6 +45,11 @@ export default function InformForm() {
             <input
               name="major"
               type="text"
+              required
+              value={formData.major}
+              onChange={(e) =>
+                setFormData({ ...formData, major: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
               placeholder="전공을 입력해주세요."
             />
@@ -44,8 +57,13 @@ export default function InformForm() {
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">연락처</label>
             <input
-              name="major"
+              name="phone"
               type="text"
+              required
+              value={formData.phone}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
               placeholder="연락처를 입력해주세요."
             />
@@ -55,6 +73,11 @@ export default function InformForm() {
             <input
               name="email"
               type="text"
+              required
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA]"
               placeholder="이메일을 입력해주세요."
             />

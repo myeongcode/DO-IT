@@ -8,39 +8,33 @@ import Link from 'next/link';
 const projectLists = [
   {
     id: 1,
-    imgSrc: '/slide/1.png',
+    imgSrc: '/slide/project-app-1.png',
     type: 'APP SERVICE',
-    title: 'Test 1',
+    title: 'NODE',
   },
   {
     id: 2,
-    imgSrc: '/slide/2.png',
+    imgSrc: '/slide/project-app-2.png',
     type: 'APP SERVICE',
-    title: 'Test 2',
+    title: '환경마크사전',
   },
   {
     id: 3,
-    imgSrc: '/slide/3.png',
+    imgSrc: '/slide/project-app-3.png',
     type: 'APP SERVICE',
-    title: 'Test 3',
+    title: 'Someone',
   },
   {
     id: 4,
-    imgSrc: '/slide/4.png',
+    imgSrc: '/slide/project-app-4.png',
     type: 'APP SERVICE',
-    title: 'Test 4',
+    title: 'MARU',
   },
   {
     id: 5,
-    imgSrc: '/slide/5.png',
-    type: 'APP SERVICE',
-    title: 'Test 5',
-  },
-  {
-    id: 6,
-    imgSrc: '/slide/6.png',
-    type: 'APP SERVICE',
-    title: 'Test 6',
+    imgSrc: '/slide/project-web-1.png',
+    type: 'WEB SERVICE',
+    title: '든든한끼',
   },
 ];
 
@@ -55,7 +49,7 @@ export default function ProjectLayout() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 3 - 8;
+    let finalPosition = -width / 4 - 6;
 
     if (mustFinish) {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
@@ -80,7 +74,7 @@ export default function ProjectLayout() {
   }, [xTranslation, width, duration, rerender, mustFinish]);
 
   return (
-    <div className="flex flex-col items-center w-full py-10  md:py-28 overflow-hidden">
+    <div className="hidden flex-col items-center w-full py-10  md:py-28 overflow-hidden md:flex">
       <div className="w-[90%] md:w-[70%]">
         <div className="flex flex-row justify-between pb-32 items-center">
           <span className="text-left text-[8.6vw] md:text-6xl font-suit font-bold">
@@ -122,11 +116,14 @@ export default function ProjectLayout() {
             setDuration(FAST_DURATION);
           }}
         >
-          {[...projectLists, ...projectLists, ...projectLists].map(
-            (item, idx) => {
-              return <ProjectCard item={item} key={idx} />;
-            },
-          )}
+          {[
+            ...projectLists,
+            ...projectLists,
+            ...projectLists,
+            ...projectLists,
+          ].map((item, idx) => {
+            return <ProjectCard item={item} key={idx} />;
+          })}
         </motion.div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { upload } from '@vercel/blob/client';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import FieldsForm from '@/app/(components)/(apply)/FieldsForm';
 import CategoriesForm from '@/app/(components)/(apply)/CategoriesForm';
 import InformForm from '@/app/(components)/(apply)/InformForm';
@@ -15,19 +15,91 @@ import Q4Form from '@/app/(components)/(apply)/Q4Form';
 import Q5Form from '@/app/(components)/(apply)/Q5Form';
 import Q6Form from '@/app/(components)/(apply)/Q6Form';
 import TermForm from '@/app/(components)/(apply)/TermForm';
-
-const steps = [{ id: 1 }, { id: 2 }, { id: 3 }];
+import CompleteForm from '@/app/(components)/(apply)/CompleteForm';
+import Link from 'next/link';
 
 export default function Apply() {
+  const [formData, setFormData] = useState({
+    field: '',
+    category: '',
+    name: '',
+    stdID: '',
+    major: '',
+    phone: '',
+    email: '',
+    grade: '',
+    semester: '',
+    attend: null,
+    q1: '',
+    q2: '',
+    q3: '',
+    q4Exp: null,
+    q4: '',
+    q5: '',
+    q6Link: '',
+    q6File: '',
+    informTerm: null,
+    portfolioTerm: null,
+  });
+
   const inputFileRef = useRef(null);
   const [blob, setBlob] = useState(null);
-  const [expProject, setExpProject] = useState(true);
   const router = useRouter();
-  const [previousStep, setPreviousStep] = useState(0);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(100 / 12);
+  const [page, setPage] = useState(0);
+
+  function PageDisplay() {
+    if (page === 0) {
+      return <FieldsForm setFormData={setFormData} formData={formData} />;
+    } else if (page === 1) {
+      return <CategoriesForm setFormData={setFormData} formData={formData} />;
+    } else if (page === 2) {
+      return <InformForm setFormData={setFormData} formData={formData} />;
+    } else if (page === 3) {
+      return <AttendForm setFormData={setFormData} formData={formData} />;
+    } else if (page === 4) {
+      return <Q1Form setFormData={setFormData} formData={formData} />;
+    } else if (page === 5) {
+      return <Q2Form setFormData={setFormData} formData={formData} />;
+    } else if (page === 6) {
+      return <Q3Form setFormData={setFormData} formData={formData} />;
+    } else if (page === 7) {
+      return <Q4Form setFormData={setFormData} formData={formData} />;
+    } else if (page === 8) {
+      return <Q5Form setFormData={setFormData} formData={formData} />;
+    } else if (page === 9) {
+      return <Q6Form setFormData={setFormData} formData={formData} />;
+    } else if (page === 10) {
+      return <TermForm setFormData={setFormData} formData={formData} />;
+    } else if (page === 11) {
+      return <CompleteForm setFormData={setFormData} formData={formData} />;
+    }
+  }
 
   async function onSubmit(e) {
     e.preventDefault();
+
+    const jsonData = formData;
+    console.log(jsonData);
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(jsonData),
+    };
+
+    // const response = await fetch(`/api/apply`, options)
+    //   .then((res) => res.json())
+    //   .then((result) => {
+    //     if (result) {
+    //       return result;
+    //     }
+    //   });
+
+    //console.log(response);
+
     // const formData = new FormData(e.target);
     // const jsonData = {};
     // const file = inputFileRef.current.files[0];
@@ -70,119 +142,100 @@ export default function Apply() {
           <br />
           <span>신규부원 모집신청</span>
         </div>
-        {/* Form Step */}
-        <nav className="py-10">dd</nav>
 
-        {/* Form */}
-        <FieldsForm />
-        {/* <CategoriesForm /> */}
-        {/* <InformForm /> */}
-        {/* <AttendForm /> */}
-        {/* <Q1Form /> */}
-        {/* <Q2Form /> */}
-        {/* <Q3Form /> */}
-        {/* <Q4Form /> */}
-        {/* <Q5Form /> */}
-        {/* <Q6Form /> */}
-        {/* <TermForm /> */}
-        <div className="flex w-full justify-end font-pretend pt-20">
-          <div className="flex flex-row text-2xl space-x-4">
-            <motion.button
-              whileHover={{
-                backgroundColor: '#D6DBDF',
+        {/* Form Step */}
+        <div className="py-10">
+          <div className="w-full h-[8px] bg-[#D9D9D9]">
+            <motion.div
+              initial={{
+                width: 0,
               }}
-              className="py-3 px-14 rounded-full bg-[#E1E8ED] text-[#657786]"
-            >
-              이전
-            </motion.button>
-            <motion.button
-              whileHover={{
-                backgroundColor: '#00ADF2',
+              animate={{
+                width: `${currentStep}%`,
               }}
-              className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
-            >
-              다음
-            </motion.button>
+              transition={{
+                duration: 0.6,
+              }}
+              className="h-full bg-[#00B8FF]"
+            />
           </div>
         </div>
+
+        {/* Form */}
+        <form onSubmit={onSubmit} action="/">
+          {PageDisplay()}
+          <div
+            className={`flex w-full  ${
+              page === 11 ? 'justify-center' : 'justify-end'
+            } font-pretend pt-20`}
+          >
+            <div
+              className={`flex flex-row text-2xl ${
+                page === 11 ? 'space-x-0' : 'space-x-4'
+              }`}
+            >
+              {page === 0 || page === 11 ? null : (
+                <motion.button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentStep((currStep) => currStep - 100 / 12);
+                    setPage((currPage) => currPage - 1);
+                  }}
+                  whileHover={{
+                    backgroundColor: '#D6DBDF',
+                  }}
+                  className="py-3 px-14 rounded-full bg-[#E1E8ED] text-[#657786]"
+                >
+                  이전
+                </motion.button>
+              )}
+              {page === 10 ? (
+                <motion.button
+                  type="submit"
+                  onClick={(e) => {
+                    setCurrentStep((currStep) => currStep + 100 / 12);
+                    setPage((currPage) => currPage + 1);
+                  }}
+                  whileHover={{
+                    backgroundColor: '#00ADF2',
+                  }}
+                  className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
+                >
+                  제출
+                </motion.button>
+              ) : (
+                <motion.button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentStep((currStep) => currStep + 100 / 12);
+                    setPage((currPage) => currPage + 1);
+                  }}
+                  whileHover={{
+                    backgroundColor: '#00ADF2',
+                  }}
+                  className={`py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] ${
+                    page === 11 ? 'hidden' : 'block'
+                  }`}
+                >
+                  다음
+                </motion.button>
+              )}
+              {page === 11 && (
+                <Link href="/">
+                  <motion.button
+                    whileHover={{
+                      backgroundColor: '#00ADF2',
+                    }}
+                    className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
+                  >
+                    완료
+                  </motion.button>
+                </Link>
+              )}
+            </div>
+          </div>
+        </form>
       </div>
-      {/* <form onSubmit={onSubmit} className="pt-[105px]">
-        <h3>지원직군</h3>
-        <select name="category">
-          <option value="pm">PM (Project Manager)</option>
-          <option value="fe">FE (Front-end Developer)</option>
-          <option value="be">BE (Back-end Developer)</option>
-          <option value="de">DE (Project Designer)</option>
-        </select>
-        <h3>관심분야</h3>
-        <select name="field">
-          <option value="web">WEB</option>
-          <option value="app">APP</option>
-          <option value="game">GAME</option>
-        </select>
-        <h3>기본 인적사항</h3>
-        <h5>이름</h5>
-        <input type="text" name="name" required />
-        <h5>학번</h5>
-        <input type="text" name="std_id" required />
-        <h5>전공</h5>
-        <input type="text" name="major" required />
-        <h5>연락처</h5>
-        <input type="tel" name="phone_num" required />
-        <h5>이메일</h5>
-        <input type="email" name="email" required />
-        <h5>학년</h5>
-        <select name="grade">
-          <option value="1">1학년</option>
-          <option value="2">2학년</option>
-          <option value="3">3학년</option>
-          <option value="4">4학년</option>
-        </select>
-        <h5>학기</h5>
-        <select name="semester">
-          <option value="1">1학기</option>
-          <option value="2">2학기</option>
-        </select>
-        <h5>재학여부</h5>
-        <select name="attend">
-          <option value="true">재학 중</option>
-          <option value="false">휴학 중</option>
-        </select>
-        <h3>질문사항</h3>
-        <h5>
-          학업 외에 병행하고 있거나 향후 계획 중에 있는 활동이 있다면
-          서술해주세요. (동아리, 연구실, 아르바이트, 스터디, 복수전공, 연계전공
-          등) 없을경우, 없음으로 기재해주세요.
-        </h5>
-        <textarea name="question_01" required />
-        <h5>자기소개 및 지원동기</h5>
-        <textarea name="question_02" required />
-        <h5>
-          희망분야를 선택한 이유와 그 분야로 가기위해 했던 노력을 작성해주세요.
-        </h5>
-        <textarea name="question_03" required />
-        <h5>누군가와 함께 프로젝트를 진행한 경험이 있으신가요?</h5>
-        <select onChange={onChange} className="exp_project" name="question_04">
-          <option value="true">네, 협업한 적이 있습니다.</option>
-          <option value="false">아니요, 아직 없습니다.</option>
-        </select>
-        {expProject ? (
-          <h5>어떤 프로젝트에서 어떤 역할을 수행하셨습니까?</h5>
-        ) : (
-          <h5>
-            프로젝트를 잘 마무리하기 위한 자신만의 의지를 말씀해주시고, 한
-            학기의 각오를 적어주세요.
-          </h5>
-        )}
-        <textarea name="question_05" required />
-        <input type="file" ref={inputFileRef} name="file" />
-        <button type="submit">제출</button>
-      </form> */}
-      {/* {blob && (
-        <div>
-          Blob url: <a href={blob.url}>{blob.url}</a>
-        </div>
-      )} */}
     </div>
   );
 }
