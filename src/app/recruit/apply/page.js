@@ -188,7 +188,7 @@ export default function Apply() {
 
   return (
     <div className="flex pt-[40px] w-full justify-center">
-      <div className="flex flex-col w-[60%] font-suit font-bold">
+      <div className="flex flex-col w-[60%] font-suit font-semibold">
         <div className="flex justify-between text-5xl pt-20 leading-snug">
           <span className="text-[#00B8FF]">DO IT.</span>
           <span>신규부원 모집신청</span>

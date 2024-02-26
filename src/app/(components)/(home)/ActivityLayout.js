@@ -20,7 +20,7 @@ export default function ActivityLayout() {
         viewport={{
           once: true,
         }}
-        className="text-left text-[9.3vw] md:text-6xl font-suit font-bold"
+        className="text-left text-[9.3vw] md:text-6xl font-suit font-semibold"
       >
         WHAT DO {"'"}DO IT{"'"}
       </motion.span>

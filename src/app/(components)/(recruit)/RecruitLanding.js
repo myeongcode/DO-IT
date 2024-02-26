@@ -66,7 +66,7 @@ export default function RecruitLanding() {
             width={1000}
             height={0}
             alt="notebookImage"
-            className="w-[90vw] xl:w-[40vw] hidden md:flex"
+            className="w-[90vw] md:w-[60vw] xl:w-[40vw] hidden md:flex"
           />
         </div>
         <div className="absolute z-0 bottom-8 md:bottom-20">
