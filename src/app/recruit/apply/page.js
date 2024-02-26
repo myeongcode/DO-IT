@@ -235,7 +235,7 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#D6DBDF',
                   }}
-                  className="text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#E1E8ED] text-[#657786]"
+                  className="text-[5vw] py-[2vw] px-[7vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#E1E8ED] text-[#657786]"
                 >
                   이전
                 </motion.button>
@@ -250,7 +250,7 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#00ADF2',
                   }}
-                  className="text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45"
+                  className="text-[5vw] py-[2vw] px-[7vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45"
                   disabled={!activeBtn}
                 >
                   제출
@@ -265,7 +265,7 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#00ADF2',
                   }}
-                  className={`text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45 ${
+                  className={`text-[5vw] py-[2vw] px-[7vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45 ${
                     page === 11 ? 'hidden' : 'block'
                   }`}
                   disabled={!activeBtn}
@@ -279,7 +279,7 @@ export default function Apply() {
                     whileHover={{
                       backgroundColor: '#00ADF2',
                     }}
-                    className="text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
+                    className="text-[5vw] py-[2vw] px-[7vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
                   >
                     완료
                   </motion.button>
