@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      suit: ['SUIT-Regular', 'sans-serif'],
+      suit: ['SUIT', 'sans-serif'],
       pretend: ['Pretendard-Regular', 'sans-serif'],
     },
   },

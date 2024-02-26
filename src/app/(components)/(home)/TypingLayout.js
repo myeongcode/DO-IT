@@ -17,8 +17,8 @@ export default function TypingLayout() {
       }}
       className="flex justify-center py-40 w-[90%] md:w-[60%] h-screen items-center text-[#14171A]"
     >
-      <div className="flex w-full justify-start flex-col space-y-8 md:hidden leading-tight mt-10 font-suit font-bold">
-        <motion.div className="flex flex-col text-[16vw]">
+      <div className="flex w-full justify-start flex-col space-y-8 md:hidden leading-tight mt-10 font-suit font-semibold">
+        <motion.div className="flex flex-col text-[14vw]">
           <span className="text-[#00B8FF]">
             <Typewriter
               words={['{DEVELOP}', '{GROW}']}
@@ -34,7 +34,7 @@ export default function TypingLayout() {
         </motion.div>
       </div>
       <div className="hidden md:flex">
-        <div className="text-[6vw] md:text-[40px] lg:text-[68px] 2xl:text-[100px] relative text-nowrap whitespace-nowrap leading-snug left-[-20px] font-suit md:font-bold">
+        <div className="text-[6vw] md:text-[40px] lg:text-[68px] 2xl:text-[100px] relative text-nowrap whitespace-nowrap leading-snug left-[-20px] font-suit md:font-semibold">
           <span className="absolute text-[5vw] left-[-6vw] top-[0.8vw] md:left-[-54px] md:top-[8px] md:text-4xl lg:left-[-82px] lg:top-[18px] lg:text-6xl 2xl:left-[-100px] 2xl:top-[32px] 2xl:text-7xl text-[#E1E8ED]">
             1
           </span>
