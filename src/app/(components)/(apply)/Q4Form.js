@@ -34,7 +34,7 @@ export default function Q4Form({ setFormData, formData }) {
         </div>
       </div>
       {selectedQ4Exp ? (
-        <div className="flex flex-row w-full justify-between pb-20">
+        <div className="flex flex-row w-full justify-between pb-0">
           <div className="w-[40%] pt-10">
             <span className="text-3xl">
               어떤 프로젝트에서 어떤 역할을
@@ -51,14 +51,14 @@ export default function Q4Form({ setFormData, formData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, q4: e.target.value })
                 }
-                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[300px] text-[#14171A]"
+                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[250px] text-[#14171A]"
                 placeholder="내용을 입력해주세요."
               />
             </div>
           </div>
         </div>
       ) : selectedQ4Exp !== null ? (
-        <div className="flex flex-row w-full justify-between pb-20">
+        <div className="flex flex-row w-full justify-between pb-0">
           <div className="w-[40%] pt-10">
             <span className="text-3xl">
               프로젝트를 잘 마무리 하기 위해
@@ -74,7 +74,7 @@ export default function Q4Form({ setFormData, formData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, q4: e.target.value })
                 }
-                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[300px]"
+                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[250px]"
                 placeholder="내용을 입력해주세요."
               />
             </div>

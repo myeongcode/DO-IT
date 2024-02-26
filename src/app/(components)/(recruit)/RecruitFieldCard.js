@@ -11,12 +11,12 @@ export default function RecruitFieldCard({ fieldItem }) {
 
   return (
     <div onClick={onClickField} className="w-full font-pretend cursor-pointer">
-      <div className="flex justify-between items-center py-10 z-20">
-        <span className="text-[4vw] md:text-2xl xl:text-4xl">
+      <div className="flex justify-between items-center py-5 md:py-10 z-20">
+        <span className="text-[6vw] md:text-2xl xl:text-4xl">
           {fieldItem.field}
         </span>
         <div className="flex flex-row items-center space-x-6">
-          <span className="text-[4vw] md:text-base xl:text-xl">
+          <span className="text-[13px] md:text-base xl:text-xl">
             {fieldItem.name}
           </span>
           <motion.svg
@@ -69,7 +69,7 @@ export default function RecruitFieldCard({ fieldItem }) {
             className="flex opacity-0 h-0 md:w-[75%] z-0"
           >
             <span
-              className={`text-[4vw] md:text-base xl:text-xl text-[#657786] md:leading-[1.8] pb-10`}
+              className={`text-[4vw] md:text-base xl:text-xl text-[#657786] md:leading-[1.8] pb-5 md:pb-10`}
             >
               {fieldItem.description}
             </span>

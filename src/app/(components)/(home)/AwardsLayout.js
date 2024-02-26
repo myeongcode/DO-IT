@@ -111,18 +111,18 @@ export default function AwardsLayout() {
       }}
       className="flex flex-col items-center w-full bg-[#14171A] md:min-h-[1027px]"
     >
-      <div className="w-[90%] md:w-[70%] py-10 md:py-28">
+      <div className="w-[90%] md:w-[56%] py-14 md:py-28">
         <div className="flex flex-col md:flex-row justify-between pb-0 md:pb-32">
-          <span className="text-left text-[8.6vw] md:text-6xl text-white font-suit font-bold">
+          <span className="text-left text-[9.3vw] md:text-6xl text-white font-suit font-bold mb-4 md:mb-0">
             AWARDS
           </span>
-          <ul className="flex flex-row items-end text-white align-text-bottom py-4 md:py-0 justify-end">
+          <ul className="flex flex-row items-end text-white align-text-bottom py-4 pb-6 md:pb-0 md:py-0 space-x-4">
             {tabs.map((tab, idx) => {
               return (
                 <motion.li
                   key={tab.year}
                   onClick={onChangeYear}
-                  className="flex relative m-3 text-2xl cursor-pointer font-pretend"
+                  className="flex relative m-0 text-2xl cursor-pointer font-pretend"
                   variants={{
                     active: {
                       color: '#FFF',
@@ -167,10 +167,10 @@ export default function AwardsLayout() {
                         custom={index}
                         className="flex flex-col md:flex-row w-full justify-between py-4 md:py-6 text-white font-pretend font-medium"
                       >
-                        <span className="text-[4vw] md:text-2xl pb-2 md:pb-0">
+                        <span className="text-[4.5vw] md:text-2xl pb-2 md:pb-0 ">
                           {element.awardName}
                         </span>
-                        <span className="text-[4vw] text-right md:text-2xl">
+                        <span className="text-[4vw] md:text-2xl text-[#C8D3DA]">
                           {element.award}
                         </span>
                       </motion.div>

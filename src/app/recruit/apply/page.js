@@ -187,11 +187,10 @@ export default function Apply() {
   }
 
   return (
-    <div className="flex pt-[105px] w-full justify-center py-20">
+    <div className="flex pt-[40px] w-full justify-center">
       <div className="flex flex-col w-[60%] font-suit font-bold">
-        <div className="text-5xl pt-20 leading-snug">
+        <div className="flex justify-between text-5xl pt-20 leading-snug">
           <span className="text-[#00B8FF]">DO IT.</span>
-          <br />
           <span>신규부원 모집신청</span>
         </div>
 
@@ -219,10 +218,10 @@ export default function Apply() {
           <div
             className={`flex w-full  ${
               page === 11 ? 'justify-center' : 'justify-end'
-            } font-pretend pt-20`}
+            } font-pretend pt-10`}
           >
             <div
-              className={`flex flex-row text-2xl ${
+              className={`flex flex-row text-2xl pb-10 ${
                 page === 11 ? 'space-x-0' : 'space-x-4'
               }`}
             >

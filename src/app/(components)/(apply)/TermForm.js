@@ -182,7 +182,7 @@ function Term1Modal({ setViewInformTerm, viewInformTerm }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="fixed top-[50%] left-[50%] w-[800px] h-[800px] p-[40px] bg-[#14171ad2] backdrop-blur-[10px] z-10 overflow-y-scroll scrollbar-hide translate-x-[-50%] translate-y-[-5%] rounded-[40px]"
+        className="fixed top-[50%] left-[50%] w-[1000px] h-[800px] p-[40px] bg-[#14171ad2] backdrop-blur-[10px] z-10 overflow-y-scroll scrollbar-hide translate-x-[-50%] translate-y-[-5%] rounded-[40px]"
       >
         <div className="flex flex-col text-white pb-[400px]">
           <div className="flex justify-end w-full">
@@ -197,7 +197,7 @@ function Term1Modal({ setViewInformTerm, viewInformTerm }) {
               className="w-[43px] p-[10px] rounded-full bg-[#657786] cursor-pointer"
             />
           </div>
-          <div className="flex flex-col font-pretend w-[90%] space-y-16">
+          <div className="flex flex-col font-pretend w-[75%] space-y-16">
             <span className="text-3xl">
               개인정보(인적사항) 수집에 대한 안내
             </span>
@@ -250,7 +250,7 @@ function Term2Modal({ setViewPortfolioTerm, viewPortfolioTerm }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="fixed top-[50%] left-[50%] w-[800px] h-[800px] p-[40px] bg-[#14171ad2] backdrop-blur-[10px] z-10 overflow-y-scroll scrollbar-hide translate-x-[-50%] translate-y-[-5%] rounded-[40px]"
+        className="fixed top-[50%] left-[50%] w-[1000px] h-[800px] p-[40px] bg-[#14171ad2] backdrop-blur-[10px] z-10 overflow-y-scroll scrollbar-hide translate-x-[-50%] translate-y-[-5%] rounded-[40px]"
       >
         <div className="flex flex-col text-white pb-[400px]">
           <div className="flex justify-end w-full">
@@ -265,7 +265,7 @@ function Term2Modal({ setViewPortfolioTerm, viewPortfolioTerm }) {
               className="w-[43px] p-[10px] rounded-full bg-[#657786] cursor-pointer"
             />
           </div>
-          <div className="flex flex-col font-pretend w-[90%] space-y-16">
+          <div className="flex flex-col font-pretend w-[75%] space-y-16">
             <span className="text-3xl">
               개인정보(포트폴리오) 수집에 대한 안내
             </span>
