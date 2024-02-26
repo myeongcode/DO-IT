@@ -206,7 +206,7 @@ export default function Navbar() {
                   <path
                     d="M86.9326 9.92935H81.2217V24.9074H86.9326V9.92935Z"
                     fill={
-                      pathname === '/'
+                      pathname === '/' || pathname === '/recruit/apply'
                         ? '#14171A'
                         : pathname === '/recruit' && navHidden
                         ? '#000'
@@ -216,7 +216,7 @@ export default function Navbar() {
                   <path
                     d="M94.2907 -0.00787354H73.8628V4.93887H94.2907V-0.00787354Z"
                     fill={
-                      pathname === '/'
+                      pathname === '/' || pathname === '/recruit/apply'
                         ? '#14171A'
                         : pathname === '/recruit' && navHidden
                         ? '#000'
@@ -226,7 +226,7 @@ export default function Navbar() {
                   <path
                     d="M71.0437 0.0513458H65.3418V24.9268H71.0437V0.0513458Z"
                     fill={
-                      pathname === '/'
+                      pathname === '/' || pathname === '/recruit/apply'
                         ? '#14171A'
                         : pathname === '/recruit' && navHidden
                         ? '#000'
@@ -236,7 +236,7 @@ export default function Navbar() {
                   <path
                     d="M22.0934 7.11853C21.4717 5.56752 20.6042 4.25998 19.4947 3.19849C18.3839 2.13572 17.0595 1.33573 15.5227 0.798549C13.9846 0.261363 12.2997 -0.00787354 10.4694 -0.00787354H0V4.97494H10.2133C12.3602 4.97494 14.0515 5.61003 15.2833 6.88021C16.515 8.15039 17.1316 10.0067 17.1316 12.4492C17.1316 14.8916 16.515 16.7479 15.2833 18.0181C14.0502 19.2883 12.3602 19.9234 10.2133 19.9234H5.71096V9.92942H0V24.9075H10.4694C12.2997 24.9075 13.9833 24.6395 15.5214 24.1011C17.0595 23.5639 18.3827 22.7639 19.4934 21.7011C20.6042 20.6384 21.4705 19.3385 22.0921 17.7991C22.7151 16.2597 23.0253 14.4781 23.0253 12.4492C23.0253 10.4202 22.7138 8.66954 22.0921 7.11853H22.0934Z"
                     fill={
-                      pathname === '/'
+                      pathname === '/' || pathname === '/recruit/apply'
                         ? '#14171A'
                         : pathname === '/recruit' && navHidden
                         ? '#000'
@@ -246,7 +246,7 @@ export default function Navbar() {
                   <path
                     d="M100.001 19.9724H94.2896V24.9269H100.001V19.9724Z"
                     fill={
-                      pathname === '/'
+                      pathname === '/' || pathname === '/recruit/apply'
                         ? '#14171A'
                         : pathname === '/recruit' && navHidden
                         ? '#000'

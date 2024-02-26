@@ -122,7 +122,7 @@ export default function Recruit() {
                 SCHEDULE
               </span>
               <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row w-full md:w-3/5 justify-between items-start md:items-end md:space-x-6 pt-14 md:pt-0">
-                <div className="flex flex-col w-[85%] md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
+                <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
                     2/27 - 3/3
                   </span>
@@ -130,7 +130,7 @@ export default function Recruit() {
                     서류 접수
                   </span>
                 </div>
-                <div className="flex flex-col w-[85%] md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
+                <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
                     3/5 - 3/7
                   </span>
@@ -138,7 +138,7 @@ export default function Recruit() {
                     면접 진행
                   </span>
                 </div>
-                <div className="flex flex-col w-[85%] md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
+                <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
                     3/9
                   </span>

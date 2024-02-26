@@ -40,14 +40,13 @@ export default function FieldsForm({ formData, setFormData }) {
       <div className="w-full">
         <span className="text-2xl text-[#657786]">01</span>
       </div>
-      <div className="flex flex-row w-full justify-between">
-        <div className="w-[40%] pt-10">
-          <span className="text-3xl">
-            지원하려는 직군을
-            <br /> 선택해주세요.
+      <div className="flex flex-col md:flex-row w-full justify-between">
+        <div className="md:w-[40%] pt-10">
+          <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
+            지원하려는 직군을 선택해주세요.
           </span>
         </div>
-        <div className="w-[60%]">
+        <div className="md:w-[60%]">
           {fields.map((field, idx) => {
             return (
               <FieldsCard

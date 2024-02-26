@@ -13,14 +13,13 @@ export default function Q4Form({ setFormData, formData }) {
       <div className="w-full">
         <span className="text-2xl text-[#657786]">08</span>
       </div>
-      <div className="flex flex-row w-full justify-between">
-        <div className="w-[40%] pt-10">
-          <span className="text-3xl">
-            누군가와 함께 프로젝트를
-            <br /> 진행한 경험이 있으신가요?
+      <div className="flex flex-col md:flex-row w-full justify-between">
+        <div className="md:w-[40%] pt-10">
+          <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
+            누군가와 함께 프로젝트를 진행한 경험이 있으신가요?
           </span>
         </div>
-        <div className="w-[60%] 2xl:w-[45%] pt-10 space-y-4">
+        <div className="md:w-[60%] 2xl:w-[45%] pt-10 space-y-4">
           {projectExp.map((exp, idx) => {
             return (
               <ExpCard
@@ -33,15 +32,18 @@ export default function Q4Form({ setFormData, formData }) {
           })}
         </div>
       </div>
-      {selectedQ4Exp ? (
-        <div className="flex flex-row w-full justify-between pb-0">
-          <div className="w-[40%] pt-10">
-            <span className="text-3xl">
-              어떤 프로젝트에서 어떤 역할을
-              <br /> 수행했는지 서술해주세요.
-            </span>
-          </div>
-          <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+      <div className="flex flex-col md:flex-row w-full justify-between pb-0">
+        <div className="md:w-[40%] pt-10">
+          <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
+            {selectedQ4Exp === true
+              ? '어떤 프로젝트에서 어떤 역할을 수행했는지 서술해주세요.'
+              : selectedQ4Exp === false
+              ? '프로젝트를 잘 마무리 하기 위해 어떤 노력을 할 것인가요?'
+              : null}
+          </span>
+        </div>
+        {selectedQ4Exp !== null ? (
+          <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
             <div className="flex flex-row items-center justify-between pt-10">
               <textarea
                 name="q4"
@@ -56,31 +58,8 @@ export default function Q4Form({ setFormData, formData }) {
               />
             </div>
           </div>
-        </div>
-      ) : selectedQ4Exp !== null ? (
-        <div className="flex flex-row w-full justify-between pb-0">
-          <div className="w-[40%] pt-10">
-            <span className="text-3xl">
-              프로젝트를 잘 마무리 하기 위해
-              <br /> 어떤 노력을 할 것인가요?
-            </span>
-          </div>
-          <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
-            <div className="flex flex-row items-center justify-between pt-10">
-              <textarea
-                name="q4"
-                type="text"
-                value={formData.q4}
-                onChange={(e) =>
-                  setFormData({ ...formData, q4: e.target.value })
-                }
-                className="border-b border-t py-4 w-full resize-none outline-none placeholder:text-[#C8D3DA] min-h-[250px]"
-                placeholder="내용을 입력해주세요."
-              />
-            </div>
-          </div>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       suit: ['SUIT', 'sans-serif'],
-      pretend: ['Pretendard-Regular', 'sans-serif'],
+      pretend: ['Pretendard', 'sans-serif'],
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],

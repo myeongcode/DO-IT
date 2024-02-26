@@ -1,6 +1,5 @@
 export default function CategoryCard({
   category,
-  index,
   setSelectedCategory,
   selectedCategory,
 }) {
@@ -18,8 +17,12 @@ export default function CategoryCard({
             : 'text-[#8A9FB1]'
         }`}
       >
-        <span className="text-2xl">{category.field}</span>
-        <span className="text-xl">{category.name}</span>
+        <span className="text-[4vw] md:text-xl xl:text-2xl">
+          {category.field}
+        </span>
+        <span className="text-[3vw] md:text-lg xl:text-xl">
+          {category.name}
+        </span>
       </div>
       <hr
         className={`border-0 h-[1px]  ${

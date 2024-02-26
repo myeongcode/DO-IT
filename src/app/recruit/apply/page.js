@@ -187,9 +187,9 @@ export default function Apply() {
   }
 
   return (
-    <div className="flex pt-[40px] w-full justify-center">
-      <div className="flex flex-col w-[60%] font-suit font-bold">
-        <div className="flex justify-between text-5xl pt-20 leading-snug">
+    <div className="flex pt-[60px] md:pt-[105px] w-full justify-center">
+      <div className="flex flex-col w-[60%] font-suit">
+        <div className="flex justify-between text-5xl pt-20 leading-snug font-semibold text-[5vw] md:text-3xl xl:text-5xl">
           <span className="text-[#00B8FF]">DO IT.</span>
           <span>신규부원 모집신청</span>
         </div>
@@ -216,7 +216,7 @@ export default function Apply() {
         <form onSubmit={onSubmit} action="/">
           {PageDisplay()}
           <div
-            className={`flex w-full  ${
+            className={`flex w-full justify-center md:justify-end  ${
               page === 11 ? 'justify-center' : 'justify-end'
             } font-pretend pt-10`}
           >
@@ -235,7 +235,7 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#D6DBDF',
                   }}
-                  className="py-3 px-14 rounded-full bg-[#E1E8ED] text-[#657786]"
+                  className="text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#E1E8ED] text-[#657786]"
                 >
                   이전
                 </motion.button>
@@ -250,7 +250,7 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#00ADF2',
                   }}
-                  className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45"
+                  className="text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45"
                   disabled={!activeBtn}
                 >
                   제출
@@ -265,7 +265,7 @@ export default function Apply() {
                   whileHover={{
                     backgroundColor: '#00ADF2',
                   }}
-                  className={`py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45 ${
+                  className={`text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF] disabled:opacity-45 ${
                     page === 11 ? 'hidden' : 'block'
                   }`}
                   disabled={!activeBtn}
@@ -279,7 +279,7 @@ export default function Apply() {
                     whileHover={{
                       backgroundColor: '#00ADF2',
                     }}
-                    className="py-3 px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
+                    className="text-[3vw] py-[2vw] px-[5vw] md:text-2xl md:py-3 md:px-14 rounded-full bg-[#00B8FF] text-[#FFFFFF]"
                   >
                     완료
                   </motion.button>

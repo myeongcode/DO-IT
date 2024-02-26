@@ -19,7 +19,7 @@ export default function GoalsLayout() {
         viewport={{
           once: true,
         }}
-        className="text-left text-[9.3vw] md:text-6xl font-suit font-bold"
+        className="text-left text-[9.3vw] md:text-6xl font-suit font-semibold"
       >
         GOALS
       </motion.span>
@@ -97,7 +97,7 @@ export default function GoalsLayout() {
             }}
             className="flex flex-col py-10 pb-0 md:py-0"
           >
-            <span className="text-[7.6vw] pb-6 md:text-4xl md:pb-14 font-suit fonr-medium">
+            <span className="text-[7.6vw] pb-6 md:text-4xl md:pb-14 font-suit">
               커뮤니케이션
             </span>
             <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
