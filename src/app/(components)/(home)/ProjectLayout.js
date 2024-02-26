@@ -16,19 +16,19 @@ const projectLists = [
     id: 2,
     imgSrc: '/slide/project-app-2.png',
     type: 'APP SERVICE',
-    title: '환경마크사전',
+    title: 'Someone',
   },
   {
     id: 3,
     imgSrc: '/slide/project-app-3.png',
     type: 'APP SERVICE',
-    title: 'Someone',
+    title: 'MARU',
   },
   {
     id: 4,
     imgSrc: '/slide/project-app-4.png',
     type: 'APP SERVICE',
-    title: 'MARU',
+    title: 'CRYPTO TREND',
   },
   {
     id: 5,

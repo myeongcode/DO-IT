@@ -15,19 +15,19 @@ const projectLists = [
     id: 2,
     imgSrc: '/slide/project-app-2.png',
     type: 'APP SERVICE',
-    title: '환경마크사전',
+    title: 'Someone',
   },
   {
     id: 3,
     imgSrc: '/slide/project-app-3.png',
     type: 'APP SERVICE',
-    title: 'Someone',
+    title: 'MARU',
   },
   {
     id: 4,
     imgSrc: '/slide/project-app-4.png',
     type: 'APP SERVICE',
-    title: 'MARU',
+    title: 'CRYPTO TREND',
   },
   {
     id: 5,
@@ -40,16 +40,17 @@ const projectLists = [
 export default function Projects() {
   return (
     <div className="flex justify-center pt-[105px] w-full bg-[#14171A]">
-      <div className="flex flex-col w-[70%] py-40">
-        <ul className="flex w-full py-10 space-x-6">
-          {/* {categories.map((category, idx) => {
+      <div className="flex flex-col w-[70%] py-16">
+        <span className="text-[76px] text-[#fff] pb-10">PROJECTS</span>
+        {/* <ul className="flex w-full py-10 space-x-6">
+          {categories.map((category, idx) => {
             return (
               <li className="text-4xl text-white font-suit" key={idx}>
                 {category}
               </li>
             );
-          })} */}
-        </ul>
+          })}
+        </ul> */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 place-items-center gap-y-6">
           {projectLists.map((item, idx) => {
             return <ProjectCard key={idx} item={item} />;
