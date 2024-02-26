@@ -6,16 +6,15 @@ export default function Q2Form({ setFormData, formData }) {
       <div className="w-full">
         <span className="text-2xl text-[#657786]">06</span>
       </div>
-      <div className="flex flex-row w-full justify-between pb-20">
-        <div className="flex flex-col w-[40%] pt-10 justify-between">
+      <div className="flex flex-col md:flex-row w-full justify-between pb-20">
+        <div className="flex flex-col md:w-[40%] pt-10 justify-between">
           <div className="flex flex-col">
-            <span className="text-3xl">
-              자기소개 및 지원동기를
-              <br /> 서술해주세요.
+            <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
+              자기소개 및 지원동기를 서술해주세요.
             </span>
           </div>
         </div>
-        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
           <div className="flex flex-row items-center justify-between pt-10">
             <textarea
               name="q2"

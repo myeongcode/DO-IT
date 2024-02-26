@@ -22,14 +22,13 @@ export default function AttendForm({ setFormData, formData }) {
       <div className="w-full">
         <span className="text-2xl text-[#657786]">04</span>
       </div>
-      <div className="flex flex-row w-full justify-between pb-20">
-        <div className="w-[40%] pt-10">
-          <span className="text-3xl">
-            재학 상태를
-            <br /> 입력해주세요.
+      <div className="flex flex-col md:flex-row w-full justify-between pb-20">
+        <div className="md:w-[40%] pt-10">
+          <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
+            재학 상태를 입력해주세요.
           </span>
         </div>
-        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
           <div className="flex flex-row items-start justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">학년</label>
             <div className="grid grid-cols-2 w-[70%] gap-4 gap-y-6">

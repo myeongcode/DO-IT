@@ -10,14 +10,13 @@ export default function InformForm({ setFormData, formData }) {
       <div className="w-full">
         <span className="text-2xl text-[#657786]">03</span>
       </div>
-      <div className="flex flex-row w-full justify-between">
-        <div className="w-[40%] pt-10">
-          <span className="text-3xl">
-            인적 사항을
-            <br /> 입력해주세요.
+      <div className="flex flex-col md:flex-row w-full justify-between">
+        <div className="md:w-[40%] pt-10">
+          <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
+            인적 사항을 입력해주세요.
           </span>
         </div>
-        <div className="w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">이름</label>
             <input
