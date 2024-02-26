@@ -101,7 +101,7 @@ export default function GoalsLayout() {
               커뮤니케이션
             </span>
             <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
-              혼자서는 모든 것을 해낼 수 없습니다. 혼자서는 작은 한 방울이나,
+              혼자서는 모든 것을 해낼 수 없습니다. 혼자서는 작은 한 방울이지만,
               함께 모이면 바다를 이루듯이 팀과 혹은 동료들과 소통을 하며 함께
               목표를 향해 달려나가 서로를 동기부여 할 수 있도록 장려하는
               동아리입니다.
