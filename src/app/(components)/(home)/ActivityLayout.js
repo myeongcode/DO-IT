@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function ActivityLayout() {
   return (
-    <div className="flex flex-col pt-40 w-[90%] md:w-[70%]">
+    <div className="flex flex-col pt-20 md:pt-40 w-[90%] md:w-[56%]">
       <motion.span
         initial={{
           x: -50,
@@ -14,13 +14,13 @@ export default function ActivityLayout() {
           opacity: 1,
         }}
         transition={{
-          delay: 0.6,
+          delay: 1,
           duration: 1,
         }}
         viewport={{
           once: true,
         }}
-        className="text-left text-[8.6vw] md:text-6xl font-suit font-bold"
+        className="text-left text-[9.3vw] md:text-6xl font-suit font-bold"
       >
         WHAT DO {"'"}DO IT{"'"}
       </motion.span>
@@ -40,24 +40,23 @@ export default function ActivityLayout() {
         viewport={{
           once: true,
         }}
-        className="w-full py-10 md:py-20"
+        className="w-full py-8 md:py-20"
       >
         <Image
           src="/project-img.jpg"
           width={2400}
           height={0}
           alt="projectImage"
-          className="max-h-40 md:max-h-64 object-cover md:mb-10 brightness-50"
+          className="max-h-40 md:max-h-80 object-cover md:mb-10 brightness-50"
         />
-        <div className="flex flex-col w-full md:flex-row">
-          <div className="flex justify-between items-center w-full md:block md:w-1/2 leading-[2.2]">
-            <span className="text-[6vw] md:text-4xl font-light font-suit">
+        <div className="flex flex-col w-full md:flex-row justify-between">
+          <div className="flex flex-col items-start w-full leading-[1.5] md:w-1/2 md:leading-[2.2] my-6 mb-8 md:my-0 md:mb-0">
+            <span className="text-[7.6vw] md:text-4xl font-light font-suit">
               PROJECT
-            </span>{' '}
-            <br />
+            </span>
             <span className="text-[4.4vw] md:text-xl font-suit">프로젝트</span>
           </div>
-          <div className="md:w-1/2">
+          <div className="w-[85%] md:w-3/4 tracking-tight">
             <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
               모든 동아리 구성원이 한 학기동안 팀빌딩을 통해 프로젝트를
               진행하고, 중간발표를 통해 각 팀들의 진행상황을 공유하는 시간을
@@ -90,29 +89,28 @@ export default function ActivityLayout() {
           viewport={{
             once: true,
           }}
-          className="w-full py-4 md:w-1/2 md:py-0"
+          className="w-full py-8 md:w-1/2 md:py-0"
         >
           <Image
             src="/networking-img.jpg"
             width={2400}
             height={0}
             alt="projectImage"
-            className="max-h-40 md:max-h-64 object-cover md:mb-10 brightness-50"
+            className="max-h-40 md:max-h-80 object-cover md:mb-10 brightness-50"
           />
           <div className="flex flex-col w-full">
-            <div className="flex justify-between items-center md:block leading-[2.2]">
-              <span className="text-[6vw] md:text-4xl font-light font-suit">
+            <div className="flex flex-col items-start leading-[1.5] my-6 mb-8 md:my-0 md:mb-0">
+              <span className="text-[7.6vw] md:text-4xl font-light font-suit">
                 NETWORKING DAY
               </span>
-              <br />
               <span className="text-[4.4vw] md:text-xl font-suit">
                 네트워킹 데이
               </span>
             </div>
-            <div className="md:py-10 md:pb-14">
+            <div className="w-[85%] md:w-full md:pt-6 md:pb-14 tracking-tight">
               <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
-                구성원 모두가 참여해 서로 교류하며 친목을 도모하는 네트워킹
-                데이를 진행합니다.
+                구성원 모두 참여해 서로 교류하며 친목을 도모하는 네트워킹 데이를
+                진행합니다.
               </span>
             </div>
           </div>
@@ -133,24 +131,23 @@ export default function ActivityLayout() {
           viewport={{
             once: true,
           }}
-          className="w-full py-4 md:w-1/2 md:py-0"
+          className="w-full py-8 pb-16 md:w-1/2 md:py-0"
         >
           <Image
             src="/seminar-img.jpg"
             width={2400}
             height={0}
             alt="projectImage"
-            className="max-h-40 md:max-h-64 object-cover md:mb-10 brightness-50"
+            className="max-h-40 md:max-h-80 object-cover md:mb-10 brightness-50"
           />
           <div className="flex flex-col w-full">
-            <div className="flex justify-between items-center md:block leading-[2.2]">
-              <span className="text-[6vw] md:text-4xl font-light font-suit">
+            <div className="flex flex-col items-start leading-[1.5] my-6 mb-8 md:my-0 md:mb-0">
+              <span className="text-[7.6vw] md:text-4xl font-light font-suit">
                 SEMINAR
-              </span>{' '}
-              <br />
+              </span>
               <span className="text-[4.4vw] md:text-xl font-suit">세미나</span>
             </div>
-            <div className="md:py-10 md:pb-14">
+            <div className="w-[85%] md:w-full md:pt-6 md:pb-14 tracking-tight">
               <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
                 선배/현직자 등을 초청해 직무, 업계 현황, 조언 등 동아리
                 구성원에게 도움이 되는 주제로 세미나를 개최합니다.

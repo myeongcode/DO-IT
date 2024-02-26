@@ -61,13 +61,13 @@ export default function Q6Form({
             <label className="w-[30%] text-[#8A9FB1]">파일 첨부</label>
             <label
               htmlFor="input-file"
-              className={`border-b p-2 w-[70%]  ${
+              className={`flex flex-row border-b p-2 w-[70%] ${
                 formData.q6File !== '' ? 'text-[#14171A]' : 'text-[#C8D3DA]'
               }`}
             >
               {formData.q6File !== ''
                 ? formData.q6File.name
-                : '선택된 파일 없음'}
+                : '클릭하여 파일 첨부하기'}
             </label>
             <input
               id="input-file"

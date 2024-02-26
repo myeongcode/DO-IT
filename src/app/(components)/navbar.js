@@ -18,10 +18,10 @@ const navItems = [
     path: '/recruit',
     name: 'RECRUIT',
   },
-  {
-    path: '/contact',
-    name: 'CONTACT',
-  },
+  // {
+  //   path: '/contact',
+  //   name: 'CONTACT',
+  // },
 ];
 
 const menuItemAnimation = {
@@ -159,7 +159,7 @@ export default function Navbar() {
               {isOpenToggle ? (
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="100"
+                  width="80"
                   height="25"
                   viewBox="0 0 100 25"
                   fill="none"
@@ -197,7 +197,7 @@ export default function Navbar() {
               ) : (
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="100"
+                  width="80"
                   height="25"
                   viewBox="0 0 100 25"
                   fill="none"
@@ -488,7 +488,7 @@ export default function Navbar() {
             transition={{
               duration: 1,
             }}
-            className="flex-row justify-between w-96 flex"
+            className="flex-row justify-between w-60 flex"
           >
             {navItems.map((item, index) => {
               const isActive = item.path === pathname;

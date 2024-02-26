@@ -75,7 +75,7 @@ export default function ProjectLayout() {
 
   return (
     <div className="hidden flex-col items-center w-full py-10  md:py-28 overflow-hidden md:flex">
-      <div className="w-[90%] md:w-[70%]">
+      <div className="w-[90%] md:w-[56%]">
         <div className="flex flex-row justify-between pb-32 items-center">
           <span className="text-left text-[8.6vw] md:text-6xl font-suit font-bold">
             PROJECTS
