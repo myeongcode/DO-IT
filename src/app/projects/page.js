@@ -41,7 +41,9 @@ export default function Projects() {
   return (
     <div className="flex justify-center pt-[105px] w-full bg-[#14171A]">
       <div className="flex flex-col w-[70%] py-16">
-        <span className="text-[76px] text-[#fff] pb-10">PROJECTS</span>
+        <span className="text-[9vw] text-center md:text-left md:text-5xl text-[#fff] pb-10">
+          PROJECTS
+        </span>
         {/* <ul className="flex w-full py-10 space-x-6">
           {categories.map((category, idx) => {
             return (

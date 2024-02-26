@@ -112,7 +112,7 @@ export default function Recruit() {
       <RecruitLanding />
       <div className="flex justify-center w-full py-20 md:py-40">
         <div className="flex flex-col w-[90%] md:w-[56%]">
-          <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-bold text-[10.5vw] md:text-4xl xl:text-6xl">
+          <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-semibold text-[10.5vw] md:text-4xl xl:text-6xl">
             <span className="text-[#00B8FF]">DO IT.</span>
             <span>1기 신규부원 모집</span>
           </div>
