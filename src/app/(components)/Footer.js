@@ -30,7 +30,7 @@ export default function Footer() {
               </span>
               <br />
               <span className="text-[#657786] text-[3.4vw] md:text-sm text-nowrap overflow-hidden">
-                연세대학교 미래캠퍼스 컨버전스홀 창업 컨테이너홀
+                연세대학교 미래캠퍼스 컨버전스홀 201호 학생창업보육실
               </span>
             </div>
           </div>
