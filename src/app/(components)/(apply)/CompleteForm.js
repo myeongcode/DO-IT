@@ -1,16 +1,14 @@
-import Image from 'next/image';
-
 export default function CompleteForm({ response }) {
   return (
     <div className="flex flex-col w-full font-suit">
       <div className="flex flex-row w-full justify-center">
         {response ? (
           <div className="flex flex-col pt-40 items-center space-y-20">
-            <span className="text-5xl tracking-tighter">
+            <span className="text-[6vw] md:text-5xl tracking-tighter text-center">
               <span className="text-[#00B8FF]">지원서 제출</span>이
               완료되었습니다!
             </span>
-            <span className="text-xl text-center text-[#657786]">
+            <span className="text-base md:text-xl text-center text-[#657786]">
               1기 모집에 지원해주셔서 감사합니다.
               <br /> 추후 자세한 면접일정은 이메일로 공지드리도록 하겠습니다.
             </span>
