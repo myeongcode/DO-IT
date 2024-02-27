@@ -2,6 +2,8 @@ import '../../styles/globals.css';
 import Footer from './(components)/Footer';
 import Navbar from './(components)/navbar';
 import { usePathname } from 'next/navigation';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'DO IT',
@@ -56,6 +58,8 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <Analytics />
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
