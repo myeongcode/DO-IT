@@ -1,6 +1,30 @@
 import styles from './modal.module.css';
+import Cookies from 'js-cookie';
+import { jwtDecode } from 'jwt-decode';
+import { toast } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Modal({ onShowModal, selectedApplicant }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const forbiddenToken = () => {
+      const token = Cookies.get('AccessToken');
+      if (!token) {
+        toast.error('로그인 토큰 만료');
+        return router.push('/admin/login');
+      }
+      const decodedToken = jwtDecode(token);
+      const currentTime = Date.now() / 1000;
+      if (decodedToken.exp < currentTime) {
+        Cookies.remove('AccessToken');
+      }
+    };
+
+    forbiddenToken();
+  }, []);
+
   return (
     <>
       {!selectedApplicant && <h3>지원자 정보 불러오는 중...</h3>}

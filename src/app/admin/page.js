@@ -2,6 +2,10 @@
 import { useEffect, useState } from 'react';
 import styles from './admin.module.css';
 import Modal from '../(components)/modal';
+import Cookies from 'js-cookie';
+import { jwtDecode } from 'jwt-decode';
+import { toast } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 const getApplicants = async () => {
   try {
@@ -20,6 +24,7 @@ export default function Admin() {
   const [applicants, setApplicants] = useState();
   const [showModal, setShowModal] = useState(false);
   const [selectedApplicant, setSelectedApplicant] = useState();
+  const router = useRouter();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,6 +33,21 @@ export default function Admin() {
         setApplicants(data.applicants);
       }
     };
+
+    const forbiddenToken = () => {
+      const token = Cookies.get('AccessToken');
+      if (!token) {
+        toast.error('로그인 토큰 만료');
+        return router.push('/admin/login');
+      }
+      const decodedToken = jwtDecode(token);
+      const currentTime = Date.now() / 1000;
+      if (decodedToken.exp < currentTime) {
+        Cookies.remove('AccessToken');
+      }
+    };
+
+    forbiddenToken();
     fetchData();
   }, []);
 
@@ -61,7 +81,7 @@ export default function Admin() {
               <td>이름</td>
               <td>학번</td>
               <td>전공</td>
-              <td>카테고리</td>
+              <td>직무</td>
               <td>희망분야</td>
             </tr>
           </thead>
