@@ -30,7 +30,7 @@ export async function POST(request) {
       };
 
       const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET, {
-        expiresIn: '5s',
+        expiresIn: '1h',
       });
 
       if (!token) {
