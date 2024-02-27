@@ -4,7 +4,9 @@ import { usePathname } from 'next/navigation';
 export default function Footer() {
   const pathname = usePathname();
   return (
-    pathname !== '/recruit/apply' && (
+    pathname !== '/recruit/apply' &&
+    pathname !== '/admin' &&
+    pathname !== '/admin/login' && (
       <div className="flex w-full justify-center bg-[#DEE5E8]">
         <div className="flex flex-col w-[90%] md:w-[56%] py-16 font-pretend">
           <div className="pb-10">
