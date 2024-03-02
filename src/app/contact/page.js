@@ -1,12 +1,14 @@
 'use client';
 import { useEffect } from 'react';
 
+const KAKAO_MAP_API_KEY = 'e5b220157079995c894fbc9f1f293d2b';
+
 export default function Contact() {
   useEffect(() => {
     const mapScript = document.createElement('script');
 
     mapScript.async = true;
-    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY}&autoload=false`;
+    mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_MAP_API_KEY}&autoload=false`;
 
     document.head.appendChild(mapScript);
 
