@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Q6Form({
   setFormData,
@@ -10,7 +11,15 @@ export default function Q6Form({
 }) {
   function onChangeFile(e) {
     const file = e.target.files?.[0];
+    const maxFileSize = 1024 * 1024 * 50; //50MB
+    console.log(file.size);
+
+    if (maxFileSize < file.size) {
+      toast.error('파일 크기가 너무 큽니다! 50MB이내의 파일로 첨부해주세요');
+      return;
+    }
     setFile(file);
+    setFormData({ ...formData, q6File: e.target.files[0] });
 
     if (fileUrl) {
       URL.revokeObjectURL(fileUrl);
@@ -36,10 +45,10 @@ export default function Q6Form({
               포트폴리오가 있다면 링크 혹은 파일로 첨부해주세요.
             </span>
           </div>
-          <br />
           <span className="text-[#8A9FB1]">
             * 디자이너 직군은 본인이 진행한 과제, 작업물 등이나 포트폴리오
-            첨부를 권장하고 있어요.
+            첨부를 권장하고 있어요. <br />* 파일은 50MB이내의 크기로
+            첨부해주세요!
           </span>
         </div>
         <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-64">
@@ -74,7 +83,6 @@ export default function Q6Form({
               type="file"
               onChange={(e) => {
                 onChangeFile(e);
-                setFormData({ ...formData, q6File: e.target.files[0] });
               }}
               className="border-b p-2 w-[70%] outline-none placeholder:text-[#C8D3DA] hidden"
             />
