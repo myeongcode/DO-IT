@@ -527,13 +527,15 @@ export default function Navbar() {
                   key={item.path}
                   variants={{
                     visible: {
-                      color: pathname !== '/recruit' ? '#00B8FF' : '#000',
+                      color: pathname !== '/recruit' ? '#00B8FF' : '#14171A',
                     },
                     hidden: {
                       color:
                         pathname === '/projects' || pathname === '/recruit'
-                          ? '#FFF'
-                          : '#000',
+                          ? pathname === '/recruit' && navHidden
+                            ? '#14171A'
+                            : '#FFFFFF'
+                          : '#14171A',
                     },
                   }}
                   animate={isActive ? 'visible' : 'hidden'}
