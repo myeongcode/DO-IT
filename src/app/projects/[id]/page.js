@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState, useRef } from 'react';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf';
 // import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
+import { motion } from 'framer-motion';
 
 const projectLists = [
   {
@@ -61,28 +62,15 @@ export default function Project(props) {
   }, [props.params.id]);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === projectPPT.length - 1 ? 0 : prevIndex + 1
-    );
+    if (currentIndex < projectPPT.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projectPPT.length - 1 : prevIndex - 1
-    );
-  };
-
-  const calculateOpacity = (idx) => {
-    // 현재 인덱스에서의 거리 계산
-    const distance = Math.abs(currentIndex - idx);
-
-    // 거리에 따라 투명도 계산 (가까울수록 불투명)
-    return Math.max(1 - distance * 0.5, 0);
-  };
-
-  const calculateGradient = (idx) => {
-    const opacity = calculateOpacity(idx);
-    return `linear-gradient(to right, rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, 0))`;
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
   if (!project) {
@@ -116,50 +104,96 @@ export default function Project(props) {
         </div>
 
         {/* 프로젝트 이미지 */}
-        <div className="w-full relative flex justify-center">
-          <div className="relative w-[1330px] h-full">
-            <div
-              className="flex transition-transform ease-in-out duration-500 gap-x-[100px]"
+        <div className="w-full relative flex justify-center flex-col items-center">
+          <div
+            className="relative w-full flex justify-center"
+            style={{
+              maskImage: `
+              linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)
+            `,
+            }}
+          >
+            <div className="relative w-[1330px] h-full">
+              <div
+                className="flex transition-transform ease-in-out duration-500 gap-x-[100px]"
+                style={{
+                  transform: `translateX(-${currentIndex * 1430}px)`,
+                }}
+              >
+                {projectPPT.map((img, idx) => (
+                  <div
+                    key={`projectPPT-${idx}`}
+                    className={`relative shrink-0 w-full h-full flex justify-center items-center transition-opacity duration-500`}
+                    style={{}}
+                  >
+                    <Image
+                      src={img}
+                      width={1330}
+                      height={400}
+                      alt={`Slide ${idx}`}
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              {currentIndex === 0 ? null : (
+                <div
+                  className="absolute top-0 left-[-700px] h-full w-[600px] opacity-0"
+                  onClick={prevSlide}
+                ></div>
+              )}
+
+              {currentIndex === projectPPT.length - 1 ? null : (
+                <div
+                  className="absolute top-0 right-[-700px] h-full w-[600px] opacity-0"
+                  onClick={nextSlide}
+                ></div>
+              )}
+            </div>
+          </div>
+          <div className="flex flex-row gap-x-[30px] py-[30px]">
+            <motion.div
+              onClick={prevSlide}
+              className={`w-9 h-9 bg-black flex justify-center items-center rounded-full cursor-pointer ${
+                currentIndex === 0 ? 'opacity-40 pointer-events-none' : ''
+              }`}
               style={{
-                transform: `translateX(-${currentIndex * 1430}px)`,
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              }}
+              whileHover={{
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
               }}
             >
-              {projectPPT.map((img, idx) => (
-                <div
-                  key={`projectPPT-${idx}`}
-                  className="shrink-0 w-full h-full flex justify-center items-center"
-                  style={{
-                    background: calculateGradient(idx),
-                  }}
-                >
-                  <Image
-                    src={img}
-                    width={1330}
-                    height={400}
-                    alt={`Slide ${idx}`}
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {currentIndex === 0 ? null : (
-              <div
-                className="absolute top-1/2 left-[-190px] cursor-pointer"
-                onClick={prevSlide}
-              >
-                <Image src={'/prev_btn.svg'} width={33} height={67} alt="" />
-              </div>
-            )}
-
-            {currentIndex === projectPPT.length - 1 ? null : (
-              <div
-                className="absolute top-1/2 right-[-190px] cursor-pointer"
-                onClick={nextSlide}
-              >
-                <Image src={'/next_btn.svg'} width={33} height={67} alt="" />
-              </div>
-            )}
+              <Image
+                src={'/prev_btn.svg'}
+                width={8}
+                height={16}
+                alt=""
+                className="transform translate-x-[-1px]"
+              />
+            </motion.div>
+            <motion.div
+              onClick={nextSlide}
+              className={`w-9 h-9 bg-black flex justify-center items-center rounded-full cursor-pointer ${
+                currentIndex === projectPPT.length - 1
+                  ? 'opacity-40 pointer-events-none'
+                  : ''
+              }`}
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              }}
+              whileHover={{
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              }}
+            >
+              <Image
+                src={'/next_btn.svg'}
+                width={8}
+                height={16}
+                alt=""
+                className="transform translate-x-[1px]"
+              />
+            </motion.div>
           </div>
         </div>
 
