@@ -316,14 +316,22 @@ export default function Project(props) {
                 {/* 팀 멤버 */}
                 {project.teamMember.map((member, idx) => {
                   return (
-                    <div className="flex flex-row justify-between items-center pt-5">
+                    <div
+                      key={`member-field-${idx}`}
+                      className="flex flex-row justify-between items-center pt-5"
+                    >
                       <h5 className="text-lg font-semibold opacity-70">
                         {member.fieldName}
                       </h5>
                       <div className="flex flex-row gap-x-5">
                         {member.member.map((name, idx) => {
                           return (
-                            <span className="text-lg font-normal">{name}</span>
+                            <span
+                              key={`member-${idx}`}
+                              className="text-lg font-normal"
+                            >
+                              {name}
+                            </span>
                           );
                         })}
                       </div>
@@ -341,7 +349,10 @@ export default function Project(props) {
                 <div className="flex flex-wrap gap-x-[10px] gap-y-[20px]">
                   {project.projectTool.map((stack, idx) => {
                     return (
-                      <div className="px-[10px] py-[4px] rounded-full bg-white text-[#4E4E4E] text-lg font-medium bg-opacity-85">
+                      <div
+                        key={`tool-${idx}`}
+                        className="px-[10px] py-[4px] rounded-full bg-white text-[#4E4E4E] text-lg font-medium bg-opacity-85"
+                      >
                         {stack}
                       </div>
                     );
@@ -357,7 +368,10 @@ export default function Project(props) {
                 {/* 링크 */}
                 {project.projectLink.map((link, idx) => {
                   return (
-                    <div className="flex flex-row justify-between items-center">
+                    <div
+                      key={`link-${idx}`}
+                      className="flex flex-row justify-between items-center"
+                    >
                       <h5 className="text-lg font-semibold opacity-70">
                         {link.linkName}
                       </h5>
