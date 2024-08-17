@@ -1,7 +1,6 @@
 import Applicant from '@/app/(model)/applicants';
 import { NextResponse } from 'next/server';
-
-const moment = require('moment');
+import moment from 'moment-timezone';
 
 export async function GET() {
   try {
@@ -44,7 +43,7 @@ export async function POST(request) {
       portfolioTerm,
     } = body;
 
-    const date = moment().format('YYYY-MM-DD HH:mm:ss');
+    const date = moment().tz('Asia/Seoul').format('YYYY-MM-DD HH:mm:ss');
     const newApplicant = await Applicant.create({
       field,
       category,

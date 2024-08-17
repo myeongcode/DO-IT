@@ -30,7 +30,10 @@ export default function Admin() {
     const fetchData = async () => {
       const data = await getApplicants();
       if (data) {
-        setApplicants(data.applicants);
+        const sortedApplicants = data.applicants.sort((a, b) => {
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        });
+        setApplicants(sortedApplicants);
       }
     };
 
@@ -77,24 +80,24 @@ export default function Admin() {
         <table className={styles.table}>
           <thead>
             <tr>
-              <td>ID</td>
               <td>이름</td>
               <td>학번</td>
               <td>전공</td>
               <td>직무</td>
               <td>희망분야</td>
+              <td>지원시간</td>
             </tr>
           </thead>
           <tbody>
             {applicants?.map((applicant, idx) => {
               return (
                 <tr key={applicant._id} onClick={() => onClickApplicant(idx)}>
-                  <td>{applicant._id}</td>
                   <td>{applicant.name}</td>
                   <td>{applicant.stdID}</td>
                   <td>{applicant.major}</td>
                   <td>{applicant.category}</td>
                   <td>{applicant.field}</td>
+                  <td>{applicant.createdAt}</td>
                 </tr>
               );
             })}

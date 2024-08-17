@@ -59,6 +59,11 @@ const tabs = [
       },
       {
         id: '24-2',
+        awardName: 'AI기반 의료 데이터 분석 경진대회',
+        award: '우수상',
+      },
+      {
+        id: '24-3',
         awardName: '',
         award: '',
       },
@@ -103,11 +108,11 @@ export default function AwardsLayout() {
         opacity: 1,
       }}
       transition={{
-        delay: 0.6,
         duration: 1,
       }}
       viewport={{
         once: true,
+        amount: 0.6,
       }}
       className="flex flex-col items-center w-full bg-[#14171A] md:min-h-[1027px]"
     >

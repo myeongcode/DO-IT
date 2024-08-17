@@ -356,10 +356,11 @@ export default function Navbar() {
               pathname === '/' ? 'rgb(255, 255, 255, 0)' : 'rgb(0, 0, 0, 0)',
           },
           hidden: {
-            backgroundColor:
-              pathname === '/projects' ? '#0000004D' : '#FFFFFF4D',
+            backgroundColor: pathname.startsWith('/projects')
+              ? '#0000004D'
+              : '#FFFFFF4D',
             boxShadow: `0px 1px 1px ${
-              pathname !== '/projects' ? '#CECECE' : '#313131'
+              pathname.startsWith('/projects') ? '#CECECE' : '#313131'
             }`,
             backdropFilter: 'blur(10px)',
             '-webkit-backdrop-filter': 'blur(10px)',

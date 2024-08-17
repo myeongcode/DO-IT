@@ -14,9 +14,9 @@ export default function IntroLayout() {
         }}
         viewport={{
           once: true,
+          amount: 1,
         }}
         transition={{
-          delay: 0.4,
           duration: 1,
         }}
         className="text-right justify-right py-20"
@@ -38,9 +38,9 @@ export default function IntroLayout() {
         }}
         viewport={{
           once: true,
+          amount: 1,
         }}
         transition={{
-          delay: 0.6,
           duration: 1,
         }}
         className="text-left justify-right py-10 md:pt-40"

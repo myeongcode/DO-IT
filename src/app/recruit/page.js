@@ -81,7 +81,7 @@ const faqs = [
     questions: [
       {
         q: 'DO IT에서는 어떤 활동을 하게 되나요?',
-        a: 'DO IT은 관심 분야가 일치하는 팀원들과 한 학기에 하나의 프로젝트를 진행하게 되며 팀장들은 주간회의, 모든 팀원들은 중간발표를 통해 프로젝트의 진행사항과 피드백을 주고받는 시간을 가집니다. 또한 성과공유회를 통해 한 학기동안 진행한 프로젝트를 발표하고 체험합니다.',
+        a: 'DO IT은 관심 분야가 일치하는 팀원들과 한 학기에 하나의 프로젝트를 진행하게 되며 팀장들은 주간회의, 모든 팀원들은 중간발표를 통해 프로젝트의 진행사항과 피드백을 주고받는 시간을 가집니다. 또한 성과공유회를 통해 한 학기동안 진행한 프로젝트를 발표하고 전시합니다.',
       },
       {
         q: '동아리 활동 기간은 어떻게 되나요?',
@@ -292,7 +292,7 @@ export default function Recruit() {
           disabled
           className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 bg-[#00B8FF] rounded-full text-[6vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45"
         >
-          지원하기
+          지원 마감
         </motion.button>
         {/* </Link> */}
       </div>

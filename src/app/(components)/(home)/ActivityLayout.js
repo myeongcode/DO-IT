@@ -14,11 +14,12 @@ export default function ActivityLayout() {
           opacity: 1,
         }}
         transition={{
-          delay: 1,
+          delay: 0.4,
           duration: 1,
         }}
         viewport={{
           once: true,
+          amount: 1,
         }}
         className="text-left text-[9.3vw] md:text-6xl font-suit font-semibold"
       >
@@ -34,20 +35,20 @@ export default function ActivityLayout() {
           opacity: 1,
         }}
         transition={{
-          delay: 0.8,
           duration: 1,
         }}
         viewport={{
           once: true,
+          amount: 0.5,
         }}
         className="w-full py-8 md:py-20"
       >
         <Image
-          src="/project-img.jpg"
+          src="/IMG_2206.JPG"
           width={2400}
           height={0}
           alt="projectImage"
-          className="max-h-40 md:max-h-80 object-cover md:mb-10 brightness-50"
+          className="max-h-40 md:max-h-[400px] object-cover md:mb-10 brightness-[80%]"
         />
         <div className="flex flex-col w-full md:flex-row justify-between">
           <div className="flex flex-col items-start w-full leading-[1.5] md:w-1/2 md:leading-[2.2] my-6 mb-8 md:my-0 md:mb-0">
@@ -65,9 +66,9 @@ export default function ActivityLayout() {
             <br />
             <br />
             <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
-              또한 성과 공유회 Dev IT. 에서 한학기에 진행한 프로젝트를 체험할 수
-              있는 부스 행사와 프로젝트 진행 중 직면했던 문제점을 공유하고 원인
-              분석과 해결 방안을 도출합니다.
+              또한 성과 공유회 Dev IT. 부스세션을 통해 프로젝트를 전시하고, 발표
+              세션을 통해 프로젝트 진행 중 직면했던 문제점과 해결 과정을
+              공유합니다.
             </span>
           </div>
         </div>
@@ -83,11 +84,11 @@ export default function ActivityLayout() {
             opacity: 1,
           }}
           transition={{
-            delay: 1,
             duration: 1,
           }}
           viewport={{
             once: true,
+            amount: 0.5,
           }}
           className="w-full py-8 md:w-1/2 md:py-0"
         >
@@ -125,11 +126,12 @@ export default function ActivityLayout() {
             opacity: 1,
           }}
           transition={{
-            delay: 1.4,
+            delay: 0.4,
             duration: 1,
           }}
           viewport={{
             once: true,
+            amount: 0.5,
           }}
           className="w-full py-8 pb-16 md:w-1/2 md:py-0"
         >
