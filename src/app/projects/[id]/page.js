@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf';
 // import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const projectLists = [
   {
@@ -14,6 +15,54 @@ const projectLists = [
     imgSrc: '/slide/1-project-app-1.png',
     type: 'APP',
     term: '1기',
+    teamName: 'hungryYonsei',
+    projectBackground: `PINS는 교내 구성원 중 모임 (지원)희망자, 모임 운영자, 기존 모임 구성원들을 위한 교내 모임 중개 및 커뮤니티 플랫폼입니다.
+
+      학교 내 중앙동아리, 준동아리, 소모임 등 수많은 모임들이 있지만, 어떤 모임이 있는지, 내가 원하는 모임이 있는건지 파악하기 어려웠어요. 또한 단순 모임 찾기 뿐만 아니라, 홍보, 모임별 일정 등을 파악하기 어려운 문제점도 존재했어요.
+
+      PINS는 교내 모임 리스트, 모임별 공간 페이지, 홈 프로모션 영역이라는 솔루션을 통해 ‘쉽고 편리한 학교 모임 경험'과 ‘교내 모임 교류 및 활동 활성화'라는 가치를 제공하고자 해요.
+    `,
+    projectTool: [
+      'Flutter',
+      'Docker',
+      'Django',
+      'PostgreSQL',
+      'Vue.js',
+      'Figma',
+    ],
+    projectFeatures: `✅ 캐릭터의 레벨별 성장 & 지각 횟수 확인
+
+      - 메인 홈에서 정시 도착의 횟수에 따라 성장하는 꾸물이 캐릭터를 만나볼 수 있어요.
+      - 총 약속 횟수 중 몇 번 꾸물거렸는지 확인할 수 있어요.
+
+      ✅ 친구들과 모임 생성 & 약속 추가
+      
+      - 직접 모임을 추가하거나 초대 받은 코드를 입력하여 모임에 참가해요.
+      - 약속 추가 시에 날짜, 장소 등 기본 약속 정보에 꾸레벨과 벌칙 설정까지 할 수 있도록 하여 재미를 더했어요.
+
+      ✅ 준비 정보를 입력 & 푸시 알림
+
+      - 나의 예상 준비 시간, 이동 시간을 입력하면 여유 시간 10분을 고려하여 절대 늦지 않을 준비, 이동을 시작할 시간을 제안해요.
+      - 해당 시간에 자동으로 푸시 알림을 받을 수 있어요.
+      
+      ✅ 우리들의 준비 현황 공유
+      - 버튼을 클릭하여 나의 준비 현황을 공유하고 친구들의 현황을 확인해요.
+      - 모임 내 누군가 첫 번째로 준비, 이동, 도착한 경우 모임원들은 푸시 알림을 받아요.
+
+      ✅ 지각 꾸물이와 벌칙 확인
+      - 약속의 지각 꾸물이와 벌칙을 확인해요.
+      - 아무도 지각하지 않은 경우, 축하 받을 수 있어요.
+    `,
+    teamMember: [
+      {
+        fieldName: 'Product Designer',
+        member: ['진기원'],
+      },
+      {
+        fieldName: 'Front-end Developer',
+        member: ['배진우'],
+      },
+    ],
     projectImgSrc: [
       '/projects/2/slide-1.png',
       '/projects/2/slide-2.png',
@@ -21,7 +70,9 @@ const projectLists = [
     ],
     projectLink: [
       {
-        github: 'https://github.com/YonseiDOIT/Pins',
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Pins',
+        linkImg: '/github-icon.svg',
       },
     ],
   },
@@ -32,6 +83,54 @@ const projectLists = [
     imgSrc: '/slide/1-project-app-2.png',
     type: 'APP',
     term: '1기',
+    teamName: 'IP',
+    projectBackground: `PINS는 교내 구성원 중 모임 (지원)희망자, 모임 운영자, 기존 모임 구성원들을 위한 교내 모임 중개 및 커뮤니티 플랫폼입니다.
+
+      학교 내 중앙동아리, 준동아리, 소모임 등 수많은 모임들이 있지만, 어떤 모임이 있는지, 내가 원하는 모임이 있는건지 파악하기 어려웠어요. 또한 단순 모임 찾기 뿐만 아니라, 홍보, 모임별 일정 등을 파악하기 어려운 문제점도 존재했어요.
+
+      PINS는 교내 모임 리스트, 모임별 공간 페이지, 홈 프로모션 영역이라는 솔루션을 통해 ‘쉽고 편리한 학교 모임 경험'과 ‘교내 모임 교류 및 활동 활성화'라는 가치를 제공하고자 해요.
+    `,
+    projectTool: [
+      'Flutter',
+      'Docker',
+      'Django',
+      'PostgreSQL',
+      'Vue.js',
+      'Figma',
+    ],
+    projectFeatures: `✅ 캐릭터의 레벨별 성장 & 지각 횟수 확인
+
+      - 메인 홈에서 정시 도착의 횟수에 따라 성장하는 꾸물이 캐릭터를 만나볼 수 있어요.
+      - 총 약속 횟수 중 몇 번 꾸물거렸는지 확인할 수 있어요.
+
+      ✅ 친구들과 모임 생성 & 약속 추가
+      
+      - 직접 모임을 추가하거나 초대 받은 코드를 입력하여 모임에 참가해요.
+      - 약속 추가 시에 날짜, 장소 등 기본 약속 정보에 꾸레벨과 벌칙 설정까지 할 수 있도록 하여 재미를 더했어요.
+
+      ✅ 준비 정보를 입력 & 푸시 알림
+
+      - 나의 예상 준비 시간, 이동 시간을 입력하면 여유 시간 10분을 고려하여 절대 늦지 않을 준비, 이동을 시작할 시간을 제안해요.
+      - 해당 시간에 자동으로 푸시 알림을 받을 수 있어요.
+      
+      ✅ 우리들의 준비 현황 공유
+      - 버튼을 클릭하여 나의 준비 현황을 공유하고 친구들의 현황을 확인해요.
+      - 모임 내 누군가 첫 번째로 준비, 이동, 도착한 경우 모임원들은 푸시 알림을 받아요.
+
+      ✅ 지각 꾸물이와 벌칙 확인
+      - 약속의 지각 꾸물이와 벌칙을 확인해요.
+      - 아무도 지각하지 않은 경우, 축하 받을 수 있어요.
+    `,
+    teamMember: [
+      {
+        fieldName: 'Product Designer',
+        member: ['진기원', '최은서'],
+      },
+      {
+        fieldName: 'Front/Back-end Developer',
+        member: ['유승우'],
+      },
+    ],
     projectImgSrc: [
       '/projects/2/slide-1.png',
       '/projects/2/slide-2.png',
@@ -39,7 +138,9 @@ const projectLists = [
     ],
     projectLink: [
       {
-        github: 'https://github.com/YonseiDOIT/Pins',
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Pins',
+        linkImg: '/github-icon.svg',
       },
     ],
   },
@@ -198,7 +299,101 @@ export default function Project(props) {
         </div>
 
         {/* 프로젝트 상세 설명 */}
-        <div>asdfs</div>
+        <div className="flex flex-row py-[60px] w-[1330px] gap-x-20">
+          <div className="flex flex-col w-1/3">
+            {/* 구성원 및 역할 */}
+            <div className="flex flex-col pb-20">
+              <h2 className="text-[26px] font-medium pb-4">구성원 및 역할</h2>
+              <div className="w-full h-[1px] bg-white"></div>
+              <div className="flex flex-col font-pretend pt-14">
+                {/* 팀 이름 */}
+                <div className="flex flex-row justify-between items-center">
+                  <h5 className="text-lg font-semibold opacity-70">TEAM</h5>
+                  <span className="text-lg font-normal">
+                    {project.teamName}
+                  </span>
+                </div>
+                {/* 팀 멤버 */}
+                {project.teamMember.map((member, idx) => {
+                  return (
+                    <div className="flex flex-row justify-between items-center pt-5">
+                      <h5 className="text-lg font-semibold opacity-70">
+                        {member.fieldName}
+                      </h5>
+                      <div className="flex flex-row gap-x-5">
+                        {member.member.map((name, idx) => {
+                          return (
+                            <span className="text-lg font-normal">{name}</span>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            {/* 기술스택 및 사용 툴 */}
+            <div className="flex flex-col pb-20">
+              <h2 className="text-[26px] font-medium pb-4">STACK & TOOL</h2>
+              <div className="w-full h-[1px] bg-white"></div>
+              <div className="flex flex-col font-pretend pt-9">
+                {/* 스택 */}
+                <div className="flex flex-wrap gap-x-[10px] gap-y-[20px]">
+                  {project.projectTool.map((stack, idx) => {
+                    return (
+                      <div className="px-[10px] py-[4px] rounded-full bg-white text-[#4E4E4E] text-lg font-medium bg-opacity-85">
+                        {stack}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            {/* 프로젝트 링크 */}
+            <div className="flex flex-col pb-20">
+              <h2 className="text-[26px] font-medium pb-4">프로젝트 링크</h2>
+              <div className="w-full h-[1px] bg-white"></div>
+              <div className="flex flex-col font-pretend pt-14">
+                {/* 링크 */}
+                {project.projectLink.map((link, idx) => {
+                  return (
+                    <div className="flex flex-row justify-between items-center">
+                      <h5 className="text-lg font-semibold opacity-70">
+                        {link.linkName}
+                      </h5>
+                      <Link href={link.link}>
+                        <Image
+                          src={link.linkImg}
+                          width={36}
+                          height={36}
+                          alt="githubLink"
+                        />
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-2/3">
+            {/* 프로젝트 배경 */}
+            <div className="flex flex-col pb-[100px]">
+              <h2 className="text-[26px] font-medium pb-4">프로젝트 배경</h2>
+              <div className="w-full h-[1px] bg-white"></div>
+              <span className="flex flex-col text-lg font-pretend pt-14 font-normal w-5/6 whitespace-pre-line">
+                {project.projectBackground}
+              </span>
+            </div>
+            {/* 프로젝트 배경 */}
+            <div className="flex flex-col">
+              <h2 className="text-[26px] font-medium pb-4">프로젝트 기능</h2>
+              <div className="w-full h-[1px] bg-white"></div>
+              <span className="flex flex-col text-lg font-pretend pt-14 font-normal w-5/6 whitespace-pre-line">
+                {project.projectFeatures}
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="absolute inset-0 z-[-5] bg-[#14171A]/70 backdrop-blur-[150px]"></div>
