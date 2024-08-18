@@ -155,7 +155,6 @@ export default function Project(props) {
   const [project, setProject] = useState();
   const [projectPPT, setProjectPPT] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const [translateXValue, setTranslateXValue] = useState(currentIndex * 1430);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -226,7 +225,7 @@ export default function Project(props) {
 
   return (
     <div className="flex flex-col relative items-center font-suit text-white overflow-x-hidden">
-      <div className="relative flex w-full flex-col items-center h-[3000px]">
+      <div className="relative flex w-full flex-col items-center">
         {/* 프로젝트 제목 및 설명 */}
         <div className="flex flex-col justify-between pt-[170px] w-[90vw] md:w-[898px] 2xl:w-[1330px] pb-[50px]">
           <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center pb-9 gap-y-[10px] md:gap-x-6 md:gap-y-0">
@@ -433,7 +432,7 @@ export default function Project(props) {
               </div>
             </div>
             {/* 프로젝트 링크 */}
-            <div className="flex flex-col pb-[60px] md:pb-20">
+            <div className="flex flex-col sm:pb-[60px] md:pb-20">
               <h2 className="text-[26px] font-medium pb-4">프로젝트 링크</h2>
               <div className="w-full h-[1px] bg-white"></div>
               <div className="flex flex-col font-pretend pt-14">
