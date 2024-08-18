@@ -185,28 +185,6 @@ export default function Project(props) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     const screenWidth = window.innerWidth;
-
-  //     if (screenWidth >= 1536) {
-  //       // 2xl: 1536px 이상
-  //       setTranslateXValue(currentIndex * 1430);
-  //     } else if (screenWidth >= 768) {
-  //       // xl: 1280px 이상
-  //       setTranslateXValue(currentIndex * 998);
-  //     } else {
-  //       // 기본값
-  //       setTranslateXValue(currentIndex * (screenWidth - 37));
-  //     }
-  //   };
-
-  //   handleResize();
-  //   window.addEventListener('resize', handleResize);
-
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, [currentIndex]);
-
   const nextSlide = () => {
     if (currentIndex < projectPPT.length - 1) {
       setCurrentIndex(currentIndex + 1);
