@@ -69,9 +69,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -112,9 +112,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -147,9 +147,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -186,9 +186,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -225,9 +225,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -260,9 +260,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -328,9 +328,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -368,9 +368,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/2/slide-1.png',
-      '/projects/2/slide-2.png',
-      '/projects/2/slide-3.png',
+      '/projects/1기/2/slide-1.png',
+      '/projects/1기/2/slide-2.png',
+      '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
