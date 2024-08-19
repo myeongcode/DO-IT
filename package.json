@@ -15,6 +15,7 @@
     "@vercel/blob": "^0.22.1",
     "@vercel/speed-insights": "^1.0.10",
     "framer-motion": "^11.0.5",
+    "hamburger-react": "^2.5.1",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
