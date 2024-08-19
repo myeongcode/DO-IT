@@ -14,27 +14,45 @@ const projectLists = [
   },
   {
     id: 2,
+    imgSrc: '/ready_img.png',
+    type: 'APP SERVICE',
+    title: '모구',
+  },
+  {
+    id: 3,
+    imgSrc: '/ready_img.png',
+    type: 'WEB SERVICE',
+    title: 'YONSEI SPACE',
+  },
+  {
+    id: 4,
+    imgSrc: '/ready_img.png',
+    type: 'APP SERVICE',
+    title: 'Flanning',
+  },
+  {
+    id: 5,
+    imgSrc: '/ready_img.png',
+    type: 'APP SERVICE',
+    title: '교내 통학버스',
+  },
+  {
+    id: 6,
+    imgSrc: '/ready_img.png',
+    type: 'APP SERVICE',
+    title: 'MOCA',
+  },
+  {
+    id: 7,
     imgSrc: '/slide/1-project-app-2.png',
     type: 'APP SERVICE',
     title: 'PINS',
   },
   {
-    id: 3,
-    imgSrc: '/slide/project-app-3.png',
+    id: 8,
+    imgSrc: '/ready_img.png',
     type: 'APP SERVICE',
-    title: 'MARU',
-  },
-  {
-    id: 4,
-    imgSrc: '/slide/project-app-4.png',
-    type: 'APP SERVICE',
-    title: 'CRYPTO TREND',
-  },
-  {
-    id: 5,
-    imgSrc: '/slide/project-web-1.png',
-    type: 'WEB SERVICE',
-    title: '든든한끼',
+    title: 'QPEED',
   },
 ];
 

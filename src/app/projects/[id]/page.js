@@ -83,6 +83,197 @@ const projectLists = [
   },
   {
     id: 2,
+    title: '모구',
+    projectSummary: '매지리 공동구매 매칭 서비스',
+    imgSrc: '/slide/1-project-app-2.png',
+    type: 'APP',
+    term: '1기',
+    teamName: '카페이너',
+    projectBackground: `
+    `,
+    projectTool: [],
+    projectFeatures: ``,
+    teamMember: [
+      {
+        fieldName: 'Product Manager',
+        member: ['손혜림'],
+      },
+      {
+        fieldName: 'Product Designer',
+        member: ['남윤지'],
+      },
+      {
+        fieldName: 'Front-end Developer',
+        member: ['배진우', '김민경'],
+      },
+      {
+        fieldName: 'Back-end Developer',
+        member: ['전가배'],
+      },
+    ],
+    projectImgSrc: [
+      '/projects/2/slide-1.png',
+      '/projects/2/slide-2.png',
+      '/projects/2/slide-3.png',
+    ],
+    projectLink: [
+      {
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Mogu',
+        linkImg: '/github-icon.svg',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'YONSEI SPACE',
+    projectSummary: '연세대학교 공간 대관 시스템 리뉴얼',
+    imgSrc: '/slide/1-project-app-2.png',
+    type: 'WEB',
+    term: '1기',
+    teamName: '2024',
+    projectBackground: ``,
+    projectTool: [],
+    projectFeatures: `
+    `,
+    teamMember: [
+      {
+        fieldName: 'Product Designer',
+        member: ['권순용'],
+      },
+      {
+        fieldName: 'Front-end Developer',
+        member: ['정연재', '이동하'],
+      },
+    ],
+    projectImgSrc: [
+      '/projects/2/slide-1.png',
+      '/projects/2/slide-2.png',
+      '/projects/2/slide-3.png',
+    ],
+    projectLink: [
+      {
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Yonsei-Space',
+        linkImg: '/github-icon.svg',
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Flanning',
+    projectSummary: '국내여행 공동 플래닝 서비스',
+    imgSrc: '/slide/1-project-app-2.png',
+    type: 'APP',
+    term: '1기',
+    teamName: 'Flanning',
+    projectBackground: ``,
+    projectTool: [],
+    projectFeatures: `
+    `,
+    teamMember: [
+      {
+        fieldName: 'Product Manager',
+        member: ['신선림'],
+      },
+      {
+        fieldName: 'Product Designer',
+        member: ['조호진'],
+      },
+      {
+        fieldName: 'Front/Back-end Developer',
+        member: ['임희원'],
+      },
+    ],
+    projectImgSrc: [
+      '/projects/2/slide-1.png',
+      '/projects/2/slide-2.png',
+      '/projects/2/slide-3.png',
+    ],
+    projectLink: [
+      {
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Flanning',
+        linkImg: '/github-icon.svg',
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: '통학버스 정보 서비스',
+    projectSummary: '교내 시내/시외버스 교통 정보 제공 서비스',
+    imgSrc: '/slide/1-project-app-2.png',
+    type: 'APP',
+    term: '1기',
+    teamName: '마동석',
+    projectBackground: ``,
+    projectTool: [],
+    projectFeatures: `
+    `,
+    teamMember: [
+      {
+        fieldName: 'Product Manager',
+        member: ['전소희'],
+      },
+      {
+        fieldName: 'Product Designer',
+        member: ['김미혜'],
+      },
+      {
+        fieldName: 'Front-end Developer',
+        member: ['임한결'],
+      },
+    ],
+    projectImgSrc: [
+      '/projects/2/slide-1.png',
+      '/projects/2/slide-2.png',
+      '/projects/2/slide-3.png',
+    ],
+    projectLink: [
+      {
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Yonsei-Commuting-Bus',
+        linkImg: '/github-icon.svg',
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'MOCA',
+    projectSummary: '중고책 거래 플랫폼',
+    imgSrc: '/slide/1-project-app-2.png',
+    type: 'APP',
+    term: '1기',
+    teamName: '6팀',
+    projectBackground: ``,
+    projectTool: [],
+    projectFeatures: `
+    `,
+    teamMember: [
+      {
+        fieldName: 'Front-end Develoer',
+        member: ['정하은'],
+      },
+      {
+        fieldName: 'Back-end Developer',
+        member: ['홍정표'],
+      },
+    ],
+    projectImgSrc: [
+      '/projects/2/slide-1.png',
+      '/projects/2/slide-2.png',
+      '/projects/2/slide-3.png',
+    ],
+    projectLink: [
+      {
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/Moca',
+        linkImg: '/github-icon.svg',
+      },
+    ],
+  },
+  {
+    id: 7,
     title: 'PINS',
     projectSummary: '교내 모임 중개 및 커뮤니티 플랫폼',
     imgSrc: '/slide/1-project-app-2.png',
@@ -149,6 +340,46 @@ const projectLists = [
       },
     ],
   },
+  {
+    id: 8,
+    title: 'QPEED',
+    projectSummary: '커미션 플랫폼',
+    imgSrc: '/slide/1-project-app-2.png',
+    type: 'APP',
+    term: '1기',
+    teamName: 'QING',
+    projectBackground: `
+    `,
+    projectTool: [],
+    projectFeatures: `
+    `,
+    teamMember: [
+      {
+        fieldName: 'Product Designer',
+        member: ['윤서희'],
+      },
+      {
+        fieldName: 'Front-end Developer',
+        member: ['김태경'],
+      },
+      {
+        fieldName: 'Back-end Developer',
+        member: ['나해빈'],
+      },
+    ],
+    projectImgSrc: [
+      '/projects/2/slide-1.png',
+      '/projects/2/slide-2.png',
+      '/projects/2/slide-3.png',
+    ],
+    projectLink: [
+      {
+        linkName: 'Github',
+        link: 'https://github.com/YonseiDOIT/QPEED',
+        linkImg: '/github-icon.svg',
+      },
+    ],
+  },
 ];
 
 export default function Project(props) {
@@ -208,7 +439,7 @@ export default function Project(props) {
         <div className="flex flex-col justify-between pt-[170px] w-[90vw] md:w-[898px] 2xl:w-[1330px] pb-[50px]">
           <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center pb-9 gap-y-[10px] md:gap-x-6 md:gap-y-0">
             <div className="flex flex-row items-center gap-x-6">
-              <h1 className="text-5xl font-medium tracking-tighter">
+              <h1 className="text-3xl md:text-5xl font-medium tracking-tighter">
                 {project.title}
               </h1>
               <div className="flex flex-row items-center gap-x-[10px]">
@@ -220,7 +451,7 @@ export default function Project(props) {
                 </h1>
               </div>
             </div>
-            <h1 className="font-medium text-2xl opacity-70">
+            <h1 className="font-medium text-xl md:text-2xl opacity-70">
               {project.projectSummary}
             </h1>
           </div>
