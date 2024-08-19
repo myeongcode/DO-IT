@@ -235,7 +235,7 @@ export default function Project(props) {
               maskImage:
                 screenWidth >= 1263
                   ? 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)'
-                  : 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%)',
+                  : 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%)',
             }}
           >
             <div className="relative w-[90vw] md:w-[898px] 2xl:w-[1330px] h-full">
@@ -269,35 +269,35 @@ export default function Project(props) {
                   </div>
                 ))}
               </div>
-              {/* {currentIndex === 0 ? null : (
+              {currentIndex === 0 ? null : (
                 <div
-                  className="absolute flex top-0 left-0 w-[10px] md:left-[-700px] h-full md:w-[600px] opacity-1 bg-slate-400"
+                  className="absolute flex top-0 left-[-110px] w-[100px] md:left-[-700px] h-full md:w-[600px] opacity-1 bg-slate-400 bg-transparent"
                   onClick={prevSlide}
                 >
-                  <Image
+                  {/* <Image
                     src={'/prev_btn.svg'}
                     width={33}
                     height={66}
                     alt=""
                     className="hidden md:block 2xl:hidden transform translate-x-[630px]"
-                  />
+                  /> */}
                 </div>
               )}
 
               {currentIndex === projectPPT.length - 1 ? null : (
                 <div
-                  className="absolute flex top-0 right-0 w-[10px] md:right-[-700px] h-full md:w-[600px] opacity-1 bg-slate-700 xl:bg-transparent"
+                  className="absolute flex top-0 right-[-110px] w-[100px] md:right-[-700px] h-full md:w-[600px] opacity-1 bg-slate-700 bg-transparent"
                   onClick={nextSlide}
                 >
-                  <Image
+                  {/* <Image
                     src={'/next_btn.svg'}
                     width={33}
                     height={66}
                     alt=""
                     className="hidden md:block 2xl:hidden transform translate-x-[-70px]"
-                  />
+                  /> */}
                 </div>
-              )} */}
+              )}
             </div>
           </div>
           {/* 슬라이드 넘기기 버튼 */}
