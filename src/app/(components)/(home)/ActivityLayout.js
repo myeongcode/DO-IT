@@ -48,7 +48,7 @@ export default function ActivityLayout() {
           width={2400}
           height={0}
           alt="projectImage"
-          className="max-h-40 md:max-h-[400px] object-cover md:mb-10 brightness-[80%]"
+          className="h-40 md:h-[400px] object-cover md:mb-10 brightness-[80%]"
         />
         <div className="flex flex-col w-full md:flex-row justify-between">
           <div className="flex flex-col items-start w-full leading-[1.5] md:w-1/2 md:leading-[2.2] my-6 mb-8 md:my-0 md:mb-0">
@@ -93,11 +93,11 @@ export default function ActivityLayout() {
           className="w-full py-8 md:w-1/2 md:py-0"
         >
           <Image
-            src="/networking-img.jpg"
+            src="/IMG_2470.JPG"
             width={2400}
             height={0}
             alt="projectImage"
-            className="max-h-40 md:max-h-80 object-cover md:mb-10 brightness-50"
+            className="h-40 md:h-60 xl:h-80 object-cover md:mb-10 brightness-50"
           />
           <div className="flex flex-col w-full">
             <div className="flex flex-col items-start leading-[1.5] my-6 mb-8 md:my-0 md:mb-0">
@@ -140,7 +140,7 @@ export default function ActivityLayout() {
             width={2400}
             height={0}
             alt="projectImage"
-            className="max-h-40 md:max-h-80 object-cover md:mb-10 brightness-50"
+            className="h-40 md:h-60 xl:h-80 object-cover md:mb-10 brightness-50"
           />
           <div className="flex flex-col w-full">
             <div className="flex flex-col items-start leading-[1.5] my-6 mb-8 md:my-0 md:mb-0">
