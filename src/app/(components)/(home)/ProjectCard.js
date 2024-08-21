@@ -39,7 +39,13 @@ export default function ProjectCard({ item }) {
           </motion.div>
         )}
       </AnimatePresence>
-      <Image className="object-cover" src={item.imgSrc} fill alt="slide1" />
+      <Image
+        className="object-cover"
+        src={item.imgSrc}
+        fill
+        sizes="310px"
+        alt="slide1"
+      />
     </motion.div>
   );
 }

@@ -32,7 +32,7 @@ const projectLists = [
   },
   {
     id: 5,
-    imgSrc: '/ready_img.png',
+    imgSrc: '/slide/1-project-app-5.png',
     type: 'APP SERVICE',
     title: '교내 통학버스',
   },

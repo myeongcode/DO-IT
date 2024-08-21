@@ -186,13 +186,33 @@ const projectLists = [
     id: 5,
     title: '통학버스 정보 서비스',
     projectSummary: '교내 시내/시외버스 교통 정보 제공 서비스',
-    imgSrc: '/slide/1-project-app-2.png',
+    imgSrc: '/slide/1-project-app-5.png',
     type: 'APP',
     term: '1기',
     teamName: '마동석',
-    projectBackground: ``,
-    projectTool: [],
-    projectFeatures: `
+    projectBackground: `기숙사에 살지않고 학교에 통학을 하려는 연세대학교 학생들이 기존 교통 정보들의 분산으로 인해 불편함을 겪는 문제가 있었고, 통학을 하는 학생들을 위해 조금이라도 더 편의를 제공하기 위해 분산된 교통정보를 한 곳에서 확인할 수 있는 서비스를 고민하게 되었습니다.
+
+    원주 시내에서 운영되는 시내 버스와 다른 지역에서 오가는 버스의 실시간 위치를 표시하고 노선 정보와 알림, 예약의 기능을 추가하여 통학의 불편함을 해소하는 프로젝트를 진행하였습니다.
+    `,
+    projectTool: ['Figma'],
+    projectFeatures: `1. 홈화면
+    - 내가 예약한 시외 티켓 확인
+    - 현재 운행 노선 정보 확인
+    - 즐겨찾는 노선 추가
+
+    2. 시내 화면
+    - 등교 셔틀 노선 정보 확인
+    - 하교 셔틀 노선 정보 확인
+    - 원주 시내버스의 실시간 정보 확인
+
+    3. 시외 화면
+    - 버스 예약
+    - 버스 예약 확인
+
+    4. 마이페이지
+    - 로그아웃
+    - 문의 전화
+    - 건의 사항
     `,
     teamMember: [
       {
@@ -209,17 +229,14 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
+      '/projects/1기/5/slide-1.png',
+      '/projects/1기/5/slide-2.png',
+      '/projects/1기/5/slide-3.png',
+      '/projects/1기/5/slide-4.png',
+      '/projects/1기/5/slide-5.png',
+      '/projects/1기/5/slide-6.png',
     ],
-    projectLink: [
-      {
-        linkName: 'Github',
-        link: 'https://github.com/YonseiDOIT/Yonsei-Commuting-Bus',
-        linkImg: '/github-icon.svg',
-      },
-    ],
+    projectLink: [],
   },
   {
     id: 6,
@@ -370,7 +387,7 @@ export default function Project(props) {
   const [project, setProject] = useState();
   const [projectPPT, setProjectPPT] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [screenWidth, setScreenWidth] = useState();
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     const projectResult = projectLists.find(
@@ -391,6 +408,8 @@ export default function Project(props) {
   });
 
   useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
