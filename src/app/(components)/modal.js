@@ -66,34 +66,40 @@ export default function Modal({ onShowModal, selectedApplicant }) {
               서술해주세요. (동아리, 연구실, 아르바이트, 스터디, 복수전공,
               연계전공 등) 없을경우, 없음으로 기재해주세요.
             </p>
-            <p>{selectedApplicant.q1}</p>
+            <p className="whitespace-pre-wrap">{selectedApplicant.q1}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
               자기소개 및 지원동기
             </p>
-            <p>{selectedApplicant.q2}</p>
+            <p className="whitespace-pre-wrap">{selectedApplicant.q2}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
               희망분야를 선택한 이유와 그 분야로 가기위해 했던 노력을
               작성해주세요.
             </p>
-            <p>{selectedApplicant.q3}</p>
+            <p className="whitespace-pre-wrap">{selectedApplicant.q3}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
               누군가와 함께 프로젝트를 진행한 경험이 있으신가요?{' '}
-              {selectedApplicant.q4Exp ? '네' : '아니요'}
+              {selectedApplicant.q4Exp ? (
+                <span className="text-blue-500">네</span>
+              ) : (
+                <span className="text-red-500">아니요</span>
+              )}
             </p>
-            <p>{selectedApplicant.q4}</p>
+            <p className="whitespace-pre-wrap">{selectedApplicant.q4}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
               본인이 생각하는 기획자/디자이너/개발자에게 중요하게 생각하는 점을
               서술해주세요.
             </p>
-            <p>{selectedApplicant.q5}</p>
+            <p className="whitespace-pre-wrap">{selectedApplicant.q5}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
               블로그 및 링크 :{' '}
-              <a href={selectedApplicant.q6Link}>{selectedApplicant.q6Link}</a>
+              <a className="break-all" href={selectedApplicant.q6Link}>
+                {selectedApplicant.q6Link}
+              </a>
             </p>
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
               첨부파일 :{' '}

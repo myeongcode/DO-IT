@@ -184,7 +184,7 @@ const projectLists = [
   },
   {
     id: 5,
-    title: '통학버스 정보 서비스',
+    title: 'YOB',
     projectSummary: '교내 시내/시외버스 교통 정보 제공 서비스',
     imgSrc: '/slide/1-project-app-5.png',
     type: 'APP',
@@ -344,15 +344,30 @@ const projectLists = [
   {
     id: 8,
     title: 'QPEED',
-    projectSummary: '커미션 플랫폼',
+    projectSummary: '모두가 작가가 되는 그날까지, 나만의 커미션 플랫폼',
     imgSrc: '/slide/1-project-app-2.png',
     type: 'APP',
     term: '1기',
     teamName: 'QING',
-    projectBackground: `
+    projectBackground: `QPEED는 커미션 중계 플랫폼으로, 누구나 쉽게 자신의 작품을 공유하고 커미션을 받을 수 있는 공간입니다. 커미션은 커뮤니티에서 자연스럽게 시작된 활동으로, 여러 작가가 자신의 작품을 공개하여 팬덤을 형성하고, 팬들이 직접 작가에게 작품을 주문하는 형태로 발전해왔습니다. 이제 커미션은 글, 그림을 넘어 다양한 카테고리로 확장되었고, 취미를 넘어서 전문적인 활동으로 자리 잡아가고 있습니다.
+
+    하지만 커미션 활동이 활발해지면서 무리한 요구, 과도한 컨펌 요청, 비매너 행위, 그리고 작가의 연락 두절 등 여러 문제들이 발생하고 있습니다. 현재 대부분의 커미션 플랫폼이 웹 서비스에 한정되어 있어 접근성과 안전성에서도 한계가 존재합니다. QPEED는 이러한 문제들을 해결하기 위해, 앱 서비스를 통해 언제 어디서나 편리하게 이용할 수 있는 접근성과 안전 결제, 세밀한 업로드 방식, 유연한 소통 기능을 제공합니다. 이를 통해 작가와 이용자를 보호하고, 더 나은 커미션 환경을 만들고자 합니다.
     `,
-    projectTool: [],
-    projectFeatures: `
+    projectTool: ['Flutter', 'Firebase', 'Figma'],
+    projectFeatures: `실시간 푸시 알림:
+    관심 있는 작가의 새로운 작품이 업로드될 때 즉시 알림을 받아볼 수 있습니다.
+
+    일정 등록과 작품 업로드 통합:
+    작품을 등록하면서 사진, 가격, 예상 마감 시간을 설정할 수 있으며, 이후 이용자와 협의하여 변경할 수 있습니다.
+
+    실시간 채팅 기능:
+    컨펌 및 각종 문의를 작가와 실시간으로 소통할 수 있습니다. 컨펌은 최초 2회 이후 추가 구매를 통해서만 가능합니다.
+
+    대시보드 기능:
+    여러 작가의 다양한 작품을 한눈에 볼 수 있는 홈 화면과, 관심 있는 작가만 따로 모아볼 수 있는 관심 화면이 제공됩니다.
+
+    커뮤니티 기능:
+    작가와 작품에 대해 생각을 나눌 수 있는 커뮤니티 게시판 기능을 제공합니다.
     `,
     teamMember: [
       {
@@ -360,12 +375,8 @@ const projectLists = [
         member: ['윤서희'],
       },
       {
-        fieldName: 'Front-end Developer',
-        member: ['김태경'],
-      },
-      {
-        fieldName: 'Back-end Developer',
-        member: ['나해빈'],
+        fieldName: 'Front/Back-end Developer',
+        member: ['김태경', '나해빈'],
       },
     ],
     projectImgSrc: [

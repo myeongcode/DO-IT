@@ -12,11 +12,6 @@ const categories = [
     field: 'APP',
     name: '앱',
   },
-  {
-    id: 2,
-    field: 'GAME',
-    name: '게임',
-  },
 ];
 
 export default function CategoriesForm({ formData, setFormData }) {

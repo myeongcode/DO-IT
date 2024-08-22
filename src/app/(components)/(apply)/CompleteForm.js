@@ -14,10 +14,13 @@ export default function CompleteForm({ response }) {
             </span>
           </div>
         ) : (
-          <div className="my-40" role="status">
+          <div
+            className="flex flex-col items-center my-40 gap-y-10"
+            role="status"
+          >
             <svg
               aria-hidden="true"
-              className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              className="w-14 h-14 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +34,9 @@ export default function CompleteForm({ response }) {
                 fill="currentFill"
               />
             </svg>
-            <span className="sr-only">Loading...</span>
+            <span className="text-xl">
+              지원서 제출 중입니다... 창을 닫지 말아주세요
+            </span>
           </div>
         )}
       </div>

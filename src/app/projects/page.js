@@ -56,6 +56,23 @@ const projectLists = [
   },
 ];
 
+const cardVariants = {
+  hidden: (i) => ({
+    opacity: 0,
+    y: i % 2 === 0 ? -50 : 50,
+  }),
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.5,
+      type: 'spring',
+    },
+  }),
+};
+
 export default function Projects() {
   return (
     <div className="flex justify-center pt-[105px] w-full bg-[#14171A]">
@@ -63,6 +80,7 @@ export default function Projects() {
         <span className="text-[9vw] text-center md:text-left md:text-5xl text-[#fff] pb-10 font-suit font-semibold">
           PROJECTS
         </span>
+        {/* 카페고리 필터링 탭 */}
         {/* <ul className="flex w-full py-10 space-x-6">
           {categories.map((category, idx) => {
             return (
@@ -73,7 +91,7 @@ export default function Projects() {
           })}
         </ul> */}
         {/* <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 place-items-center gap-y-6"> */}
-        <motion.div className="grid grid-cols-2 2xl:grid-cols-4 place-self-start gap-[6px] sm:gap-[30px]">
+        <motion.div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-self-start gap-[6px] md:gap-[30px]">
           {projectLists.map((item, idx) => {
             return (
               <Link
@@ -81,7 +99,14 @@ export default function Projects() {
                 href={`/projects/${item.id}`}
                 className="flex"
               >
-                <ProjectCard item={item} />
+                <motion.div
+                  custom={idx} // 각 아이템의 인덱스를 custom 속성으로 전달
+                  initial="hidden"
+                  animate="visible"
+                  variants={cardVariants}
+                >
+                  <ProjectCard item={item} />
+                </motion.div>
               </Link>
             );
           })}
