@@ -59,6 +59,7 @@ const projectLists = [
 const cardVariants = {
   hidden: (i) => ({
     opacity: 0,
+    x: i % 2 === 0 ? -50 : 50,
     y: i % 2 === 0 ? -50 : 50,
   }),
   visible: (i) => ({
@@ -67,7 +68,7 @@ const cardVariants = {
     y: 0,
     transition: {
       delay: i * 0.1,
-      duration: 0.5,
+      duration: 1,
       type: 'spring',
     },
   }),
