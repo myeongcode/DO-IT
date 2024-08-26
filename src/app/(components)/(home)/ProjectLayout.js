@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { motion, useMotionValue, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -8,49 +10,49 @@ import Link from 'next/link';
 const projectLists = [
   {
     id: 1,
-    imgSrc: '/slide/1-project-app-1.png',
+    imgSrc: '/projects/1기/1/1-project-app-1.png',
     type: 'APP SERVICE',
-    title: '학식모지',
+    title: '연세대 학식모지',
   },
   {
     id: 2,
-    imgSrc: '/ready_img.png',
+    imgSrc: '/projects/1기/2/1-project-app-2.png',
     type: 'APP SERVICE',
-    title: '모구',
+    title: 'mogu',
   },
   {
     id: 3,
-    imgSrc: '/ready_img.png',
+    imgSrc: '/projects/1기/3/1-project-web-3.png',
     type: 'WEB SERVICE',
     title: 'YONSEI SPACE',
   },
   {
     id: 4,
-    imgSrc: '/ready_img.png',
+    imgSrc: '/projects/1기/4/1-project-app-4.png',
     type: 'APP SERVICE',
     title: 'Flanning',
   },
   {
     id: 5,
-    imgSrc: '/slide/1-project-app-5.png',
+    imgSrc: '/projects/1기/5/1-project-app-5.png',
     type: 'APP SERVICE',
-    title: '교내 통학버스',
+    title: 'YOB',
   },
   {
     id: 6,
-    imgSrc: '/ready_img.png',
+    imgSrc: '/projects/1기/6/1-project-app-6.png',
     type: 'APP SERVICE',
     title: 'MOCA',
   },
   {
     id: 7,
-    imgSrc: '/slide/1-project-app-2.png',
+    imgSrc: '/projects/1기/7/1-project-app-7.png',
     type: 'APP SERVICE',
     title: 'PINS',
   },
   {
     id: 8,
-    imgSrc: '/ready_img.png',
+    imgSrc: '/projects/1기/8/1-project-app-8.png',
     type: 'APP SERVICE',
     title: 'QPEED',
   },

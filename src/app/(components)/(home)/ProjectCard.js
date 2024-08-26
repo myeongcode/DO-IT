@@ -1,4 +1,5 @@
 'use client';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -33,8 +34,8 @@ export default function ProjectCard({ item }) {
               }}
               className="flex flex-col text-white z-10 text-start m-5 leading-7 font-suit"
             >
-              <h1>{item.type}</h1>
-              <h1 className="font-bold text-xl">{item.title}</h1>
+              <h1 className="text-sm sm:text-base">{item.type}</h1>
+              <h1 className="font-bold text-base sm:text-xl">{item.title}</h1>
             </motion.div>
           </motion.div>
         )}

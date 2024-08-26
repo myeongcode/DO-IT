@@ -17,9 +17,9 @@ const projectLists = [
     id: 1,
     title: '연세대 학식모지',
     projectSummary: '교내 복지매장 정보 제공 서비스',
-    imgSrc: '/slide/1-project-app-1.png',
+    imgSrc: '/projects/1기/1/1-project-app-1.png',
     type: 'APP',
-    term: '선발 프로젝트',
+    term: '선발',
     teamName: '학식모지',
     projectBackground: `연세대 학식모지는 연세대학교 미래캠퍼스 학생들에게 교내 학식 메뉴와 복지매장의 운영 시간을 편리하게 알려주는 정보 제공 어플리케이션입니다. 
 
@@ -53,9 +53,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
+      // '/projects/1기/1/slide-1.png',
+      // '/projects/1기/1/slide-2.png',
+      // '/projects/1기/1/slide-3.png',
     ],
     projectLink: [
       {
@@ -67,16 +67,50 @@ const projectLists = [
   },
   {
     id: 2,
-    title: '모구',
-    projectSummary: '매지리 공동구매 매칭 서비스',
-    imgSrc: '/slide/1-project-app-2.png',
+    title: 'mogu',
+    projectSummary: '연세인을 위한 모든 공동구매, 모구',
+    imgSrc: '/projects/1기/2/1-project-app-2.png',
     type: 'APP',
     term: '1기',
     teamName: '카페이너',
-    projectBackground: `
+    projectBackground: `모구는 매지리에 거주하는 연세대학교 학생들이 물품을 공동구매 할 수 있도록 공구 의사가 맞는 학생들을 연결해주는 서비스입니다.
+
+    학교 주변에 거주하는 학생들은 주변에 만족스러운 오프라인 매장이 없어 물품을 구매하는 데 불편함을 겪고 있습니다. 이에 따라 온라인으로 자주 구매하여 배송받는데, 온라인 구매 시에도 소량구매 비용의 부담으로 인해 대량구매를 하는 경향이 있습니다. 비용 측면의 부담, 품질유지기한 내에 물품을 사용하지 못하거나 보관 공간 부족 등의 시간/공간 관련 문제, 다량의 음식물쓰레기 처리에 대한 스트레스를 겪고 있습니다.
+    
+    따라서 필요한 만큼의 상품을 저렴하게 구매하고 싶어하는 학생들을 위해 원하는 상품을 공동구매할 수 있도록 연결해주는 서비스를 기획하게 되었습니다.
+
+    🙋🏻‍♀️ 손혜림 PM | 문제정의 및 리서치, 페르소나 설정, 플로우 차트 설계, 일정 관리 및 회의 진행, 전반적인 프로세스 관리
+    🙋🏻‍♀️ 남윤지 PD | 와이어프레임 구축, 디자인 스토리보드 제작, 전반적인 컨셉과 디자인 스타일 설정
+    🙋🏻‍♀️ 김민경 FE | UI 구현, 사용자 인터랙션 구현, 기능 구현, API 연동
+    🙋🏻‍♂️ 배진우 FE | UI 구현, 사용자 인터랙션 구현, 기능 구현, API 연동
+    🙋🏻‍♀️ 전가배 BE | 로직, ERD 설계, 데이터베이스 관리, 인증 및 서버, API 설계
     `,
-    projectTool: [],
-    projectFeatures: ``,
+    projectTool: [
+      'JavaScript',
+      'React Native',
+      'Java',
+      'Spring Boot',
+      'AWS EC2',
+      'AWS RDS',
+      'mysql',
+    ],
+    projectFeatures: `1. 공구 모집 및 관리
+    - 모집 : 공동구매 글을 직접 등록하여 참여자를 모집할 수 있습니다.
+    - 참여자 관리 : 공구가 진행되는 단계별로 참여자들을 용이하게 관리할 수 있도록 참여자들의 참여수량 및 참여자 정보를 리스트업하여 주최자에게 보여줍니다.
+
+    2. 공구 참여
+    - 참여 : 원하는 금액과 수량에 맞추어 공구에 참여할 수 있습니다.
+    - 소통 : 공구 의사가 맞는 학생끼리 일정을 조율하며 소통할 수 있도록 오픈채팅방 링크를 제공합니다.
+
+    3. 검색
+    - 관심있는 품목 혹은 키워드를 검색하여 진행중인 공구를 찾아볼 수 있습니다.
+
+    4. 관심공구
+    - 현재 진행중인 공동구매 중 관심있는 상품에 하트를 눌러 찜한 글만 모아볼 수 있습니다.
+
+    5. 공구 관리
+    - 내가 진행중이거나 참여중인 공구의 현재 진행상황을 한눈에 파악할 수 있습니다. 중도에 취소된 공구와 물품 수령까지 받고 완료된 공구는 ‘종료된 공구’ 페이지에서 따로 확인 가능합니다.
+    `,
     teamMember: [
       {
         fieldName: 'Product Manager',
@@ -95,11 +129,7 @@ const projectLists = [
         member: ['전가배'],
       },
     ],
-    projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
-    ],
+    projectImgSrc: ['/projects/1기/2/slide-1.png'],
     projectLink: [
       {
         linkName: 'Github',
@@ -111,14 +141,26 @@ const projectLists = [
   {
     id: 3,
     title: 'YONSEI SPACE',
-    projectSummary: '연세대학교 공간 대관 시스템 리뉴얼',
-    imgSrc: '/slide/1-project-app-2.png',
+    projectSummary: '연세인을 위한 새로운 공간 대관 시스템',
+    imgSrc: '/projects/1기/3/1-project-web-3.png',
     type: 'WEB',
     term: '1기',
     teamName: '2024',
-    projectBackground: ``,
-    projectTool: [],
-    projectFeatures: `
+    projectBackground: `기존의 공간대관시스템은 노후화 및 관리미흡 등으로 인해 사용자들이 불편함을 느끼고 있으며 사용방법 또한 제대로 지켜지고 있지 않고 있습니다.
+    
+    YONSEISPACE는 이를 개선하고자 기획한 공간대관시스템 리뉴얼 프로젝트이며 여러분들께 새로운 방식의 공간대관을 경험시켜드릴겁니다.`,
+    projectTool: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+    projectFeatures: `ⅰ) 조건별 검색 필터
+      건물,시간,기자재,용도,인원 중 사용자가 원하는 조건을 선택해, 보다 빠른 검색이 가능해졌습니다.
+
+    ⅱ) 간편해진 대관신청 과정
+      복잡했던 대관 신청 과정을 신청폼 작성 하나로 간소화하였습니다.
+
+    ⅲ) 새로워진 Card UI
+      기존의 테이블 형식이 아닌 시각화된 UI로 공간의 특징을 한눈에 파악 할 수 있습니다.
+
+    ⅵ) 깔끔해진 마이페이지
+      불필요한 페이지를 없애고 흩어져있던 공지사항과 대관현황 페이지 등을 하나로 통합하였습니다.
     `,
     teamMember: [
       {
@@ -131,9 +173,8 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
+      '/projects/1기/3/slide-1.png',
+      '/projects/1기/3/slide-2.png',
     ],
     projectLink: [
       {
@@ -147,13 +188,40 @@ const projectLists = [
     id: 4,
     title: 'Flanning',
     projectSummary: '국내여행 공동 플래닝 서비스',
-    imgSrc: '/slide/1-project-app-2.png',
+    imgSrc: '/projects/1기/4/1-project-app-4.png',
     type: 'APP',
     term: '1기',
     teamName: 'Flanning',
-    projectBackground: ``,
-    projectTool: [],
-    projectFeatures: `
+    projectBackground: `국내여행자들의 수요는 팬데믹 이후 계속 증가하고 있습니다. 하지만 개인별로 상이한 여행 목적과 계획 스타일을 고려한 공동 여행 플래닝 서비스는 아직 부족합니다.
+
+    Flanning은 각자의 필요에 맞게 여행 계획을 세울 수 있는 자율성 높은 국내여행 공동 플래닝 방식을 제안합니다. 
+
+    번거롭고 때로는 갈등도 겪어야 했던 공동 플래닝 과정을, 설레는 감정과 오롯이 함께할 수 있는 즐거운 여행 경험의 일부로 변화시키고자 합니다. 여행 후에는 생생한 리뷰 작성까지, 여행의 시작과 마무리를 플래닝과 함께해요!
+`,
+    projectTool: [
+      'React Native',
+      'JavaScript',
+      'Google map API',
+      'Figma',
+      'Firebase',
+      'Kakao login API',
+    ],
+    projectFeatures: `🧭 편리한 공동 플래닝
+    - 실시간 업데이트 되는 플래너로 혼선 없는 일정 확인
+    - 공동 작업자를 추가하여 동행자와 함께 여행 일정 편집
+
+    🧭 자율성 높은 플래너
+    - 개인화된 경험과 플래닝 효율을 증대시키는, 자율적인 항목 선택 방식
+    - 대안 플랜 추가, 링크 추가 등, 다양한 기능을 활용한 효과적인 플래닝
+
+    🧭 직관적인 서비스 경험 
+    - 최초 사용자에게 여행 스타일 테스트와 앱 튜토리얼 제공
+    - 라벨과 토글, 아이콘을 적극 활용한 직관적인 플래너 디자인
+
+    🧭 생생한 여행 리뷰 
+    - 여행 후 리뷰 등록으로 추억을 생생하게 기록
+    - 구체적인 피드백 작성으로 향후 여행 경험을 개선
+
     `,
     teamMember: [
       {
@@ -170,9 +238,12 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
+      '/projects/1기/4/slide-1.png',
+      '/projects/1기/4/slide-2.png',
+      '/projects/1기/4/slide-3.png',
+      '/projects/1기/4/slide-4.png',
+      '/projects/1기/4/slide-5.png',
+      '/projects/1기/4/slide-6.png',
     ],
     projectLink: [
       {
@@ -186,7 +257,7 @@ const projectLists = [
     id: 5,
     title: 'YOB',
     projectSummary: '교내 시내/시외버스 교통 정보 제공 서비스',
-    imgSrc: '/slide/1-project-app-5.png',
+    imgSrc: '/projects/1기/5/1-project-app-5.png',
     type: 'APP',
     term: '1기',
     teamName: '마동석',
@@ -242,13 +313,35 @@ const projectLists = [
     id: 6,
     title: 'MOCA',
     projectSummary: '중고책 거래 플랫폼',
-    imgSrc: '/slide/1-project-app-2.png',
+    imgSrc: '/projects/1기/6/1-project-app-6.png',
     type: 'APP',
     term: '1기',
     teamName: '6팀',
-    projectBackground: ``,
-    projectTool: [],
+    projectBackground: `- 공간적 한계로 인한 개인의 종이책 보관의 어려움
+    전자책의 등장으로 종이책이 사라질 것이라는 전망이 있었으나, 가독성, 시력 및 피로도, 책의 소장 가치 등의 이유로 여전히 종이책을 선호하는 사람들이 많다. 그러나 종이책을 보관하는 데는 공간적 한계가 존재한다. 책을 정리하려니 버리기 아깝고, 중고로 팔려 해도 근처에 중고 서점이나 책방이 없으면 어려운 상황이다.
+
+    - 문화 공간의 부족과 대비되는 카페 증가 추이
+    정부의 ‘책 생태계’ 관련 예산 삭감으로 인해 ‘도서관 정책 개발 및 서비스 환경 개선’ 예산이 지난해 대비 52억 4천만 원, ‘도서관 기반 조성’ 예산은 30억 원 넘게 삭감됐다. 특히, 작은 도서관들은 정부나 지자체의 지원 없이 운영이 어려워 지방 주민들의 문화 공간이 줄어들고 있다.
+
+    이에 반해, 코로나 이후 우리나라의 커피 전문점 수는 이전보다 79% 증가했다. 카페의 수가 늘어나면서 다양한 형태의 카페가 생겨나고 있으며, 그중 대표적인 것이 북카페이다. 북카페는 많은 양의 책을 보유한 카페로, 독서와 다양한 음료를 동시에 즐길 수 있는 공간을 제공한다.
+
+    이러한 상황에서 두 문제를 해결할 방안으로 카페와 같이 활용 가능한 공간을 활용하여 개인의 책 대여, 반납, 판매를 돕는 플랫폼을 만들고자 한다.
+    `,
+    projectTool: ['Flutter', 'FastAPI', 'Docker', 'Figma'],
     projectFeatures: `
+    메인 화면
+      - 중고책 검색 : 새로 등록된 책과 인기있는 책을 둘러보며, 원하는 책의 상세 정보도 확인할 수 있습니다.
+      - 중고책 정보 확인 : 중고책들의 가격을 비교해 합리적인 거래를 도울수 있습니다.
+
+    책 관리
+      - 나의 중고책 등록 : 책을 등록하고 자신이 보관 중인 책의 상세 정보를 조회할 수 있습니다.
+      - 책 상태 관리 : 구매와 대출을 허용할 수 있는 관리 상태를 실시간으로 체크할 수 있습니다.
+
+    마이페이지
+      - 인앱결제 : 현재 보유 중인 캐시를 조회하며 캐시를 충전하여 거래할 수  있습니다. 
+      - 찜목록 : 관심있는 책을 찜해놓고 목록을 확인할 수 있습니다.
+      - 책 내역 확인 : 구매/대여/판매한 책들의 내역을 목록으로 확인할 수 있습니다.
+      - 설정 : 개인 정보를 관리하거나 알림 수신을 설정할 수 있습니다.
     `,
     teamMember: [
       {
@@ -260,11 +353,7 @@ const projectLists = [
         member: ['홍정표'],
       },
     ],
-    projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
-    ],
+    projectImgSrc: ['/projects/1기/6/slide-1.png'],
     projectLink: [
       {
         linkName: 'Github',
@@ -277,7 +366,7 @@ const projectLists = [
     id: 7,
     title: 'PINS',
     projectSummary: '교내 모임 중개 및 커뮤니티 플랫폼',
-    imgSrc: '/slide/1-project-app-2.png',
+    imgSrc: '/projects/1기/7/1-project-app-7.png',
     type: 'APP',
     term: '1기',
     teamName: 'IP',
@@ -295,28 +384,25 @@ const projectLists = [
       'Vue.js',
       'Figma',
     ],
-    projectFeatures: `✅ 캐릭터의 레벨별 성장 & 지각 횟수 확인
+    projectFeatures: `📍 우리 학교 인원으로만 구성
+    같은 대학교에 등록된 학생들로만 모임을 구성하여, 신뢰할 수 있는 소통과 협업이 가능해요.
+    학교 인증 절차를 거쳐 더욱 안전한 모임 활동을 즐길 수 있어요.
 
-      - 메인 홈에서 정시 도착의 횟수에 따라 성장하는 꾸물이 캐릭터를 만나볼 수 있어요.
-      - 총 약속 횟수 중 몇 번 꾸물거렸는지 확인할 수 있어요.
+    📍 나의 모임 모아보기
+    내가 가입한 모임들을 한눈에 볼 수 있는 나의 모임 탭에서 쉽게 관리할 수 있어요.
+    모임 별로 최근 활동, 공지사항, 일정 등을 한곳에서 확인할 수 있어 편리해요.
 
-      ✅ 친구들과 모임 생성 & 약속 추가
-      
-      - 직접 모임을 추가하거나 초대 받은 코드를 입력하여 모임에 참가해요.
-      - 약속 추가 시에 날짜, 장소 등 기본 약속 정보에 꾸레벨과 벌칙 설정까지 할 수 있도록 하여 재미를 더했어요.
+    📍 다양한 모임 리스트 및 필터링 가능
+    우리 대학교 내 다양한 모임을 탐색하고 모집 중인 동아리, 소모임을 빠르게 확인할 수 있어요.
+    관심사, 모집 상태 등 여러 기준으로 모임 리스트를 필터링하여 원하는 모임을 빠르게 찾을 수 있어요.
 
-      ✅ 준비 정보를 입력 & 푸시 알림
+    📍 쉽고 빠른 모임 지원
+    마음에 드는 모임을 발견하면 간단한 지원서 작성으로 빠르게 지원할 수 있어요.
+    지원 후 모임 운영진이 검토한 뒤, 앱에서 직접 합격 여부를 확인할 수 있어요.
 
-      - 나의 예상 준비 시간, 이동 시간을 입력하면 여유 시간 10분을 고려하여 절대 늦지 않을 준비, 이동을 시작할 시간을 제안해요.
-      - 해당 시간에 자동으로 푸시 알림을 받을 수 있어요.
-      
-      ✅ 우리들의 준비 현황 공유
-      - 버튼을 클릭하여 나의 준비 현황을 공유하고 친구들의 현황을 확인해요.
-      - 모임 내 누군가 첫 번째로 준비, 이동, 도착한 경우 모임원들은 푸시 알림을 받아요.
-
-      ✅ 지각 꾸물이와 벌칙 확인
-      - 약속의 지각 꾸물이와 벌칙을 확인해요.
-      - 아무도 지각하지 않은 경우, 축하 받을 수 있어요.
+    📍 모임 공지사항, 일정, 멤버 목록 등 모임 관리
+    모임 공지사항, 일정, 멤버 목록 등을 손쉽게 관리하고 확인할 수 있어요.
+    중요한 공지나 일정을 빠르게 확인할 수 있어, 더 효율적인 모임 활동이 가능해요.
     `,
     teamMember: [
       {
@@ -329,9 +415,9 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
+      // '/projects/1기/2/slide-1.png',
+      // '/projects/1기/2/slide-2.png',
+      // '/projects/1기/2/slide-3.png',
     ],
     projectLink: [
       {
@@ -345,7 +431,7 @@ const projectLists = [
     id: 8,
     title: 'QPEED',
     projectSummary: '모두가 작가가 되는 그날까지, 나만의 커미션 플랫폼',
-    imgSrc: '/slide/1-project-app-2.png',
+    imgSrc: '/projects/1기/8/1-project-app-8.png',
     type: 'APP',
     term: '1기',
     teamName: 'QING',
@@ -380,9 +466,10 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      '/projects/1기/2/slide-1.png',
-      '/projects/1기/2/slide-2.png',
-      '/projects/1기/2/slide-3.png',
+      '/projects/1기/8/slide-1.png',
+      '/projects/1기/8/slide-2.png',
+      '/projects/1기/8/slide-3.png',
+      '/projects/1기/8/slide-4.png',
     ],
     projectLink: [
       {
@@ -686,7 +773,7 @@ export default function Project(props) {
           <div className="flex flex-col order-1 pb-[60px] md:w-7/12 md:order-2 2xl:w-2/3">
             {/* 프로젝트 배경 */}
             <div className="flex flex-col pb-[60px] md:pb-[100px]">
-              <h2 className="text-[26px] font-medium pb-4">프로젝트 배경</h2>
+              <h2 className="text-[26px] font-medium pb-4">프로젝트 개요</h2>
               <div className="w-full h-[1px] bg-white"></div>
               <span className="flex flex-col text-lg font-pretend pt-14 font-normal md:w-full 2xl:w-5/6 whitespace-pre-line">
                 {project.projectBackground}
