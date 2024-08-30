@@ -123,7 +123,7 @@ function InformTermCard({ term, setSelectedInformTerm, selectedInformTerm }) {
           selectedInformTerm === term ? 'text-[#14171A]' : 'text-[#8A9FB1]'
         }`}
       >
-        <span className="text-[3vw] md:text-xl">
+        <span className="text-[4vw] md:text-xl">
           {term ? '동의함' : '동의하지 않음'}
         </span>
       </div>
@@ -153,7 +153,7 @@ function PortfolioTermCard({
           selectedPortfolioTerm === term ? 'text-[#14171A]' : 'text-[#8A9FB1]'
         }`}
       >
-        <span className="text-[3vw] md:text-xl">
+        <span className="text-[4vw] md:text-xl">
           {term ? '동의함' : '동의하지 않음'}
         </span>
       </div>
@@ -218,7 +218,7 @@ function Term1Modal({ setViewInformTerm, viewInformTerm }) {
               <br />
               2. 수집 이용 목적 : 지원 절차 진행 및 연락
               <br />
-              3. 정보 보유 기간 : 신입부원 선발 완료(2024.3.9) 후 1년
+              3. 정보 보유 기간 : 신입부원 선발 완료(2024.8.31) 후 1년
               <br />
             </span>
             <span className="text-[3vw] md:text-base font-light">
@@ -287,7 +287,7 @@ function Term2Modal({ setViewPortfolioTerm, viewPortfolioTerm }) {
               <br />
               2. 수집 이용 목적 : 지원 절차 진행 및 연락
               <br />
-              3. 정보 보유 기간 : 신입부원 선발 완료(2024.3.9) 후 1년
+              3. 정보 보유 기간 : 신입부원 선발 완료(2024.8.31) 후 1년
               <br />
             </span>
             <span className="text-[3vw] md:text-base font-light">

@@ -83,8 +83,8 @@ export default function Admin() {
               <td>이름</td>
               <td>학번</td>
               <td>전공</td>
-              <td>직무</td>
               <td>희망분야</td>
+              <td>희망직군</td>
               <td>지원시간</td>
             </tr>
           </thead>

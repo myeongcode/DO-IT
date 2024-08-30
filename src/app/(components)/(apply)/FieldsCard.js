@@ -9,7 +9,7 @@ export default function FieldsCard({ field, setSelectedField, selectedField }) {
       }`}
     >
       <div className="flex justify-between items-center py-10 z-20">
-        <span className="text-[3vw] md:text-2xl xl:text-3xl">
+        <span className="text-[4vw] md:text-2xl xl:text-3xl">
           {field.field}
         </span>
         <div className="flex flex-row items-center space-x-6">

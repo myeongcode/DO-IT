@@ -38,11 +38,11 @@ export default function Modal({ onShowModal, selectedApplicant }) {
             <br />
             <br />
             <br />
-            <p style={{ fontWeight: '600', fontSize: '24px' }}>카테고리</p>
-            <p>{selectedApplicant.category}</p>
+            <p style={{ fontWeight: '600', fontSize: '24px' }}>희망직군</p>
+            <p>{selectedApplicant.field}</p>
             <br />
             <p style={{ fontWeight: '600', fontSize: '24px' }}>희망분야</p>
-            <p>{selectedApplicant.field}</p>
+            <p>{selectedApplicant.category}</p>
             <br />
             <p style={{ fontWeight: '600', fontSize: '24px' }}>학번</p>
             <p>{selectedApplicant.stdID}</p>

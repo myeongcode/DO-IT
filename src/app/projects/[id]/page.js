@@ -17,7 +17,7 @@ const projectLists = [
     id: 1,
     title: '연세대 학식모지',
     projectSummary: '교내 복지매장 정보 제공 서비스',
-    imgSrc: '/projects/1기/1/1-project-app-1.png',
+    imgSrc: '/projects/1기/1/Thumbnail_YonseiHasikmoji.png',
     type: 'APP',
     term: '선발',
     teamName: '학식모지',
@@ -53,15 +53,24 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      // '/projects/1기/1/slide-1.png',
-      // '/projects/1기/1/slide-2.png',
-      // '/projects/1기/1/slide-3.png',
+      '/projects/1기/1/slide-1.png',
+      '/projects/1기/1/slide-2.png',
+      '/projects/1기/1/slide-3.png',
+      '/projects/1기/1/slide-4.png',
+      '/projects/1기/1/slide-5.png',
+      '/projects/1기/1/slide-6.png',
+      '/projects/1기/1/slide-7.png',
     ],
     projectLink: [
       {
-        linkName: 'Github',
-        link: 'https://github.com/YonseiDOIT/Pins',
-        linkImg: '/github-icon.svg',
+        linkName: 'Google Play',
+        link: 'https://play.google.com/store/apps/details?id=com.hungry_yonsei.myapplication&hl=ko',
+        linkImg: '/google-play.png',
+      },
+      {
+        linkName: 'App Store',
+        link: 'https://apps.apple.com/vn/app/%EC%97%B0%EC%84%B8%EB%8C%80-%ED%95%99%EC%8B%9D%EB%AA%A8%EC%A7%80/id6462422011',
+        linkImg: '/app-store.png',
       },
     ],
   },
@@ -69,7 +78,7 @@ const projectLists = [
     id: 2,
     title: 'mogu',
     projectSummary: '연세인을 위한 모든 공동구매, 모구',
-    imgSrc: '/projects/1기/2/1-project-app-2.png',
+    imgSrc: '/projects/1기/2/Thumbnail_mogu.png',
     type: 'APP',
     term: '1기',
     teamName: '카페이너',
@@ -142,7 +151,7 @@ const projectLists = [
     id: 3,
     title: 'YONSEI SPACE',
     projectSummary: '연세인을 위한 새로운 공간 대관 시스템',
-    imgSrc: '/projects/1기/3/1-project-web-3.png',
+    imgSrc: '/projects/1기/3/Thumbnail_YONSEISPACE.png',
     type: 'WEB',
     term: '1기',
     teamName: '2024',
@@ -188,7 +197,7 @@ const projectLists = [
     id: 4,
     title: 'Flanning',
     projectSummary: '국내여행 공동 플래닝 서비스',
-    imgSrc: '/projects/1기/4/1-project-app-4.png',
+    imgSrc: '/projects/1기/4/Thumbnail_Flanning.jpeg',
     type: 'APP',
     term: '1기',
     teamName: 'Flanning',
@@ -257,7 +266,7 @@ const projectLists = [
     id: 5,
     title: 'YOB',
     projectSummary: '교내 시내/시외버스 교통 정보 제공 서비스',
-    imgSrc: '/projects/1기/5/1-project-app-5.png',
+    imgSrc: '/projects/1기/5/Thumbnail_YOB.png',
     type: 'APP',
     term: '1기',
     teamName: '마동석',
@@ -313,7 +322,7 @@ const projectLists = [
     id: 6,
     title: 'MOCA',
     projectSummary: '중고책 거래 플랫폼',
-    imgSrc: '/projects/1기/6/1-project-app-6.png',
+    imgSrc: '/projects/1기/6/Thumbnail_MOCA.png',
     type: 'APP',
     term: '1기',
     teamName: '6팀',
@@ -366,7 +375,7 @@ const projectLists = [
     id: 7,
     title: 'PINS',
     projectSummary: '교내 모임 중개 및 커뮤니티 플랫폼',
-    imgSrc: '/projects/1기/7/1-project-app-7.png',
+    imgSrc: '/projects/1기/7/Thumbnail_PINS.png',
     type: 'APP',
     term: '1기',
     teamName: 'IP',
@@ -415,9 +424,13 @@ const projectLists = [
       },
     ],
     projectImgSrc: [
-      // '/projects/1기/2/slide-1.png',
-      // '/projects/1기/2/slide-2.png',
-      // '/projects/1기/2/slide-3.png',
+      '/projects/1기/7/slide-1.png',
+      '/projects/1기/7/slide-2.png',
+      '/projects/1기/7/slide-3.png',
+      '/projects/1기/7/slide-4.png',
+      '/projects/1기/7/slide-5.png',
+      '/projects/1기/7/slide-6.png',
+      '/projects/1기/7/slide-7.png',
     ],
     projectLink: [
       {
@@ -431,7 +444,7 @@ const projectLists = [
     id: 8,
     title: 'QPEED',
     projectSummary: '모두가 작가가 되는 그날까지, 나만의 커미션 플랫폼',
-    imgSrc: '/projects/1기/8/1-project-app-8.png',
+    imgSrc: '/projects/1기/8/Thumbnail_Qpeed.png',
     type: 'APP',
     term: '1기',
     teamName: 'QING',
@@ -633,7 +646,7 @@ export default function Project(props) {
             </div>
           </div>
           {/* 슬라이드 넘기기 버튼 */}
-          <div className="hidden 2xl:flex flex-row gap-x-[30px] py-[30px]">
+          <div className="flex flex-row gap-x-[30px] py-[30px]">
             <motion.div
               onClick={prevSlide}
               className={`w-9 h-9 bg-black flex justify-center items-center rounded-full cursor-pointer ${
@@ -745,7 +758,7 @@ export default function Project(props) {
             <div className="flex flex-col sm:pb-[60px] md:pb-20">
               <h2 className="text-[26px] font-medium pb-4">프로젝트 링크</h2>
               <div className="w-full h-[1px] bg-white"></div>
-              <div className="flex flex-col font-pretend pt-14">
+              <div className="flex flex-col font-pretend pt-14 gap-y-6">
                 {/* 링크 */}
                 {project.projectLink.map((link, idx) => {
                   return (

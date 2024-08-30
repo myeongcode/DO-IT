@@ -312,7 +312,6 @@ export default function Navbar() {
         transition={{
           duration: 0.3,
         }}
-        // className="w-full md:hidden flex fixed box-border transition duration-75 items-center z-20 justify-center py-[10px]"
         className={
           'w-full hidden md:flex fixed box-border transition duration-75 items-center z-20 justify-center'
         }
@@ -426,7 +425,7 @@ export default function Navbar() {
                     fill: '#00B8FF',
                   }}
                   animate={{
-                    fill: '#00B8FF',
+                    fill: pathname === '/recruit' ? '#14171A' : '#00B8FF',
                   }}
                   transition={{
                     duration: 0.2,
@@ -438,7 +437,7 @@ export default function Navbar() {
                     fill: '#00B8FF',
                   }}
                   animate={{
-                    fill: '#00B8FF',
+                    fill: pathname === '/recruit' ? '#14171A' : '#00B8FF',
                   }}
                   transition={{
                     duration: 0.2,

@@ -26,6 +26,12 @@ const fields = [
     name: 'SERVER 개발자',
     keyword: 'BE',
   },
+  {
+    id: 4,
+    field: 'Project Learner (Learner)',
+    name: '프로젝트 러너',
+    keyword: 'Learner',
+  },
 ];
 
 export default function FieldsForm({ formData, setFormData }) {

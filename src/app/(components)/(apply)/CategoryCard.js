@@ -20,7 +20,7 @@ export default function CategoryCard({
         <span className="text-[4vw] md:text-xl xl:text-2xl">
           {category.field}
         </span>
-        <span className="text-[3vw] md:text-lg xl:text-xl">
+        <span className="text-[4vw] md:text-lg xl:text-xl">
           {category.name}
         </span>
       </div>

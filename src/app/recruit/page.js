@@ -36,6 +36,13 @@ const fields = [
     description:
       '백엔드 개발자로 사용자가 요청하는 데이터를 저장하고 처리하며 CLIENT와의 통신을 원활히 할 수 있도록 개발합니다.',
   },
+  {
+    id: 4,
+    field: 'Project Learner',
+    name: '프로젝트 러너',
+    description:
+      '팀 프로젝트에 바로 참여하는 것이 어려운 분들을 위한 예비 학습자입니다. DO IT 활동(중간 발표, 성과공유회, 네트워킹, 세미나 등)들을 참여하며 다음 기수에 팀 프로젝트를 할 수 있도록 성장해 나갑니다.',
+  },
 ];
 
 const faqs = [
@@ -45,7 +52,7 @@ const faqs = [
     questions: [
       {
         q: '비전공자인데 지원이 가능할까요?',
-        a: '네, 가능합니다. 하지만 실제로 지원하고자 하시는 분야(기획 or 개발 or 디자인)에 대한 기본적인 지식은 알고 계셔야합니다.',
+        a: '네, 가능합니다. 하지만 실제로 지원하고자 하시는 분야(기획 or 개발 or 디자인)에 대한 기본적인 지식은 알고 계셔야합니다. 팀 프로젝트 참여에 부담이 되신다면, Project Learner로 지원하셔서 추후에 팀 프로젝트로 참여하시길 바랍니다.',
       },
       {
         q: '프로젝트 경험이 없어도 가능한가요?',
@@ -95,6 +102,14 @@ const faqs = [
         q: '불가피한 사정이 생겨 활동을 더 이상 못하게 될 것 같아요',
         a: '혹여라도 활동 중 사정이 생겨 활동을 못하게 된다면, 운영진 내부 회의를 통해 활동 여부를 결정 할 예정입니다.',
       },
+      {
+        q: '활동 회비는 어떻게 되나요?',
+        a: 'DO IT에서는 회비로 30,000원을 받고 있습니다. 활동하는데 만족할 수 있도록 깊이있게 활용하도록 하겠습니다.',
+      },
+      {
+        q: 'Project Learner의 경우 구체적으로 어떤 활동들을 하게 되나요?',
+        a: 'Learner분들은 관심 직군/분야로의 성장을 위해 DO IT의 활동(네트워킹, 세미나, 중간발표, 성과공유회 등)들을 참여하며 다양한 탐색을 수행하고, 관심 직군/분야의 간단한 개인프로젝트도 1개씩 진행하여 성과공유회 발표세션에서 Learner가 수행한 개인프로젝트를 회고하는 발표를 진행합니다.',
+      },
     ],
   },
 ];
@@ -111,10 +126,10 @@ export default function Recruit() {
     <div className="flex flex-col w-full items-center overflow-hidden text-[#14171A] font-pretend">
       <RecruitLanding />
       <div className="flex justify-center w-full py-20 md:py-40">
-        <div className="flex flex-col w-[90%] md:w-[56%]">
+        <div className="flex flex-col w-[90%] 2xl:w-[56%] md:w-[80%]">
           <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-semibold text-[10.5vw] md:text-4xl xl:text-6xl">
             <span className="text-[#00B8FF]">DO IT.</span>
-            <span>1기 신규부원 모집</span>
+            <span>2기 신규부원 모집</span>
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col md:flex-row w-full justify-between py-10 md:py-20">
@@ -124,7 +139,7 @@ export default function Recruit() {
               <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row w-full md:w-3/5 justify-between items-start md:items-end md:space-x-6 pt-14 md:pt-0">
                 <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
-                    2/27 - 3/3
+                    8/31 - 9/8
                   </span>
                   <span className="text-[6vw] md:text-base xl:text-xl text-[#657786]">
                     서류 접수
@@ -132,7 +147,7 @@ export default function Recruit() {
                 </div>
                 <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
-                    3/5 - 3/7
+                    9/10 - 9/12
                   </span>
                   <span className="text-[6vw] md:text-base xl:text-xl text-[#657786]">
                     면접 진행
@@ -140,7 +155,7 @@ export default function Recruit() {
                 </div>
                 <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
-                    3/9
+                    9/15
                   </span>
                   <span className="text-[6vw] md:text-base xl:text-xl text-[#657786]">
                     최종 결과
@@ -267,8 +282,8 @@ export default function Recruit() {
                     프로젝트 필수 참여
                   </span>
                   <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786] md:text-center">
-                    프로젝트의 성공적인 마무리를 위해 모든 동아리원이 적극적으로
-                    참여해야 합니다.
+                    프로젝트의 성공적인 마무리를 위해 Pre-Learner를 제외한 모든
+                    동아리원이 적극적으로 참여해야 합니다.
                   </span>
                 </div>
                 <div className="flex flex-col w-[85%] md:w-2/4 space-y-6 md:space-y-20 md:items-center">
@@ -287,14 +302,11 @@ export default function Recruit() {
         </div>
       </div>
       <div className="mb-20 md:mb-40">
-        {/* <Link href="/recruit/apply"> */}
-        <motion.button
-          disabled
-          className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 bg-[#00B8FF] rounded-full text-[6vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45"
-        >
-          지원 마감
-        </motion.button>
-        {/* </Link> */}
+        <Link href="/recruit/apply">
+          <motion.button className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 bg-[#00B8FF] rounded-full text-[6vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45">
+            지원 하기
+          </motion.button>
+        </Link>
       </div>
     </div>
   );

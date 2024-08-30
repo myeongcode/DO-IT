@@ -188,7 +188,7 @@ export default function Apply() {
 
   return (
     <div className="flex pt-[60px] md:pt-[105px] w-full justify-center">
-      <div className="flex flex-col w-[60%] font-suit">
+      <div className="flex flex-col w-[80%] font-suit">
         <div className="flex justify-between text-5xl pt-20 leading-snug font-semibold text-[5vw] md:text-3xl xl:text-5xl">
           <span className="text-[#00B8FF]">DO IT.</span>
           <span>신규부원 모집신청</span>
@@ -273,7 +273,7 @@ export default function Apply() {
                   다음
                 </motion.button>
               )}
-              {page === 11 && (
+              {page === 11 && response && (
                 <Link href="/">
                   <motion.button
                     whileHover={{

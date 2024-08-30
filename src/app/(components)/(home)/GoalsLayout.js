@@ -49,7 +49,7 @@ export default function GoalsLayout() {
             <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
               우리는 모든 단계에서 고민을 해야합니다. 고민 끝의 시도는 본인을
               성장시킬 뿐만 아니라 모두를 성장시키는 큰 힘을 가지고 있습니다.
-              매사에 {"'"}Do it{"'"}이라는 정신을 가지며 활동을 추구합니다.
+              매사에 {"'"}DO IT{"'"}이라는 정신을 가지며 활동을 추구합니다.
             </span>
           </motion.div>
           <motion.div
@@ -98,7 +98,7 @@ export default function GoalsLayout() {
             className="flex flex-col py-10 pb-0 md:py-0"
           >
             <span className="text-[7.6vw] pb-6 md:text-4xl md:pb-14 font-suit">
-              커뮤니케이션
+              소통
             </span>
             <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
               혼자서는 모든 것을 해낼 수 없습니다. 혼자서는 작은 한 방울이지만,

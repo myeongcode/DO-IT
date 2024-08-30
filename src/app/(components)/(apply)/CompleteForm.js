@@ -9,7 +9,7 @@ export default function CompleteForm({ response }) {
               완료되었습니다!
             </span>
             <span className="text-base md:text-xl text-center text-[#657786]">
-              1기 모집에 지원해주셔서 감사합니다.
+              2기 모집에 지원해주셔서 감사합니다.
               <br /> 추후 자세한 면접일정은 이메일로 공지드리도록 하겠습니다.
             </span>
           </div>
