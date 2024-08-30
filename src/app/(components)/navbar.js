@@ -244,7 +244,12 @@ export default function Navbar() {
                     fill: '#00B8FF',
                   }}
                   animate={{
-                    fill: '#00B8FF',
+                    fill:
+                      pathname === '/recruit'
+                        ? !isOpenToggle
+                          ? '#14171A'
+                          : '#00B8FF'
+                        : '#00B8FF',
                   }}
                   transition={{
                     duration: 0.2,
@@ -256,7 +261,12 @@ export default function Navbar() {
                     fill: '#00B8FF',
                   }}
                   animate={{
-                    fill: '#00B8FF',
+                    fill:
+                      pathname === '/recruit'
+                        ? !isOpenToggle
+                          ? '#14171A'
+                          : '#00B8FF'
+                        : '#00B8FF',
                   }}
                   transition={{
                     duration: 0.2,
