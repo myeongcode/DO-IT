@@ -17,18 +17,18 @@ const fields = [
   {
     id: 2,
     field: 'Front-end Developer (FE)',
-    name: 'CLIENT 개발자',
+    name: '개발자',
     keyword: 'FE',
   },
   {
     id: 3,
     field: 'Back-end Developer (BE)',
-    name: 'SERVER 개발자',
+    name: '개발자',
     keyword: 'BE',
   },
   {
     id: 4,
-    field: 'Project Learner (Learner)',
+    field: 'Project Learner',
     name: '프로젝트 러너',
     keyword: 'Learner',
   },

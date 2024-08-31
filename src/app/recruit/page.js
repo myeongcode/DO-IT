@@ -128,7 +128,7 @@ export default function Recruit() {
       <div className="flex justify-center w-full py-20 md:py-40">
         <div className="flex flex-col w-[90%] 2xl:w-[56%] md:w-[80%]">
           <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-semibold text-[10.5vw] md:text-4xl xl:text-6xl">
-            <span className="text-[#00B8FF]">DO IT.</span>
+            <span className="text-[#6439FE]">DO IT.</span>
             <span>2기 신규부원 모집</span>
           </div>
           <div className="flex flex-col">
@@ -241,7 +241,7 @@ export default function Recruit() {
                             key={idx}
                             className="flex flex-col md:flex-row justify-between py-4 md:py-6 space-y-2 md:space-y-0"
                           >
-                            <div className="flex flex-row space-x-2 w-[85%] md:w-[50%]">
+                            <div className="flex flex-row space-x-2 w-[90%] md:w-[50%]">
                               <span className="text-[5vw] md:text-xl xl:text-2xl font-suit font-black text-[#8A9FB1] md:leading-[1.3]">
                                 Q
                               </span>
@@ -249,7 +249,7 @@ export default function Recruit() {
                                 {faqItem.q}
                               </span>
                             </div>
-                            <div className="flex pl-[5.5vw] w-[85%] md:w-[45%]">
+                            <div className="flex pl-[5.5vw] w-[90%] md:w-[45%]">
                               <span className="text-[4vw] md:text-sm xl:text-base text-[#657786] md:leading-[1.5]">
                                 {faqItem.a}
                               </span>
@@ -282,8 +282,8 @@ export default function Recruit() {
                     프로젝트 필수 참여
                   </span>
                   <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786] md:text-center">
-                    프로젝트의 성공적인 마무리를 위해 Pre-Learner를 제외한 모든
-                    동아리원이 적극적으로 참여해야 합니다.
+                    프로젝트의 성공적인 마무리를 위해 모든 동아리원이 적극적으로
+                    참여해야 합니다.
                   </span>
                 </div>
                 <div className="flex flex-col w-[85%] md:w-2/4 space-y-6 md:space-y-20 md:items-center">
@@ -303,8 +303,8 @@ export default function Recruit() {
       </div>
       <div className="mb-20 md:mb-40">
         <Link href="/recruit/apply">
-          <motion.button className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 bg-[#00B8FF] rounded-full text-[6vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45">
-            지원 하기
+          <motion.button className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 bg-[#6439FE] rounded-full text-[6vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45">
+            지원하기
           </motion.button>
         </Link>
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 
-const categories = [
+const categories1 = [
   {
     id: 0,
     field: 'WEB',
@@ -11,6 +11,29 @@ const categories = [
     id: 1,
     field: 'APP',
     name: '앱',
+  },
+];
+
+const categories2 = [
+  {
+    id: 0,
+    field: 'PM',
+    name: '기획',
+  },
+  {
+    id: 1,
+    field: 'UI/UX Design',
+    name: '디자인',
+  },
+  {
+    id: 2,
+    field: 'Front-end',
+    name: '프론트엔드 개발',
+  },
+  {
+    id: 3,
+    field: 'Back-end',
+    name: '백엔드 개발',
   },
 ];
 
@@ -32,18 +55,36 @@ export default function CategoriesForm({ formData, setFormData }) {
             관심 분야를 선택해주세요.
           </span>
         </div>
-        <div className="flex flex-row md:w-[60%] py-10 justify-center space-x-6 pb-60">
-          {categories.map((category, idx) => {
-            return (
-              <CategoryCard
-                key={idx}
-                category={category}
-                index={idx}
-                setSelectedCategory={setSelectedCategory}
-                selectedCategory={selectedCategory}
-              />
-            );
-          })}
+        <div className="flex flex-wrap md:w-[60%] py-10 justify-center space-x-6 pb-60">
+          {formData.field === 'Learner' ? (
+            <div className="grid grid-cols-2 w-full gap-6">
+              {categories2.map((category, idx) => {
+                return (
+                  <CategoryCard
+                    key={idx}
+                    category={category}
+                    index={idx}
+                    setSelectedCategory={setSelectedCategory}
+                    selectedCategory={selectedCategory}
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div className="flex w-full space-x-6">
+              {categories1.map((category, idx) => {
+                return (
+                  <CategoryCard
+                    key={idx}
+                    category={category}
+                    index={idx}
+                    setSelectedCategory={setSelectedCategory}
+                    selectedCategory={selectedCategory}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </div>

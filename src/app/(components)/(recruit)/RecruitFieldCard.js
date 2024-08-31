@@ -69,7 +69,7 @@ export default function RecruitFieldCard({ fieldItem }) {
             className="flex opacity-0 h-0 md:w-[75%] z-0"
           >
             <span
-              className={`text-[4vw] md:text-base xl:text-xl text-[#657786] md:leading-[1.8] pb-5 md:pb-10`}
+              className={`text-[4vw] md:text-base xl:text-xl text-[#657786] md:leading-[1.8] pb-5 md:pb-10 w-[90%]`}
             >
               {fieldItem.description}
             </span>
