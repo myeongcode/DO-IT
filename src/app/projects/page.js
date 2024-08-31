@@ -94,7 +94,7 @@ export default function Projects() {
           })}
         </ul> */}
           {/* <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 place-items-center gap-y-6"> */}
-          <motion.div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-self-start gap-[3px] md:gap-[30px]">
+          <motion.div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-self-start gap-[3px] md:gap-[6px]">
             {projectLists.map((item, idx) => {
               return (
                 <Link
