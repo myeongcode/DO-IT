@@ -35,8 +35,11 @@ export default function CompleteForm({ response }) {
               />
             </svg>
             <span className="text-xl">
-              지원서 제출 중입니다... 창을 닫지 말아주세요 *혹시라도 로딩이
-              끝나지 않고 계속 진행된다면, DO IT 이메일로 문의주시기 바랍니다.
+              지원서 제출 중입니다... 창을 닫지 말아주세요
+            </span>
+            <span className="text-red-400">
+              *혹시라도 로딩이 끝나지 않고 계속 진행된다면, DO IT 이메일로
+              문의주시기 바랍니다.
             </span>
           </div>
         )}
