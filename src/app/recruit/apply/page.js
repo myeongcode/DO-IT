@@ -47,7 +47,7 @@ export default function Apply() {
   const [blob, setBlob] = useState(null);
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(100 / 12);
-  const [page, setPage] = useState(11);
+  const [page, setPage] = useState(0);
   const [activeBtn, setActiveBtn] = useState(false);
   const [response, setResponse] = useState();
   const [file, setFile] = useState(undefined);
