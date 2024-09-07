@@ -48,7 +48,8 @@ export default function Q6Form({
           <span className="text-[#8A9FB1]">
             * 디자이너 직군은 본인이 진행한 과제, 작업물 등이나 포트폴리오
             첨부를 권장하고 있어요. <br />* 파일은 50MB이내의 크기로
-            첨부해주세요!
+            첨부해주세요! <br />* 파일은 .pdf, .png, .jpg, .jpeg로만
+            제출해주세요!
           </span>
         </div>
         <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-64">
@@ -81,6 +82,7 @@ export default function Q6Form({
               id="input-file"
               name="q6File"
               type="file"
+              accept=".pdf, .png, .jpg, .jpeg"
               onChange={(e) => {
                 onChangeFile(e);
               }}
