@@ -218,7 +218,7 @@ export default function Apply() {
           <div
             className={`flex w-full justify-center md:justify-end  ${
               page === 11 ? 'justify-center' : 'justify-end'
-            } font-pretend pt-10`}
+            } font-pretendard pt-10`}
           >
             <div
               className={`flex flex-row text-2xl pb-10 ${

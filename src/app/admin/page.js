@@ -7,21 +7,8 @@ import { jwtDecode } from 'jwt-decode';
 import { toast } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
-const getApplicants = async () => {
-  try {
-    const res = await fetch(`/api/apply`, {
-      cache: 'no-store',
-    });
-    const data = await res.json();
-    return data;
-  } catch (e) {
-    console.log('지원자 정보 불러오기 실패 : ', e);
-    return null;
-  }
-};
-
 export default function Admin() {
-  const [applicants, setApplicants] = useState();
+  const [applicants, setApplicants] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedApplicant, setSelectedApplicant] = useState();
   const router = useRouter();
@@ -29,7 +16,7 @@ export default function Admin() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getApplicants();
-      if (data) {
+      if (data && data.applicants) {
         const sortedApplicants = data.applicants.sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt);
         });
@@ -53,6 +40,25 @@ export default function Admin() {
     forbiddenToken();
     fetchData();
   }, []);
+
+  const getApplicants = async () => {
+    try {
+      const res = await fetch(`/api/apply`, {
+        method: 'GET',
+        cache: 'no-store',
+        credentials: 'include',
+      });
+      if (res.status !== 200) {
+        const message = await res.json();
+        toast.error(message.message);
+        return router.push('/admin/login');
+      }
+      const data = await res.json();
+      return data;
+    } catch (e) {
+      return null;
+    }
+  };
 
   function onClickApplicant(idx) {
     const clickedApplicant = applicants[idx];

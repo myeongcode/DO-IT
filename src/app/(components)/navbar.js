@@ -491,7 +491,7 @@ export default function Navbar() {
                       ? '#FFFFFF'
                       : '#14171A',
                   }}
-                  className="flex flex-col justify-center items-center font-pretend"
+                  className="flex flex-col justify-center items-center font-pretendard"
                 >
                   <Link href={item.path}>{item.name}</Link>
                   {isActive ? (

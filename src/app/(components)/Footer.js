@@ -8,7 +8,7 @@ export default function Footer() {
     pathname !== '/admin' &&
     pathname !== '/admin/login' && (
       <div className="flex w-full justify-center bg-[#DEE5E8]">
-        <div className="flex flex-col w-[90%] md:w-[56%] py-16 font-pretend">
+        <div className="flex flex-col w-[90%] md:w-[56%] py-16 font-pretendard">
           <div className="pb-10">
             <span className="text-[#657786] text-[3.4vw] md:text-sm">
               DO IT (연세대학교 미래캠퍼스 IT 개발동아리)

@@ -24,7 +24,7 @@ export default function Q1Form({ setFormData, formData }) {
             없을 경우, 없음으로 기재해주세요
           </span>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
           <div className="flex flex-row items-center justify-between pt-10">
             <textarea
               name="q1"

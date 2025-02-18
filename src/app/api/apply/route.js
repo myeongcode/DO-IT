@@ -1,15 +1,30 @@
 import Applicant from '@/app/(model)/applicants';
 import { NextResponse } from 'next/server';
 import moment from 'moment-timezone';
+// import { jwtDecode } from 'jwt-decode';
+import jwt from 'jsonwebtoken';
 
-export async function GET() {
+export async function GET(request) {
+  const token = request.cookies.get('AccessToken')?.value;
+
+  if (!token) {
+    return NextResponse.json(
+      { message: '토큰이 존재하지 않습니다.' },
+      { status: 401 }
+    );
+  }
+
   try {
+    const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+    if (decoded.length < 0) {
+      return;
+    }
     const applicants = await Applicant.find();
     return NextResponse.json({ applicants }, { status: 200 });
   } catch (e) {
     return NextResponse.json(
       {
-        message: 'Error',
+        message: '토큰이 유효하지 않음',
         e,
       },
       { status: 500 }

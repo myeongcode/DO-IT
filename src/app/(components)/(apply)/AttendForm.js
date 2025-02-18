@@ -28,7 +28,7 @@ export default function AttendForm({ setFormData, formData }) {
             재학 상태를 입력해주세요.
           </span>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
           <div className="flex flex-row items-start justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">학년</label>
             <div className="grid grid-cols-2 w-[70%] gap-4 gap-y-6">
@@ -86,7 +86,7 @@ function GradeCard({ grade, selectedGrade, setSelectedGrade }) {
       onClick={(e) => {
         setSelectedGrade(grade);
       }}
-      className="w-full cursor-pointer font-pretend"
+      className="w-full cursor-pointer font-pretendard"
     >
       <div
         className={`flex flex-col items-center space-y-3 pb-3  ${
@@ -110,7 +110,7 @@ function SemesterCard({ semester, selectedSemester, setSelectedSemester }) {
       onClick={(e) => {
         setSelectedSemester(semester);
       }}
-      className="w-full cursor-pointer font-pretend"
+      className="w-full cursor-pointer font-pretendard"
     >
       <div
         className={`flex flex-col items-center space-y-3 pb-3  ${
@@ -134,7 +134,7 @@ function AttendCard({ attend, setSelectedAttend, selectedAttend }) {
       onClick={(e) => {
         setSelectedAttend(attend);
       }}
-      className="w-full cursor-pointer font-pretend"
+      className="w-full cursor-pointer font-pretendard"
     >
       <div
         className={`flex flex-col items-center space-y-3 pb-3  ${

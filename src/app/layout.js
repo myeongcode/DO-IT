@@ -7,6 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
 import Head from 'next/head';
+import { ProjectProvider } from './context/projectContext';
 
 export const metadata = {
   title: 'DO IT',
@@ -17,11 +18,11 @@ export const metadata = {
   openGraph: {
     title: 'DO IT',
     description: '연세대학교 미래캠퍼스 IT 개발동아리',
-    url: 'https://do-it.kr', // 실제 사이트 URL로 변경하세요
+    url: 'https://do-it.kr',
     type: 'website',
     images: [
       {
-        url: '/DO+IT_Logo_Black+Blue.png', // 실제 이미지 URL로 변경하세요
+        url: '/DO+IT_Logo_Black+Blue.png',
         width: 800,
         height: 600,
         alt: '연세대학교 미래캠퍼스 IT 개발동아리',
@@ -34,22 +35,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <Head>
-        <title>DO IT</title>
-        <meta
-          name="description"
-          content="연세대학교 미래캠퍼스 IT 개발동아리"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <body>
-        <Toaster position="top-center" reverseOrder={false} />
-        <Navbar />
-        {children}
-        <Analytics />
-        <SpeedInsights />
-        <Footer />
-      </body>
+      <ProjectProvider>
+        <Head>
+          <title>DO IT</title>
+          <meta
+            name="description"
+            content="연세대학교 미래캠퍼스 IT 개발동아리"
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <body>
+          <Toaster position="top-center" reverseOrder={false} />
+          <Navbar />
+          {children}
+          {/* <Analytics />
+          <SpeedInsights /> */}
+          <Footer />
+        </body>
+      </ProjectProvider>
     </html>
   );
 }

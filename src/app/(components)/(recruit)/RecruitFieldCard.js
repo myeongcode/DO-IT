@@ -10,7 +10,10 @@ export default function RecruitFieldCard({ fieldItem }) {
   }
 
   return (
-    <div onClick={onClickField} className="w-full font-pretend cursor-pointer">
+    <div
+      onClick={onClickField}
+      className="w-full font-pretendard cursor-pointer"
+    >
       <div className="flex justify-between items-center py-5 md:py-10 z-20">
         <span className="text-[6vw] md:text-2xl xl:text-4xl">
           {fieldItem.field}

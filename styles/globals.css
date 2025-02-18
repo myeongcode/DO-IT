@@ -2,152 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'SUIT-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff')
-      format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-
+/* SUIT 폰트 */
 @font-face {
   font-family: 'SUIT';
   font-weight: 100;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Thin.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-Thin.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-Thin.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 200;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraLight.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-ExtraLight.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-ExtraLight.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 300;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Light.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-Light.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-Light.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 400;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Regular.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-Regular.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-Regular.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 500;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Medium.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-Medium.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-Medium.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 600;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-SemiBold.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-SemiBold.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-SemiBold.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 700;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Bold.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-Bold.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-Bold.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 800;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-ExtraBold.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-ExtraBold.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-ExtraBold.ttf') format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'SUIT';
   font-weight: 900;
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/sunn/SUIT-Heavy.ttf')
-      format('truetype');
+  src: url('/fonts/SUIT/woff2/SUIT-Heavy.woff2') format('woff2'),
+    url('/fonts/SUIT/ttf/SUIT-Heavy.ttf') format('truetype');
   font-display: swap;
 }
 
+/* Pretendard 폰트 */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-Thin.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-ExtraLight.woff2')
+    format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-Light.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-SemiBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 800;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-ExtraBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 900;
+  font-style: normal;
+  src: url('/fonts/Pretendard/woff2/Pretendard-Black.woff2') format('woff2');
+  font-display: swap;
+}
+
+/*
 @font-face {
   font-family: 'Pretendard';
   font-weight: 100;
@@ -282,7 +293,7 @@
     url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf')
       format('truetype');
   font-display: swap;
-}
+} */
 
 body {
   overflow-x: hidden;

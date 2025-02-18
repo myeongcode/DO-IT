@@ -49,7 +49,7 @@ export default function TermForm({ formData, setFormData }) {
             개인정보 수집에 대한 동의
           </span>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-40 space-y-16">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard pb-40 space-y-16">
           <div className="flex flex-row items-start justify-between pt-10">
             <label className="flex flex-row w-[30%] text-[#8A9FB1]">
               개인정보(인적사항) 수집
@@ -116,7 +116,7 @@ function InformTermCard({ term, setSelectedInformTerm, selectedInformTerm }) {
       onClick={() => {
         setSelectedInformTerm(term);
       }}
-      className="w-full cursor-pointer font-pretend"
+      className="w-full cursor-pointer font-pretendard"
     >
       <div
         className={`flex flex-col items-center space-y-3 pb-3  ${
@@ -146,7 +146,7 @@ function PortfolioTermCard({
       onClick={() => {
         setSelectedPortfolioTerm(term);
       }}
-      className="w-full cursor-pointer font-pretend"
+      className="w-full cursor-pointer font-pretendard"
     >
       <div
         className={`flex flex-col items-center space-y-3 pb-3  ${
@@ -203,7 +203,7 @@ function Term1Modal({ setViewInformTerm, viewInformTerm }) {
               className="w-[43px] p-[10px] rounded-full bg-[#657786] cursor-pointer"
             />
           </div>
-          <div className="flex flex-col font-pretend md:w-[75%] space-y-16">
+          <div className="flex flex-col font-pretendard md:w-[75%] space-y-16">
             <span className="text-[6vw] md:text-3xl">
               개인정보(인적사항) 수집에 대한 안내
             </span>
@@ -271,7 +271,7 @@ function Term2Modal({ setViewPortfolioTerm, viewPortfolioTerm }) {
               className="w-[43px] p-[10px] rounded-full bg-[#657786] cursor-pointer"
             />
           </div>
-          <div className="flex flex-col font-pretend md:w-[75%] space-y-16">
+          <div className="flex flex-col font-pretendard md:w-[75%] space-y-16">
             <span className="text-3xl">
               개인정보(포트폴리오) 수집에 대한 안내
             </span>

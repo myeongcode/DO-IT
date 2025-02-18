@@ -1,12 +1,12 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose, { mongo, Schema } from 'mongoose';
 
-mongoose.connect(process.env.MONGODB_URI);
-mongoose.Promise = global.Promise;
-
-const adminSchema = new Schema({
-  id: String,
-  password: String,
-});
+const adminSchema = new Schema(
+  {
+    id: String,
+    password: String,
+  },
+  { collection: 'admins' }
+);
 
 const Admin = mongoose.models.Admin || mongoose.model('Admin', adminSchema);
 

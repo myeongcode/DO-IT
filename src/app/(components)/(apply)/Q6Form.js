@@ -52,7 +52,7 @@ export default function Q6Form({
             제출해주세요!
           </span>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend pb-64">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard pb-64">
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">링크</label>
             <input

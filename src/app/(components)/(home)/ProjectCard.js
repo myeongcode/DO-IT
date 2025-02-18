@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function ProjectCard({ item }) {
+export default function ProjectCard({ project }) {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ export default function ProjectCard({ item }) {
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
       onClick={() => setShowOverlay(!showOverlay)}
-      className="w-[43vw] h-[73vw] sm:w-[310px] sm:h-[510px] relative flex"
+      className="w-[200px] h-[340px] lg:w-[310px] lg:h-[510px] relative flex"
     >
       <AnimatePresence>
         {showOverlay && (
@@ -34,15 +34,17 @@ export default function ProjectCard({ item }) {
               }}
               className="flex flex-col text-white z-10 text-start m-5 leading-7 font-suit"
             >
-              <h1 className="text-sm sm:text-base">{item.type}</h1>
-              <h1 className="font-bold text-base sm:text-xl">{item.title}</h1>
+              <h1 className="text-sm sm:text-base">{project.type}</h1>
+              <h1 className="font-bold text-base sm:text-xl">
+                {project.title}
+              </h1>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
       <Image
         className="object-cover"
-        src={item.imgSrc}
+        src={project.imgSrc}
         fill
         sizes="310px"
         alt="slide1"

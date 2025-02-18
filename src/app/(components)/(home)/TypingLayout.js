@@ -17,7 +17,7 @@ export default function TypingLayout() {
       }}
       className="flex justify-center py-40 w-[90%] md:w-[60%] h-screen items-center text-[#14171A]"
     >
-      <div className="flex w-full justify-start flex-col space-y-8 md:hidden leading-tight mt-10 font-suit font-semibold">
+      <div className="flex w-full justify-start flex-col space-y-8 md:hidden leading-tight font-suit font-semibold">
         <motion.div className="flex flex-col text-[14vw]">
           <span className="text-[#00B8FF]">
             <Typewriter

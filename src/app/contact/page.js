@@ -49,14 +49,14 @@ export default function Contact() {
         <div className="flex flex-col">
           <div className="flex flex-row items-center justify-between py-10 space-x-5">
             <span className="text-[4.4vw] md:text-3xl">E-MAIL</span>
-            <span className="text-[4vw] md:text-xl font-pretend text-[#657786]">
+            <span className="text-[4vw] md:text-xl font-pretendard text-[#657786]">
               yonsei.do.it@gmail.com
             </span>
           </div>
           <hr />
           <div className="flex flex-row items-center justify-between py-10 space-x-10">
             <span className="text-[4.4vw] md:text-3xl">LOCATION</span>
-            <span className="text-[3vw] md:text-xl font-pretend text-[#657786]">
+            <span className="text-[3vw] md:text-xl font-pretendard text-[#657786]">
               연세대학교 미래캠퍼스 컨버전스홀 201호 학생창업보육실
             </span>
           </div>

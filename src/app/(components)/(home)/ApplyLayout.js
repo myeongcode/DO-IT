@@ -24,7 +24,7 @@ export default function ApplyLayout() {
               transition={{
                 duration: 0.6,
               }}
-              className="px-[6vw] py-[1vw] md:px-10 md:py-3 text-[5vw] md:text-3xl  rounded-full border-2 border-[#fff] text-white font-pretend"
+              className="px-[6vw] py-[1vw] md:px-10 md:py-3 text-[5vw] md:text-3xl  rounded-full border-2 border-[#fff] text-white font-pretendard"
             >
               지원하기
             </motion.button>

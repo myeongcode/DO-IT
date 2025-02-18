@@ -3,59 +3,60 @@ import Link from 'next/link';
 import ProjectCard from '../(components)/(home)/ProjectCard';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+import { useProjects } from '../context/projectContext';
 
 const categories = ['ALL', 'APP', 'WEB', 'GAME'];
 
-const projectLists = [
-  {
-    id: 1,
-    imgSrc: '/projects/1기/1/Thumbnail_YonseiHasikmoji.png',
-    type: 'APP SERVICE',
-    title: '연세대 학식모지',
-  },
-  {
-    id: 2,
-    imgSrc: '/projects/1기/2/Thumbnail_mogu.png',
-    type: 'APP SERVICE',
-    title: 'mogu',
-  },
-  {
-    id: 3,
-    imgSrc: '/projects/1기/3/Thumbnail_YONSEISPACE.png',
-    type: 'WEB SERVICE',
-    title: 'YONSEI SPACE',
-  },
-  {
-    id: 4,
-    imgSrc: '/projects/1기/4/Thumbnail_Flanning.jpeg',
-    type: 'APP SERVICE',
-    title: 'Flanning',
-  },
-  {
-    id: 5,
-    imgSrc: '/projects/1기/5/Thumbnail_YOB.png',
-    type: 'APP SERVICE',
-    title: 'YOB',
-  },
-  {
-    id: 6,
-    imgSrc: '/projects/1기/6/Thumbnail_MOCA.png',
-    type: 'APP SERVICE',
-    title: 'MOCA',
-  },
-  {
-    id: 7,
-    imgSrc: '/projects/1기/7/Thumbnail_PINS.png',
-    type: 'APP SERVICE',
-    title: 'PINS',
-  },
-  {
-    id: 8,
-    imgSrc: '/projects/1기/8/Thumbnail_Qpeed.png',
-    type: 'APP SERVICE',
-    title: 'QPEED',
-  },
-];
+// const projectLists = [
+//   {
+//     id: 1,
+//     imgSrc: '/projects/1기/1/Thumbnail_YonseiHasikmoji.png',
+//     type: 'APP SERVICE',
+//     title: '연세대 학식모지',
+//   },
+//   {
+//     id: 2,
+//     imgSrc: '/projects/1기/2/Thumbnail_mogu.png',
+//     type: 'APP SERVICE',
+//     title: 'mogu',
+//   },
+//   {
+//     id: 3,
+//     imgSrc: '/projects/1기/3/Thumbnail_YONSEISPACE.png',
+//     type: 'WEB SERVICE',
+//     title: 'YONSEI SPACE',
+//   },
+//   {
+//     id: 4,
+//     imgSrc: '/projects/1기/4/Thumbnail_Flanning.jpeg',
+//     type: 'APP SERVICE',
+//     title: 'Flanning',
+//   },
+//   {
+//     id: 5,
+//     imgSrc: '/projects/1기/5/Thumbnail_YOB.png',
+//     type: 'APP SERVICE',
+//     title: 'YOB',
+//   },
+//   {
+//     id: 6,
+//     imgSrc: '/projects/1기/6/Thumbnail_MOCA.png',
+//     type: 'APP SERVICE',
+//     title: 'MOCA',
+//   },
+//   {
+//     id: 7,
+//     imgSrc: '/projects/1기/7/Thumbnail_PINS.png',
+//     type: 'APP SERVICE',
+//     title: 'PINS',
+//   },
+//   {
+//     id: 8,
+//     imgSrc: '/projects/1기/8/Thumbnail_Qpeed.png',
+//     type: 'APP SERVICE',
+//     title: 'QPEED',
+//   },
+// ];
 
 const cardVariants = {
   hidden: (i) => ({
@@ -76,6 +77,8 @@ const cardVariants = {
 };
 
 export default function Projects() {
+  const { projects } = useProjects();
+
   return (
     <>
       <div className="flex justify-center pt-[60px] md:pt-[105px] w-full bg-[#14171A]">
@@ -95,11 +98,11 @@ export default function Projects() {
         </ul> */}
           {/* <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 place-items-center gap-y-6"> */}
           <motion.div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-self-start gap-[3px] md:gap-[6px]">
-            {projectLists.map((item, idx) => {
+            {projects.map((project, idx) => {
               return (
                 <Link
                   key={`project-${idx}`}
-                  href={`/projects/${item.id}`}
+                  href={`/projects/${project.id}`}
                   className="flex"
                 >
                   <motion.div
@@ -108,7 +111,7 @@ export default function Projects() {
                     animate="visible"
                     variants={cardVariants}
                   >
-                    <ProjectCard item={item} />
+                    <ProjectCard project={project} />
                   </motion.div>
                 </Link>
               );

@@ -19,7 +19,7 @@ export default function Q5Form({ setFormData, formData }) {
             본인 지원 직군에 맞춰 작성해주시면 됩니다.
           </span>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
           <div className="flex flex-row items-center justify-between pt-10">
             <textarea
               name="q5"

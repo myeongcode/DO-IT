@@ -43,7 +43,7 @@ export default function Q4Form({ setFormData, formData }) {
           </span>
         </div>
         {selectedQ4Exp !== null ? (
-          <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+          <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
             <div className="flex flex-row items-center justify-between pt-10">
               <textarea
                 name="q4"
@@ -70,7 +70,7 @@ function ExpCard({ exp, setSelectedQ4Exp, selectedQ4Exp }) {
       onClick={(e) => {
         setSelectedQ4Exp(exp);
       }}
-      className={`w-full font-pretend cursor-pointer ${
+      className={`w-full font-pretendard cursor-pointer ${
         selectedQ4Exp === exp ? 'text-[#14171A]' : 'text-[#8A9FB1]'
       }`}
     >

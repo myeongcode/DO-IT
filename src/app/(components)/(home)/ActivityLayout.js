@@ -19,9 +19,9 @@ export default function ActivityLayout() {
         }}
         viewport={{
           once: true,
-          amount: 1,
+          // amount: 1,
         }}
-        className="text-left text-[9.3vw] md:text-6xl font-suit font-semibold"
+        className="text-left text-[9.3vw] md:text-6xl font-suit font-bold"
       >
         WHAT DO {"'"}DO IT{"'"}
       </motion.span>
@@ -58,14 +58,14 @@ export default function ActivityLayout() {
             <span className="text-[4.4vw] md:text-xl font-suit">프로젝트</span>
           </div>
           <div className="w-[85%] md:w-3/4 tracking-tight">
-            <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
+            <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretendard">
               모든 동아리 구성원이 한 학기동안 팀빌딩을 통해 프로젝트를
               진행하고, 중간발표를 통해 각 팀들의 진행상황을 공유하는 시간을
               가집니다.
             </span>
             <br />
             <br />
-            <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
+            <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretendard">
               또한 성과 공유회 Dev IT. 부스세션을 통해 프로젝트를 전시하고, 발표
               세션을 통해 프로젝트 진행 중 직면했던 문제점과 해결 과정을
               공유합니다.
@@ -93,11 +93,11 @@ export default function ActivityLayout() {
           className="w-full py-8 md:w-1/2 md:py-0"
         >
           <Image
-            src="/IMG_2470.JPG"
+            src="/networking.jpg"
             width={2400}
             height={0}
             alt="projectImage"
-            className="h-40 md:h-60 xl:h-80 object-cover md:mb-10 brightness-50"
+            className="h-40 md:h-60 xl:h-80 object-cover md:mb-10 brightness-[0.8]"
           />
           <div className="flex flex-col w-full">
             <div className="flex flex-col items-start leading-[1.5] my-6 mb-8 md:my-0 md:mb-0">
@@ -109,7 +109,7 @@ export default function ActivityLayout() {
               </span>
             </div>
             <div className="w-[85%] md:w-full md:pt-6 md:pb-14 tracking-tight">
-              <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
+              <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretendard">
                 구성원 모두 참여해 서로 교류하며 친목을 도모하는 네트워킹 데이를
                 진행합니다.
               </span>
@@ -150,7 +150,7 @@ export default function ActivityLayout() {
               <span className="text-[4.4vw] md:text-xl font-suit">세미나</span>
             </div>
             <div className="w-[85%] md:w-full md:pt-6 md:pb-14 tracking-tight">
-              <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretend">
+              <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretendard">
                 선배/현직자 등을 초청해 직무, 업계 현황, 조언 등 동아리
                 구성원에게 도움이 되는 주제로 세미나를 개최합니다.
               </span>

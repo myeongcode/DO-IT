@@ -14,7 +14,7 @@ export default function Q2Form({ setFormData, formData }) {
             </span>
           </div>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
           <div className="flex flex-row items-center justify-between pt-10">
             <textarea
               name="q2"

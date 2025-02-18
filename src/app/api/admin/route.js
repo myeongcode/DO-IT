@@ -2,22 +2,33 @@ import Admin from '@/app/(model)/admin';
 import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 
-const moment = require('moment');
+// GET요청이 따로 필요없음
+// export async function GET(request) {
+//   const token = request.cookies.get('AccessToken')?.value;
 
-export async function GET() {
-  try {
-    const admins = await Admin.find();
-    return NextResponse.json({ admins }, { status: 200 });
-  } catch (e) {
-    return NextResponse.json(
-      {
-        message: 'Error',
-        e,
-      },
-      { status: 500 }
-    );
-  }
-}
+//   if (!token) {
+//     return NextResponse.json(
+//       { message: '토큰이 존재하지 않습니다.' },
+//       { status: 401 }
+//     );
+//   }
+
+//   try {
+//     const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+//     return NextResponse.json(
+//       { message: '토큰 검증 완료', decoded },
+//       { status: 200 }
+//     );
+//   } catch (e) {
+//     return NextResponse.json(
+//       {
+//         message: '유효하지 않은 토큰',
+//         e,
+//       },
+//       { status: 500 }
+//     );
+//   }
+// }
 
 export async function POST(request) {
   try {

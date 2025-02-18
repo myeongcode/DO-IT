@@ -123,7 +123,7 @@ export default function Recruit() {
   }
 
   return (
-    <div className="flex flex-col w-full items-center overflow-hidden text-[#14171A] font-pretend">
+    <div className="flex flex-col w-full items-center overflow-hidden text-[#14171A] font-pretendard">
       <RecruitLanding />
       <div className="flex justify-center w-full py-20 md:py-40">
         <div className="flex flex-col w-[90%] 2xl:w-[56%] md:w-[80%]">

@@ -16,7 +16,7 @@ export default function InformForm({ setFormData, formData }) {
             인적 사항을 입력해주세요.
           </span>
         </div>
-        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretend">
+        <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
           <div className="flex flex-row items-center justify-between pt-10">
             <label className="w-[30%] text-[#8A9FB1]">이름</label>
             <input

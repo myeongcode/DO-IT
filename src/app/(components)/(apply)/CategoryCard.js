@@ -8,7 +8,7 @@ export default function CategoryCard({
       onClick={() => {
         setSelectedCategory(category.field);
       }}
-      className="flex flex-col w-full cursor-pointer font-pretend"
+      className="flex flex-col w-full cursor-pointer font-pretendard"
     >
       <div
         className={`flex flex-col items-center space-y-3 pb-3  ${

@@ -46,7 +46,7 @@ export default function GoalsLayout() {
             <span className="text-[7.6vw] pb-6 md:text-4xl md:pb-14 font-suit fonr-medium">
               성장
             </span>
-            <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
+            <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretendard">
               우리는 모든 단계에서 고민을 해야합니다. 고민 끝의 시도는 본인을
               성장시킬 뿐만 아니라 모두를 성장시키는 큰 힘을 가지고 있습니다.
               매사에 {"'"}DO IT{"'"}이라는 정신을 가지며 활동을 추구합니다.
@@ -73,7 +73,7 @@ export default function GoalsLayout() {
             <span className="text-[7.6vw] pb-6 md:text-4xl md:pb-14 font-suit fonr-medium">
               열정
             </span>
-            <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
+            <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretendard">
               목표를 설정한다는 것은 결실을 맺을 때까지 지속적으로 추구하는 것을
               의미합니다. 흔들리지 않는 열정으로 접근해 프로젝트를 성공으로 이끌
               수 있도록 도와주는 동아리입니다.
@@ -100,7 +100,7 @@ export default function GoalsLayout() {
             <span className="text-[7.6vw] pb-6 md:text-4xl md:pb-14 font-suit">
               소통
             </span>
-            <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretend">
+            <span className="w-[85%] md:w-full text-[#657786] text-[3.8vw] md:text-base md:leading-[1.8] font-pretendard">
               혼자서는 모든 것을 해낼 수 없습니다. 혼자서는 작은 한 방울이지만,
               함께 모이면 바다를 이루듯이 팀과 혹은 동료들과 소통을 하며 함께
               목표를 향해 달려나가 서로를 동기부여 할 수 있도록 장려하는

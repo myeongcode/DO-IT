@@ -4,7 +4,7 @@ export default function FieldsCard({ field, setSelectedField, selectedField }) {
       onClick={() => {
         setSelectedField(field.keyword);
       }}
-      className={`w-full font-pretend font-normal cursor-pointer  ${
+      className={`w-full font-pretendard font-normal cursor-pointer  ${
         selectedField === field.keyword ? 'text-[#14171A]' : 'text-[#8A9FB1]'
       }`}
     >
