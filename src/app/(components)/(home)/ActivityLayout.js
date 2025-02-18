@@ -44,7 +44,7 @@ export default function ActivityLayout() {
         className="w-full py-8 md:py-20"
       >
         <Image
-          src="/IMG_2206.JPG"
+          src="/project.jpg"
           width={2400}
           height={0}
           alt="projectImage"
