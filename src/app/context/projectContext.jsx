@@ -57,12 +57,12 @@ const projectLists = [
       {
         linkName: 'Google Play',
         link: 'https://play.google.com/store/apps/details?id=com.hungry_yonsei.myapplication&hl=ko',
-        linkImg: '/google-play.png',
+        linkImg: '/common/google-play.png',
       },
       {
         linkName: 'App Store',
         link: 'https://apps.apple.com/vn/app/%EC%97%B0%EC%84%B8%EB%8C%80-%ED%95%99%EC%8B%9D%EB%AA%A8%EC%A7%80/id6462422011',
-        linkImg: '/app-store.png',
+        linkImg: '/common/apple.svg',
       },
     ],
   },
@@ -135,7 +135,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Mogu',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -181,7 +181,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Yonsei-Space',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -250,7 +250,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Flanning',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -359,7 +359,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Moca',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -428,7 +428,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Pins',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -480,7 +480,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/QPEED',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -493,25 +493,16 @@ const projectLists = [
     term: ['2기'],
     teamName: '1팀',
     // 수정 예정
-    projectBackground: `QPEED는 커미션 중계 플랫폼으로, 누구나 쉽게 자신의 작품을 공유하고 커미션을 받을 수 있는 공간입니다. 커미션은 커뮤니티에서 자연스럽게 시작된 활동으로, 여러 작가가 자신의 작품을 공개하여 팬덤을 형성하고, 팬들이 직접 작가에게 작품을 주문하는 형태로 발전해왔습니다. 이제 커미션은 글, 그림을 넘어 다양한 카테고리로 확장되었고, 취미를 넘어서 전문적인 활동으로 자리 잡아가고 있습니다.
-
-    하지만 커미션 활동이 활발해지면서 무리한 요구, 과도한 컨펌 요청, 비매너 행위, 그리고 작가의 연락 두절 등 여러 문제들이 발생하고 있습니다. 현재 대부분의 커미션 플랫폼이 웹 서비스에 한정되어 있어 접근성과 안전성에서도 한계가 존재합니다. QPEED는 이러한 문제들을 해결하기 위해, 앱 서비스를 통해 언제 어디서나 편리하게 이용할 수 있는 접근성과 안전 결제, 세밀한 업로드 방식, 유연한 소통 기능을 제공합니다. 이를 통해 작가와 이용자를 보호하고, 더 나은 커미션 환경을 만들고자 합니다.
+    projectBackground: `2DAYTODAY는 계획 수립 능력을 활성화하고 효율적인 일정 관리를 돕는 서비스입니다. 많은 사람들이 일정을 하루 단위로 계획하지만 그러다보면 급한 일이 생기거나 예상보다 일이 밀리면 계획이 꼬이기 쉽습니다. 이런 상황은 계획자에게 스트레스를 주고, 일정을 제대로 관리하기 어렵게 만듭니다.
+    또한, 복잡한 업무나 큰 작업은 하루 단위로 계획하기 어려운 경우가 많습니다. 이를 해결하기 위해, 2DAYTODAY는 이틀 단위로 유연하게 일정을 조정할 수 있는 시스템을 제공합니다. 
+    따라서 2DAYTODAY는 이틀 단위로 기존보다 더 유연하게 일정을 조정할 수 있도록 도와주며, 계획 간 연계를 통해 작업을 효율적으로 분배하고 생산성을 높이는 데 기여합니다.
     `,
     projectTool: ['Figma', 'HTML', 'CSS', 'JavaScript'],
-    projectFeatures: `실시간 푸시 알림:
-    관심 있는 작가의 새로운 작품이 업로드될 때 즉시 알림을 받아볼 수 있습니다.
+    projectFeatures: `MAIN → MAIN 화면에서는 오늘과 내일의 일정을 추가하고 관리할 수 있습니다. 해야 할 일정은 하늘색, 완료한 일정은 회색, 미룬 일정은 주황색으로 구분됩니다. 미룬 일정은 이미 한 번 미뤄졌기 때문에 다시 미룰 수 없습니다. 
 
-    일정 등록과 작품 업로드 통합:
-    작품을 등록하면서 사진, 가격, 예상 마감 시간을 설정할 수 있으며, 이후 이용자와 협의하여 변경할 수 있습니다.
-
-    실시간 채팅 기능:
-    컨펌 및 각종 문의를 작가와 실시간으로 소통할 수 있습니다. 컨펌은 최초 2회 이후 추가 구매를 통해서만 가능합니다.
-
-    대시보드 기능:
-    여러 작가의 다양한 작품을 한눈에 볼 수 있는 홈 화면과, 관심 있는 작가만 따로 모아볼 수 있는 관심 화면이 제공됩니다.
-
-    커뮤니티 기능:
-    작가와 작품에 대해 생각을 나눌 수 있는 커뮤니티 게시판 기능을 제공합니다.
+    TASKS → TASKS 화면에서는 일정을 추가하고 수정할 수 있습니다. 일정 이름과 설명을 입력하고, 일정을 오늘 또는 내일로 설정할 수 있습니다. 일정이 미뤄져야 할 경우 미루기 버튼을 눌러 일정을 미룰 수 있습니다. 이미 한 번 미뤄진 일정은 미루기 버튼이 비활성화되어 다시 미룰 수 없습니다.  
+    
+    WEEKLY → WEEKLY 화면에서는 일정 달성률을 확인할 수 있습니다. 오늘을 기준으로 지난 일주일 동안의 달성률을 확인할 수 있으며, 각 일정별 달성률도 확인할 수 있습니다.
     `,
     teamMember: [
       {
@@ -533,12 +524,12 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/2dayToday',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
       {
         linkName: 'Link',
         link: 'https://2daytoday.com/',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/home.svg',
       },
     ],
   },
@@ -547,7 +538,8 @@ const projectLists = [
     title: '코디(CoDi)',
     projectSummary: '개발자/디자이너를 위한 팀 빌딩 서비스',
     // 수정 예정
-    imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
+    // imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
+    imgSrc: '/common/Thumbnail_default.png',
     type: 'APP',
     term: ['2기'],
     teamName: '배라31',
@@ -591,7 +583,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/CODI',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -600,7 +592,8 @@ const projectLists = [
     title: 'Routie',
     projectSummary: '효율적인 학교생활 루틴 관리 서비스',
     // 수정 예정
-    imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
+    // imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
+    imgSrc: '/common/Thumbnail_default.png',
     type: 'APP',
     term: ['2기'],
     teamName: '예은이의 연세',
@@ -655,7 +648,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Routie',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },
@@ -723,7 +716,7 @@ const projectLists = [
       {
         linkName: 'Github',
         link: 'https://github.com/YonseiDOIT/Obok',
-        linkImg: '/github-icon.svg',
+        linkImg: '/common/github.svg',
       },
     ],
   },

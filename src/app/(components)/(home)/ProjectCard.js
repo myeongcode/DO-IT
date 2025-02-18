@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
       onClick={() => setShowOverlay(!showOverlay)}
-      className="w-[200px] h-[340px] lg:w-[310px] lg:h-[510px] relative flex"
+      className="w-[180px] h-[280px] sm:w-[200px] sm:h-[340px] lg:w-[310px] lg:h-[510px] relative flex"
     >
       <AnimatePresence>
         {showOverlay && (

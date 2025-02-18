@@ -188,7 +188,7 @@ export default function Project(props) {
               }}
             >
               <Image
-                src={'/prev_btn.svg'}
+                src={'/common/prev_btn.svg'}
                 width={8}
                 height={16}
                 alt=""
@@ -210,7 +210,7 @@ export default function Project(props) {
               }}
             >
               <Image
-                src={'/next_btn.svg'}
+                src={'/common/next_btn.svg'}
                 width={8}
                 height={16}
                 alt=""
@@ -297,7 +297,7 @@ export default function Project(props) {
                       <h5 className="text-lg font-semibold opacity-70">
                         {link.linkName}
                       </h5>
-                      <Link href={link.link}>
+                      <Link href={link.link} target="_blank">
                         <Image
                           src={link.linkImg}
                           width={36}
