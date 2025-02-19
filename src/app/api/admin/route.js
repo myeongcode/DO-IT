@@ -1,6 +1,7 @@
 import Admin from '@/app/(model)/admin';
 import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
+import dbConnect from '@/app/lib/dbConnect';
 
 // GET요청이 따로 필요없음
 // export async function GET(request) {
@@ -32,6 +33,8 @@ import jwt from 'jsonwebtoken';
 
 export async function POST(request) {
   try {
+    await dbConnect();
+
     const admins = await Admin.find();
     const data = await request.json();
 
