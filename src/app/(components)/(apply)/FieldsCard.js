@@ -13,7 +13,7 @@ export default function FieldsCard({ field, setSelectedField, selectedField }) {
           {field.field}
         </span>
         <div className="flex flex-row items-center space-x-6">
-          <span className="text-[3vw] md:text-base xl:text-xl">
+          <span className="text-[4vw] md:text-base xl:text-xl">
             {field.name}
           </span>
         </div>

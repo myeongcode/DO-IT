@@ -26,19 +26,28 @@ const fields = [
     name: '개발자',
     keyword: 'BE',
   },
-  {
-    id: 4,
-    field: 'Project Learner',
-    name: '프로젝트 러너',
-    keyword: 'Learner',
-  },
+  // {
+  //   id: 4,
+  //   field: 'Project Learner',
+  //   name: '프로젝트 러너',
+  //   keyword: 'Learner',
+  // },
 ];
 
 export default function FieldsForm({ formData, setFormData }) {
   const [selectedField, setSelectedField] = useState(formData.field);
 
   useEffect(() => {
-    setFormData({ ...formData, field: selectedField });
+    setFormData({
+      ...formData,
+      field: selectedField,
+      fieldName:
+        selectedField === 'PM'
+          ? '기획자'
+          : selectedField === 'PD'
+          ? '디자이너'
+          : '개발자',
+    });
   }, [selectedField]);
 
   return (

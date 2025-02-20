@@ -11,13 +11,13 @@ import { ProjectProvider } from './context/projectContext';
 
 export const metadata = {
   title: 'DO IT',
-  description: '연세대학교 미래캠퍼스 IT 개발동아리',
+  description: '연세대학교 미래캠퍼스 IT협업동아리',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: 'DO IT',
-    description: '연세대학교 미래캠퍼스 IT 개발동아리',
+    description: '연세대학교 미래캠퍼스 IT협업동아리',
     url: 'https://do-it.kr',
     type: 'website',
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
         url: '/DO+IT_Logo_Black+Blue.png',
         width: 800,
         height: 600,
-        alt: '연세대학교 미래캠퍼스 IT 개발동아리',
+        alt: '연세대학교 미래캠퍼스 IT협업동아리',
       },
     ],
   },
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
           <title>DO IT</title>
           <meta
             name="description"
-            content="연세대학교 미래캠퍼스 IT 개발동아리"
+            content="연세대학교 미래캠퍼스 IT협업동아리"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -48,8 +48,8 @@ export default function RootLayout({ children }) {
           <Toaster position="top-center" reverseOrder={false} />
           <Navbar />
           {children}
-          {/* <Analytics />
-          <SpeedInsights /> */}
+          <Analytics />
+          <SpeedInsights />
           <Footer />
         </body>
       </ProjectProvider>

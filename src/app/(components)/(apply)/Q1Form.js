@@ -10,19 +10,23 @@ export default function Q1Form({ setFormData, formData }) {
         <div className="flex flex-col md:w-[40%] pt-10 justify-between">
           <div className="flex flex-col">
             <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
-              학업 외에 병행하고 있거나 향후 계획 중에 있는 활동이 있다면
-              서술해주세요.
+              본인 직무에 맞게 활용해본 툴 혹은 기술스택을 작성해주세요.
             </span>
             <br />
             <span className="text-[#8A9FB1]">
-              (동아리, 연구실, 아르바이트, 스터디, 다중전공 등)
+              (React, HTML, CSS, Figma, FastAPI, 일러스트, Jira, Notion 등)
             </span>
           </div>
           <br />
 
-          <span className="text-[#8A9FB1]">
-            없을 경우, 없음으로 기재해주세요
-          </span>
+          <div className="flex flex-col gap-y-2">
+            <span className="text-[#8A9FB1]">
+              없을 경우, 없음으로 기재해주세요
+            </span>
+            <span className="text-[#8A9FB1]">
+              *팀빌딩에 참고하기 위한 용도로 사용됩니다.
+            </span>
+          </div>
         </div>
         <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard">
           <div className="flex flex-row items-center justify-between pt-10">

@@ -10,7 +10,11 @@ export default function Q2Form({ setFormData, formData }) {
         <div className="flex flex-col md:w-[40%] pt-10 justify-between">
           <div className="flex flex-col">
             <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
-              자기소개 및 지원동기를 서술해주세요.
+              DO IT에 지원하게 된 계기가 무엇인가요?
+            </span>
+            <br />
+            <span className="text-[#8A9FB1]">
+              간략한 자기소개와 함께 작성해주세요.
             </span>
           </div>
         </div>

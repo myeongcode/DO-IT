@@ -10,8 +10,8 @@ export default function Q3Form({ setFormData, formData }) {
         <div className="flex flex-col md:w-[40%] pt-10 justify-between">
           <div className="flex flex-col">
             <span className="text-[5vw] md:text-2xl xl:text-3xl font-semibold">
-              희망분야를 선택한 이유와 그 분야로 가기위해 노력한 경험을
-              서술해주세요
+              {formData.field}을(를) 선택한 이유와 그 분야로 가기위해 노력한
+              경험을 서술해주세요
             </span>
           </div>
         </div>

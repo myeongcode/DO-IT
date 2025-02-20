@@ -218,7 +218,7 @@ function Term1Modal({ setViewInformTerm, viewInformTerm }) {
               <br />
               2. 수집 이용 목적 : 지원 절차 진행 및 연락
               <br />
-              3. 정보 보유 기간 : 신입부원 선발 완료(2024.8.31) 후 1년
+              3. 정보 보유 기간 : 신입부원 선발 완료(2025.3.17) 후 1년
               <br />
             </span>
             <span className="text-[3vw] md:text-base font-light">
@@ -287,7 +287,7 @@ function Term2Modal({ setViewPortfolioTerm, viewPortfolioTerm }) {
               <br />
               2. 수집 이용 목적 : 지원 절차 진행 및 연락
               <br />
-              3. 정보 보유 기간 : 신입부원 선발 완료(2024.8.31) 후 1년
+              3. 정보 보유 기간 : 신입부원 선발 완료(2025.3.17) 후 1년
               <br />
             </span>
             <span className="text-[3vw] md:text-base font-light">

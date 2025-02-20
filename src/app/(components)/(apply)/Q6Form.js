@@ -12,7 +12,10 @@ export default function Q6Form({
   function onChangeFile(e) {
     const file = e.target.files?.[0];
     const maxFileSize = 1024 * 1024 * 50; //50MB
-    console.log(file.size);
+
+    if (!file) {
+      return;
+    }
 
     if (maxFileSize < file.size) {
       toast.error('파일 크기가 너무 큽니다! 50MB이내의 파일로 첨부해주세요');
@@ -47,9 +50,9 @@ export default function Q6Form({
           </div>
           <span className="text-[#8A9FB1]">
             * 디자이너 직군은 본인이 진행한 과제, 작업물 등이나 포트폴리오
-            첨부를 권장하고 있어요. <br />* 파일은 50MB이내의 크기로
-            첨부해주세요! <br />* 파일은 .pdf, .png, .jpg, .jpeg로만
-            제출해주세요!
+            첨부를 권장하고 있어요. <br />* 개발자 직군은 본인의 깃허브 링크를
+            첨부해주세요. <br />* 파일은 50MB이내의 크기로 첨부해주세요. <br />*
+            파일은 .pdf, .png, .jpg, .jpeg로만 제출해주세요.
           </span>
         </div>
         <div className="md:w-[60%] xl:w-[60%] 2xl:w-[45%] font-pretendard pb-64">

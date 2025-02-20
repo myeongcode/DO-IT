@@ -39,7 +39,7 @@ const fields = [
   {
     id: 4,
     field: 'Project Learner',
-    name: '프로젝트 러너',
+    name: '프로젝트 러너(3기 모집X)',
     description:
       '팀 프로젝트에 바로 참여하는 것이 어려운 분들을 위한 예비 학습자입니다. DO IT 활동(중간 발표, 성과공유회, 네트워킹, 세미나 등)들을 참여하며 다음 기수에 팀 프로젝트를 할 수 있도록 성장해 나갑니다.',
   },
@@ -52,8 +52,12 @@ const faqs = [
     questions: [
       {
         q: '비전공자인데 지원이 가능할까요?',
-        a: '네, 가능합니다. 하지만 실제로 지원하고자 하시는 분야(기획 or 개발 or 디자인)에 대한 기본적인 지식은 알고 계셔야합니다. 팀 프로젝트 참여에 부담이 되신다면, Project Learner로 지원하셔서 추후에 팀 프로젝트로 참여하시길 바랍니다.',
+        a: '네, 가능합니다. 하지만 실제로 지원하고자 하시는 분야(기획 or 개발 or 디자인)에 대한 기본적인 지식은 알고 계셔야합니다.',
       },
+      // {
+      //   q: '비전공자인데 지원이 가능할까요?',
+      //   a: '네, 가능합니다. 하지만 실제로 지원하고자 하시는 분야(기획 or 개발 or 디자인)에 대한 기본적인 지식은 알고 계셔야합니다. 팀 프로젝트 참여에 부담이 되신다면, Project Learner로 지원하셔서 추후에 팀 프로젝트로 참여하시길 바랍니다.',
+      // },
       {
         q: '프로젝트 경험이 없어도 가능한가요?',
         a: '가능합니다. DO IT은 프로젝트 협업 능력을 향상시키고 다양한 경험을 통해 성장해나가는 동아리입니다.',
@@ -96,7 +100,7 @@ const faqs = [
       },
       {
         q: '팀빌딩은 어떻게 이뤄지나요?',
-        a: "처음 활동하시는 분은 지원하는 분야에 맞춰 팀빌딩이 진행됩니다. 기존 기수 멤버들은 '팀빌딩 세션'을 통해 마음이 맞는 사람들과 따로 팀을 꾸리거나 임의로 배정될 수 있습니다.",
+        a: '처음 활동하시는 분은 지원하는 분야에 맞춰 팀빌딩이 진행됩니다. 기존 기수 멤버들은 마음이 맞는 사람들과 이어서 진행하거나 새로운 사람들과 팀빌딩이 될 수 있습니다.',
       },
       {
         q: '불가피한 사정이 생겨 활동을 더 이상 못하게 될 것 같아요',
@@ -109,6 +113,10 @@ const faqs = [
       {
         q: 'Project Learner의 경우 구체적으로 어떤 활동들을 하게 되나요?',
         a: 'Learner분들은 관심 직군/분야로의 성장을 위해 DO IT의 활동(네트워킹, 세미나, 중간발표, 성과공유회 등)들을 참여하며 다양한 탐색을 수행하고, 관심 직군/분야의 간단한 개인프로젝트도 1개씩 진행하여 성과공유회 발표세션에서 Learner가 수행한 개인프로젝트를 회고하는 발표를 진행합니다.',
+      },
+      {
+        q: 'Project Learner는 언제 모집하나요?',
+        a: '3기에서는 모집하지 않습니다.',
       },
     ],
   },
@@ -128,8 +136,8 @@ export default function Recruit() {
       <div className="flex justify-center w-full py-20 md:py-40">
         <div className="flex flex-col w-[90%] 2xl:w-[56%] md:w-[80%]">
           <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-semibold text-[10.5vw] md:text-4xl xl:text-6xl">
-            <span className="text-[#6439FE]">DO IT.</span>
-            <span>2기 신규부원 모집</span>
+            <span className="text-[#2955DC] font-bold">DO IT.</span>
+            <span>3기 신규부원 모집</span>
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col md:flex-row w-full justify-between py-10 md:py-20">
@@ -139,7 +147,7 @@ export default function Recruit() {
               <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row w-full md:w-3/5 justify-between items-start md:items-end md:space-x-6 pt-14 md:pt-0">
                 <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
-                    8/31 - 9/8
+                    2/28 - 3/7
                   </span>
                   <span className="text-[6vw] md:text-base xl:text-xl text-[#657786]">
                     서류 접수
@@ -147,7 +155,7 @@ export default function Recruit() {
                 </div>
                 <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
-                    9/10 - 9/12
+                    3/11 - 3/14
                   </span>
                   <span className="text-[6vw] md:text-base xl:text-xl text-[#657786]">
                     면접 진행
@@ -155,7 +163,7 @@ export default function Recruit() {
                 </div>
                 <div className="flex flex-col w-[85%] md:w-full md:justify-between items-start md:flex-col md:space-y-3 md:items-start">
                   <span className="text-[10vw] md:text-4xl xl:text-[40px]">
-                    9/15
+                    3/17
                   </span>
                   <span className="text-[6vw] md:text-base xl:text-xl text-[#657786]">
                     최종 결과
@@ -273,7 +281,7 @@ export default function Recruit() {
                     2학기 이상 활동
                   </span>
                   <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786] md:text-center">
-                    개인적인 사정을 제외하고, 모든 동아리원은 반드시 2학기 이상
+                    개인적인 사정을 제외하고, 모든 구성원은 반드시 2학기 이상
                     필수로 활동에 참여해야 합니다.
                   </span>
                 </div>
@@ -282,7 +290,7 @@ export default function Recruit() {
                     프로젝트 필수 참여
                   </span>
                   <span className="text-[4vw] md:text-base xl:text-xl md:leading-[1.8] text-[#657786] md:text-center">
-                    프로젝트의 성공적인 마무리를 위해 모든 동아리원이 적극적으로
+                    프로젝트의 성공적인 마무리를 위해 모든 구성원이 적극적으로
                     참여해야 합니다.
                   </span>
                 </div>

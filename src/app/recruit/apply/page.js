@@ -22,6 +22,7 @@ import { getSignedURL } from '@/app/(model)/actions';
 export default function Apply() {
   const [formData, setFormData] = useState({
     field: '',
+    fieldName: '',
     category: '',
     name: '',
     stdID: '',
