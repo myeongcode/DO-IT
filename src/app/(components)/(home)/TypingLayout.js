@@ -50,7 +50,7 @@ export default function TypingLayout() {
                 'GROW TOGETHER',
                 'CLIENT DEVELOPER',
                 'SERVER DEVELOPER',
-                'PROJECT MANAGER',
+                'PRODUCT MANAGER',
                 'PRODUCT DESIGNER',
               ]}
               loop={0}

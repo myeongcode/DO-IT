@@ -19,7 +19,7 @@ export default function ActivityLayout() {
         }}
         viewport={{
           once: true,
-          // amount: 1,
+          amount: 0.3,
         }}
         className="text-left text-[9.3vw] md:text-6xl font-suit font-bold"
       >
@@ -110,8 +110,8 @@ export default function ActivityLayout() {
             </div>
             <div className="w-[85%] md:w-full md:pt-6 md:pb-14 tracking-tight">
               <span className="text-[#657786] text-[3.6vw] md:text-base md:leading-[1.8] font-pretendard">
-                구성원 모두 참여해 서로 교류하며 친목을 도모하는 네트워킹 데이를
-                진행합니다.
+                다양한 직군의 구성원들이 참여해 서로 교류하며 친목을 도모하는
+                네트워킹 데이를 진행합니다.
               </span>
             </div>
           </div>

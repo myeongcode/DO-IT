@@ -79,7 +79,7 @@ export default function Navbar() {
             exit={{
               height: 0,
             }}
-            className="flex fixed w-full h-screen z-20 bg-[#14171A] font-suit font-bold"
+            className="flex md:hidden fixed w-full h-screen z-20 bg-[#14171A] font-suit font-bold"
           >
             <motion.ul
               className={`flex-col text-white pt-32 space-y-4 m-6 ${

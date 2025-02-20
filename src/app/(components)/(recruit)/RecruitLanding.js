@@ -88,10 +88,9 @@ export default function RecruitLanding() {
 
       setTimeout(() => {
         requestAnimationFrame(updateFrame);
-      }, 5000); // 5 seconds delay before the next frame
+      }, 5000);
     }
 
-    // Start the animation after an initial delay
     setTimeout(() => {
       requestAnimationFrame(updateFrame);
     }, 3000);

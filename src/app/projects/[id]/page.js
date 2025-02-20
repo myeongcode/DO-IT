@@ -35,7 +35,7 @@ export default function Project(props) {
     onSwipedLeft: () => nextSlide(),
     onSwipedRight: () => prevSlide(),
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true, // 마우스로도 슬라이드 가능
+    trackMouse: true,
   });
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Project(props) {
                       key={`term-${idx}`}
                       className="font-pretendard font-medium text-lg text-[#B0B0B0] border border-[#B0B0B0] px-[8px] py-[1px] rounded-full"
                     >
-                      {term}
+                      {typeof term === 'number' ? `${term}기` : term}
                     </h1>
                   );
                 })}
@@ -146,30 +146,14 @@ export default function Project(props) {
                 <div
                   className="absolute flex top-0 left-[-110px] w-[100px] md:left-[-700px] h-full md:w-[600px] opacity-1 bg-slate-400 bg-transparent"
                   onClick={prevSlide}
-                >
-                  {/* <Image
-                    src={'/prev_btn.svg'}
-                    width={33}
-                    height={66}
-                    alt=""
-                    className="hidden md:block 2xl:hidden transform translate-x-[630px]"
-                  /> */}
-                </div>
+                ></div>
               )}
 
               {currentIndex === projectPPT.length - 1 ? null : (
                 <div
                   className="absolute flex top-0 right-[-110px] w-[100px] md:right-[-700px] h-full md:w-[600px] opacity-1 bg-slate-700 bg-transparent"
                   onClick={nextSlide}
-                >
-                  {/* <Image
-                    src={'/next_btn.svg'}
-                    width={33}
-                    height={66}
-                    alt=""
-                    className="hidden md:block 2xl:hidden transform translate-x-[-70px]"
-                  /> */}
-                </div>
+                ></div>
               )}
             </div>
           </div>

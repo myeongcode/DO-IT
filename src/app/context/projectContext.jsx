@@ -11,7 +11,7 @@ const projectLists = [
     projectSummary: '교내 복지매장 정보 제공 서비스',
     imgSrc: '/projects/1기/1/Thumbnail_YonseiHasikmoji.png',
     type: 'APP',
-    term: ['선발'],
+    term: [1, '선발'],
     teamName: '학식모지',
     projectBackground: `연세대 학식모지는 연세대학교 미래캠퍼스 학생들에게 교내 학식 메뉴와 복지매장의 운영 시간을 편리하게 알려주는 정보 제공 어플리케이션입니다. 
 
@@ -57,7 +57,7 @@ const projectLists = [
       {
         linkName: 'Google Play',
         link: 'https://play.google.com/store/apps/details?id=com.hungry_yonsei.myapplication&hl=ko',
-        linkImg: '/common/google-play.png',
+        linkImg: '/common/play-store.svg',
       },
       {
         linkName: 'App Store',
@@ -72,7 +72,7 @@ const projectLists = [
     projectSummary: '연세인을 위한 모든 공동구매, 모구',
     imgSrc: '/projects/1기/2/Thumbnail_mogu.png',
     type: 'APP',
-    term: ['1기'],
+    term: [1],
     teamName: '카페이너',
     projectBackground: `모구는 매지리에 거주하는 연세대학교 학생들이 물품을 공동구매 할 수 있도록 공구 의사가 맞는 학생들을 연결해주는 서비스입니다.
 
@@ -145,7 +145,7 @@ const projectLists = [
     projectSummary: '연세인을 위한 새로운 공간 대관 시스템',
     imgSrc: '/projects/1기/3/Thumbnail_YONSEISPACE.png',
     type: 'WEB',
-    term: ['1기'],
+    term: [1],
     teamName: '2024',
     projectBackground: `기존의 공간대관시스템은 노후화 및 관리미흡 등으로 인해 사용자들이 불편함을 느끼고 있으며 사용방법 또한 제대로 지켜지고 있지 않고 있습니다.
     
@@ -191,7 +191,7 @@ const projectLists = [
     projectSummary: '국내여행 공동 플래닝 서비스',
     imgSrc: '/projects/1기/4/Thumbnail_Flanning.jpeg',
     type: 'APP',
-    term: ['1기', '2기'],
+    term: [1, 2],
     teamName: 'Flanning',
     projectBackground: `국내여행자들의 수요는 팬데믹 이후 계속 증가하고 있습니다. 하지만 개인별로 상이한 여행 목적과 계획 스타일을 고려한 공동 여행 플래닝 서비스는 아직 부족합니다.
 
@@ -234,8 +234,8 @@ const projectLists = [
         member: ['조호진'],
       },
       {
-        fieldName: 'Front/Back-end Developer',
-        member: ['임희원'],
+        fieldName: 'Front-end Developer',
+        member: ['임희원', '우명규'],
       },
     ],
     projectImgSrc: [
@@ -260,7 +260,7 @@ const projectLists = [
     projectSummary: '교내 시내/시외버스 교통 정보 제공 서비스',
     imgSrc: '/projects/1기/5/Thumbnail_YOB.png',
     type: 'APP',
-    term: ['1기'],
+    term: [1],
     teamName: '마동석',
     projectBackground: `기숙사에 살지않고 학교에 통학을 하려는 연세대학교 학생들이 기존 교통 정보들의 분산으로 인해 불편함을 겪는 문제가 있었고, 통학을 하는 학생들을 위해 조금이라도 더 편의를 제공하기 위해 분산된 교통정보를 한 곳에서 확인할 수 있는 서비스를 고민하게 되었습니다.
 
@@ -316,7 +316,7 @@ const projectLists = [
     projectSummary: '중고책 거래 플랫폼',
     imgSrc: '/projects/1기/6/Thumbnail_MOCA.png',
     type: 'APP',
-    term: ['1기'],
+    term: [1],
     teamName: '6팀',
     projectBackground: `- 공간적 한계로 인한 개인의 종이책 보관의 어려움
     전자책의 등장으로 종이책이 사라질 것이라는 전망이 있었으나, 가독성, 시력 및 피로도, 책의 소장 가치 등의 이유로 여전히 종이책을 선호하는 사람들이 많다. 그러나 종이책을 보관하는 데는 공간적 한계가 존재한다. 책을 정리하려니 버리기 아깝고, 중고로 팔려 해도 근처에 중고 서점이나 책방이 없으면 어려운 상황이다.
@@ -369,7 +369,7 @@ const projectLists = [
     projectSummary: '교내 모임 중개 및 커뮤니티 플랫폼',
     imgSrc: '/projects/1기/7/Thumbnail_PINS.png',
     type: 'APP',
-    term: ['1기', '2기'],
+    term: [1, 2],
     teamName: 'IP',
     projectBackground: `PINS는 교내 구성원 중 모임 (지원)희망자, 모임 운영자, 기존 모임 구성원들을 위한 교내 모임 중개 및 커뮤니티 플랫폼입니다.
 
@@ -438,7 +438,7 @@ const projectLists = [
     projectSummary: '모두가 작가가 되는 그날까지, 나만의 커미션 플랫폼',
     imgSrc: '/projects/1기/8/Thumbnail_Qpeed.png',
     type: 'APP',
-    term: ['1기'],
+    term: [1],
     teamName: 'QING',
     projectBackground: `QPEED는 커미션 중계 플랫폼으로, 누구나 쉽게 자신의 작품을 공유하고 커미션을 받을 수 있는 공간입니다. 커미션은 커뮤니티에서 자연스럽게 시작된 활동으로, 여러 작가가 자신의 작품을 공개하여 팬덤을 형성하고, 팬들이 직접 작가에게 작품을 주문하는 형태로 발전해왔습니다. 이제 커미션은 글, 그림을 넘어 다양한 카테고리로 확장되었고, 취미를 넘어서 전문적인 활동으로 자리 잡아가고 있습니다.
 
@@ -490,9 +490,8 @@ const projectLists = [
     projectSummary: '이틀씩 작성하는 TO DO 서비스',
     imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
     type: 'WEB',
-    term: ['2기'],
+    term: [2],
     teamName: '1팀',
-    // 수정 예정
     projectBackground: `2DAYTODAY는 계획 수립 능력을 활성화하고 효율적인 일정 관리를 돕는 서비스입니다. 많은 사람들이 일정을 하루 단위로 계획하지만 그러다보면 급한 일이 생기거나 예상보다 일이 밀리면 계획이 꼬이기 쉽습니다. 이런 상황은 계획자에게 스트레스를 주고, 일정을 제대로 관리하기 어렵게 만듭니다.
     또한, 복잡한 업무나 큰 작업은 하루 단위로 계획하기 어려운 경우가 많습니다. 이를 해결하기 위해, 2DAYTODAY는 이틀 단위로 유연하게 일정을 조정할 수 있는 시스템을 제공합니다. 
     따라서 2DAYTODAY는 이틀 단위로 기존보다 더 유연하게 일정을 조정할 수 있도록 도와주며, 계획 간 연계를 통해 작업을 효율적으로 분배하고 생산성을 높이는 데 기여합니다.
@@ -535,49 +534,60 @@ const projectLists = [
   },
   {
     id: 10,
-    title: '코디(CoDi)',
+    title: '코디(CODI)',
     projectSummary: '개발자/디자이너를 위한 팀 빌딩 서비스',
-    // 수정 예정
-    // imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
-    imgSrc: '/common/Thumbnail_default.png',
+    imgSrc: '/projects/2기/2/Thumbnail_CODI.png',
     type: 'APP',
-    term: ['2기'],
+    term: [2],
     teamName: '배라31',
-    projectBackground: `QPEED는 커미션 중계 플랫폼으로, 누구나 쉽게 자신의 작품을 공유하고 커미션을 받을 수 있는 공간입니다. 커미션은 커뮤니티에서 자연스럽게 시작된 활동으로, 여러 작가가 자신의 작품을 공개하여 팬덤을 형성하고, 팬들이 직접 작가에게 작품을 주문하는 형태로 발전해왔습니다. 이제 커미션은 글, 그림을 넘어 다양한 카테고리로 확장되었고, 취미를 넘어서 전문적인 활동으로 자리 잡아가고 있습니다.
+    projectBackground: `기존의 팀 빌딩 플랫폼은 주로 구인·구직 기능에 초점을 맞추고 있어, 실제 프로젝트를 함께할 팀원을 찾기보다는 단순한 인력 매칭에 그치는 경우가 많다. 반면, 공모전과 관련된 기존 사이트들은 대회 정보를 제공하지만, 참가자가 함께할 팀원을 구하는 기능이 없거나 매우 제한적이다.
 
-    하지만 커미션 활동이 활발해지면서 무리한 요구, 과도한 컨펌 요청, 비매너 행위, 그리고 작가의 연락 두절 등 여러 문제들이 발생하고 있습니다. 현재 대부분의 커미션 플랫폼이 웹 서비스에 한정되어 있어 접근성과 안전성에서도 한계가 존재합니다. QPEED는 이러한 문제들을 해결하기 위해, 앱 서비스를 통해 언제 어디서나 편리하게 이용할 수 있는 접근성과 안전 결제, 세밀한 업로드 방식, 유연한 소통 기능을 제공합니다. 이를 통해 작가와 이용자를 보호하고, 더 나은 커미션 환경을 만들고자 합니다.
+    CODI는 이러한 한계를 극복하고자, 팀 빌딩과 공모전 정보를 효과적으로 연결하는 기능을 제공한다. 사용자는 자신의 포트폴리오를 공유하고, 관심 있는 프로젝트나 공모전에 맞춰 팀을 구성할 수 있다. 또한, 프로젝트 모집 공고를 올려 팀원을 모집하거나, 다른 사용자의 프로젝트에 합류하는 것이 가능하다.
     `,
-    projectTool: ['Figma', 'HTML', 'CSS', 'JavaScript'],
-    projectFeatures: `실시간 푸시 알림:
-    관심 있는 작가의 새로운 작품이 업로드될 때 즉시 알림을 받아볼 수 있습니다.
+    projectTool: ['Figma', 'FastAPI', 'Docker', 'MySQL', 'Flutter'],
+    projectFeatures: `
+    - 사용자 등록 및 로그인 (User Registration & Login)
+        - 설명 : 사용자 인증 및 계정 생성 기능
+        - 세부 내용 : 이메일 또는 소셜 로그인 지원
 
-    일정 등록과 작품 업로드 통합:
-    작품을 등록하면서 사진, 가격, 예상 마감 시간을 설정할 수 있으며, 이후 이용자와 협의하여 변경할 수 있습니다.
+    - 콘텐츠 게시 (Content Posting)
+        - 설명 : 개발 및 디자인 관련 포트폴리오 자료 게시
+        - 세부 내용 : 이미지, 텍스트, 코드 스니펫, 링크 업로드 지원
 
-    실시간 채팅 기능:
-    컨펌 및 각종 문의를 작가와 실시간으로 소통할 수 있습니다. 컨펌은 최초 2회 이후 추가 구매를 통해서만 가능합니다.
+    - 피드 탐색 (Feed Browsing)
+        - 설명 : 다른 사용자가 게시한 콘텐츠 탐색
+        - 세부 내용 : 콘텐츠 정렬, 카테고리 별 필터 기능
+        
+    - 팀 빌딩 요청 (Team Building Requests)
+        - 설명 : 프로젝트 팀원을 모집하거나 팀에 합류하는 기능
+        - 세부 내용 : 프로젝트 모집 공고 작성, 관심 프로젝트 지정
 
-    대시보드 기능:
-    여러 작가의 다양한 작품을 한눈에 볼 수 있는 홈 화면과, 관심 있는 작가만 따로 모아볼 수 있는 관심 화면이 제공됩니다.
-
-    커뮤니티 기능:
-    작가와 작품에 대해 생각을 나눌 수 있는 커뮤니티 게시판 기능을 제공합니다.
+    - 사용자 프로필 (User Profile)
+        - 설명 : 사용자의 전문 분야 및 포트폴리오 정보 제공
+        - 세부 내용 : 자기 소개, 보유 칭호, 사용자 인사이트, 추가 포트폴리오 링크 관리
     `,
     teamMember: [
       {
         fieldName: 'Product Designer',
-        member: ['권순용'],
+        member: ['김민구'],
       },
       {
         fieldName: 'Front-end Developer',
-        member: ['박김한결', '이여은'],
+        member: ['정하은', '이동하'],
+      },
+      {
+        fieldName: 'Back-end Developer',
+        member: ['홍정표'],
       },
     ],
     projectImgSrc: [
-      '/projects/2기/1/slide-1.png',
-      '/projects/2기/1/slide-2.png',
-      '/projects/2기/1/slide-3.png',
-      '/projects/2기/1/slide-4.png',
+      '/projects/2기/2/slide-1.png',
+      '/projects/2기/2/slide-2.png',
+      '/projects/2기/2/slide-3.png',
+      '/projects/2기/2/slide-4.png',
+      '/projects/2기/2/slide-5.png',
+      '/projects/2기/2/slide-6.png',
+      '/projects/2기/2/slide-7.png',
     ],
     projectLink: [
       {
@@ -591,11 +601,9 @@ const projectLists = [
     id: 11,
     title: 'Routie',
     projectSummary: '효율적인 학교생활 루틴 관리 서비스',
-    // 수정 예정
-    // imgSrc: '/projects/2기/1/Thumbnail_2dayToday.png',
-    imgSrc: '/common/Thumbnail_default.png',
+    imgSrc: '/projects/2기/3/Thumbnail_Routie.png',
     type: 'APP',
-    term: ['2기'],
+    term: [2],
     teamName: '예은이의 연세',
     projectBackground: `QPEED는 커미션 중계 플랫폼으로, 누구나 쉽게 자신의 작품을 공유하고 커미션을 받을 수 있는 공간입니다. 커미션은 커뮤니티에서 자연스럽게 시작된 활동으로, 여러 작가가 자신의 작품을 공개하여 팬덤을 형성하고, 팬들이 직접 작가에게 작품을 주문하는 형태로 발전해왔습니다. 이제 커미션은 글, 그림을 넘어 다양한 카테고리로 확장되었고, 취미를 넘어서 전문적인 활동으로 자리 잡아가고 있습니다.
 
@@ -631,18 +639,27 @@ const projectLists = [
     teamMember: [
       {
         fieldName: 'Product Designer',
-        member: ['권순용'],
+        member: ['한예은', '이나의'],
       },
       {
         fieldName: 'Front-end Developer',
-        member: ['박김한결', '이여은'],
+        member: ['정연재'],
+      },
+      {
+        fieldName: 'Front-end Developer',
+        member: ['박세희'],
       },
     ],
     projectImgSrc: [
-      '/projects/2기/1/slide-1.png',
-      '/projects/2기/1/slide-2.png',
-      '/projects/2기/1/slide-3.png',
-      '/projects/2기/1/slide-4.png',
+      '/projects/2기/3/slide-1.png',
+      '/projects/2기/3/slide-2.png',
+      '/projects/2기/3/slide-3.png',
+      '/projects/2기/3/slide-4.png',
+      '/projects/2기/3/slide-5.png',
+      '/projects/2기/3/slide-6.png',
+      '/projects/2기/3/slide-7.png',
+      '/projects/2기/3/slide-8.png',
+      '/projects/2기/3/slide-9.png',
     ],
     projectLink: [
       {
@@ -658,7 +675,7 @@ const projectLists = [
     projectSummary: '자기주도학습을 위한 학습 보조 서비스',
     imgSrc: '/projects/2기/4/Thumbnail_obok.png',
     type: 'APP',
-    term: ['2기'],
+    term: [2],
     teamName: '내성적인 형제들',
     projectBackground: `공부 습관을 잡고 자기 주도 학습 역량을 키워야 하는 중하위권 중고등학생들은 자신의 학습 상태를 제대로 인지하지 못하는 경우가 많습니다. 이는 학습 과정에 대한 성찰 시간이 부족하기 때문이며, 결국 원하는 성과를 얻지 못하는 문제로 이어집니다.
 
@@ -730,7 +747,6 @@ export function ProjectProvider({ children }) {
   }, []);
 
   const getAllProjectData = async () => {
-    console.log('모든 프로젝트 불러오기 완료');
     setProjects(projectLists);
   };
 
