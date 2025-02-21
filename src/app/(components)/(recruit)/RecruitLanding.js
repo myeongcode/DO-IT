@@ -9,7 +9,6 @@ import {
   motion,
   useAnimation,
 } from 'framer-motion';
-import { duration } from 'moment';
 
 export default function RecruitLanding() {
   const controls = useAnimation();
@@ -21,98 +20,109 @@ export default function RecruitLanding() {
   const [fillColor3, setFillColor3] = useState('#FFFFFF');
   const [backgroundFill, setbackgroundFill] = useState(false);
 
-  useEffect(() => {
-    let isMounted = true;
-    let sequenceIndex = 0;
-    const sequences = [
-      {
-        strokeColor1: '#FE74EF',
-        fillColor1: '#FE74EF',
-        strokeColor2: '#DCF052',
-        fillColor2: '#DCF052',
-        strokeColor3: '#6439FE',
-        fillColor3: '#6439FE',
-        backgroundColor: '#ffffff',
-      },
-      {
-        strokeColor1: '#6439FE',
-        fillColor1: '#6439FE',
-        strokeColor2: '#FFFFFF',
-        fillColor2: '#FFFFFF',
-        strokeColor3: '#FE74EF',
-        fillColor3: '#FE74EF',
-        backgroundColor: '#DCF052',
-      },
-      {
-        strokeColor1: '#DCF052',
-        fillColor1: '#DCF052',
-        strokeColor2: '#6439FE',
-        fillColor2: '#6439FE',
-        strokeColor3: '#FFFFFF',
-        fillColor3: '#FFFFFF',
-        backgroundColor: '#FE74EF',
-      },
-      {
-        strokeColor1: '#FFFFFF',
-        fillColor1: '#FFFFFF',
-        strokeColor2: '#FE74EF',
-        fillColor2: '#FE74EF',
-        strokeColor3: '#DCF052',
-        fillColor3: '#DCF052',
-        backgroundColor: '#6439FE',
-      },
-    ];
+  // useEffect(() => {
+  //   let isMounted = true;
+  //   let sequenceIndex = 0;
+  //   const sequences = [
+  //     {
+  //       strokeColor1: '#FE74EF',
+  //       fillColor1: '#FE74EF',
+  //       strokeColor2: '#DCF052',
+  //       fillColor2: '#DCF052',
+  //       strokeColor3: '#6439FE',
+  //       fillColor3: '#6439FE',
+  //       backgroundColor: '#ffffff',
+  //     },
+  //     {
+  //       strokeColor1: '#6439FE',
+  //       fillColor1: '#6439FE',
+  //       strokeColor2: '#FFFFFF',
+  //       fillColor2: '#FFFFFF',
+  //       strokeColor3: '#FE74EF',
+  //       fillColor3: '#FE74EF',
+  //       backgroundColor: '#DCF052',
+  //     },
+  //     {
+  //       strokeColor1: '#DCF052',
+  //       fillColor1: '#DCF052',
+  //       strokeColor2: '#6439FE',
+  //       fillColor2: '#6439FE',
+  //       strokeColor3: '#FFFFFF',
+  //       fillColor3: '#FFFFFF',
+  //       backgroundColor: '#FE74EF',
+  //     },
+  //     {
+  //       strokeColor1: '#FFFFFF',
+  //       fillColor1: '#FFFFFF',
+  //       strokeColor2: '#FE74EF',
+  //       fillColor2: '#FE74EF',
+  //       strokeColor3: '#DCF052',
+  //       fillColor3: '#DCF052',
+  //       backgroundColor: '#6439FE',
+  //     },
+  //   ];
 
-    function updateFrame() {
-      if (!isMounted) return;
+  //   function updateFrame() {
+  //     if (!isMounted) return;
 
-      const currentSequence = sequences[sequenceIndex];
-      setStrokeColor1(currentSequence.strokeColor1);
-      setFillColor1(currentSequence.fillColor1);
-      setStrokeColor2(currentSequence.strokeColor2);
-      setFillColor2(currentSequence.fillColor2);
-      setStrokeColor3(currentSequence.strokeColor3);
-      setFillColor3(currentSequence.fillColor3);
+  //     const currentSequence = sequences[sequenceIndex];
+  //     setStrokeColor1(currentSequence.strokeColor1);
+  //     setFillColor1(currentSequence.fillColor1);
+  //     setStrokeColor2(currentSequence.strokeColor2);
+  //     setFillColor2(currentSequence.fillColor2);
+  //     setStrokeColor3(currentSequence.strokeColor3);
+  //     setFillColor3(currentSequence.fillColor3);
 
-      if (currentSequence.backgroundColor === '#6439FE') {
-        setbackgroundFill(true);
-      } else {
-        setbackgroundFill(false);
-      }
-      controls.start({
-        backgroundColor: currentSequence.backgroundColor,
-        transition: { duration: 0.5 },
-      });
+  //     if (currentSequence.backgroundColor === '#6439FE') {
+  //       setbackgroundFill(true);
+  //     } else {
+  //       setbackgroundFill(false);
+  //     }
+  //     controls.start({
+  //       backgroundColor: currentSequence.backgroundColor,
+  //       transition: { duration: 0.5 },
+  //     });
 
-      sequenceIndex = (sequenceIndex + 1) % sequences.length;
+  //     sequenceIndex = (sequenceIndex + 1) % sequences.length;
 
-      setTimeout(() => {
-        requestAnimationFrame(updateFrame);
-      }, 5000);
-    }
+  //     setTimeout(() => {
+  //       requestAnimationFrame(updateFrame);
+  //     }, 5000);
+  //   }
 
-    setTimeout(() => {
-      requestAnimationFrame(updateFrame);
-    }, 3000);
+  //   setTimeout(() => {
+  //     requestAnimationFrame(updateFrame);
+  //   }, 3000);
 
-    return () => {
-      isMounted = false;
-    };
-  }, [controls]);
+  //   return () => {
+  //     isMounted = false;
+  //   };
+  // }, [controls]);
 
   return (
     <motion.div
       initial={{
         backgroundColor: '#ffffff',
       }}
-      animate={controls}
+      // animate={controls}
       transition={{
         delay: 4,
         ease: 'easeInOut',
       }}
       className="flex relative justify-center items-center h-screen w-full md:h-screen bg-[#ffffff]"
     >
-      <div className="absolute flex flex-col md:flex-row top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-suit">
+      <div className="flex flex-col items-center gap-y-6">
+        <Image
+          src="/common/DO-IT_Logo_Black_Blue.svg"
+          alt="DO-IT Logo"
+          width={400}
+          height={80}
+          priority={true}
+          className="w-[200px] md:w-[400px]"
+        />
+        <h1 className="text-3xl md:text-5xl">DO IT 3기 모집 준비중</h1>
+      </div>
+      {/* <div className="absolute flex flex-col md:flex-row top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-suit">
         <motion.div className="absolute left-1/2 -top-20 transform -translate-x-1/2 md:translate-x-0 md:-top-1/2 md:left-0">
           <motion.div className="whitespace-nowrap overflow-hidden">
             <motion.div
@@ -326,8 +336,10 @@ export default function RecruitLanding() {
             </motion.svg>
           </motion.div>
         </div>
-      </div>
-      <AnimatePresence>
+      </div> */}
+
+      {/* 아래 스크롤 아이콘 애니메이션 */}
+      {/* <AnimatePresence>
         <motion.div
           initial={{
             opacity: 0,
@@ -368,7 +380,7 @@ export default function RecruitLanding() {
             />
           </motion.div>
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence> */}
     </motion.div>
   );
 }

@@ -587,6 +587,10 @@ const projectLists = [
       '/projects/2기/2/slide-5.png',
       '/projects/2기/2/slide-6.png',
       '/projects/2기/2/slide-7.png',
+      '/projects/2기/2/slide-8.png',
+      '/projects/2기/2/slide-9.png',
+      '/projects/2기/2/slide-10.png',
+      '/projects/2기/2/slide-11.png',
     ],
     projectLink: [
       {

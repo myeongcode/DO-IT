@@ -133,7 +133,7 @@ export default function Recruit() {
   return (
     <div className="flex flex-col w-full items-center overflow-hidden text-[#14171A] font-pretendard">
       <RecruitLanding />
-      <div className="flex justify-center w-full py-20 md:py-40">
+      {/* <div className="flex justify-center w-full py-20 md:py-40">
         <div className="flex flex-col w-[90%] 2xl:w-[56%] md:w-[80%]">
           <div className="flex flex-col leading-snug md:leading-snug xl:leading-snug pb-20 md:pb-40 font-suit font-semibold text-[10.5vw] md:text-4xl xl:text-6xl">
             <span className="text-[#2955DC] font-bold">DO IT.</span>
@@ -308,17 +308,17 @@ export default function Recruit() {
             <hr />
           </div>
         </div>
-      </div>
-      <div className="mb-20 md:mb-40">
-        {/* <Link href="/recruit/apply"> */}
+      </div> */}
+      {/* <div className="mb-20 md:mb-40">
+        <Link href="/recruit/apply">
         <motion.button
           className="flex py-3 px-8 md:py-3 md:px-10 xl:py-5 xl:px-16 bg-[#6439FE] rounded-full text-[6vw] md:text-2xl xl:text-3xl text-white disabled:opacity-45"
           disabled
         >
           지원마감
         </motion.button>
-        {/* </Link> */}
-      </div>
+        </Link>
+      </div> */}
     </div>
   );
 }
