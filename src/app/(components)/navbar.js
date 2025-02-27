@@ -133,7 +133,7 @@ export default function Navbar() {
         transition={{
           duration: 0.3,
         }}
-        className="w-full md:hidden flex fixed box-border transition duration-75 items-center z-20 justify-center py-[10px]"
+        className="w-full md:hidden flex fixed box-border transition duration-75 items-center z-30 justify-center py-[10px]"
       >
         <motion.div className="flex box-border justify-between w-[90%]">
           <motion.div

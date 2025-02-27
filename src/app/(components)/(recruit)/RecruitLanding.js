@@ -11,14 +11,33 @@ import {
 } from 'framer-motion';
 
 export default function RecruitLanding() {
-  const controls = useAnimation();
-  const [strokeColor1, setStrokeColor1] = useState('#FE74EF');
-  const [fillColor1, setFillColor1] = useState('#FFFFFF');
-  const [strokeColor2, setStrokeColor2] = useState('#DCF052');
-  const [fillColor2, setFillColor2] = useState('#FFFFFF');
-  const [strokeColor3, setStrokeColor3] = useState('#6439FE');
-  const [fillColor3, setFillColor3] = useState('#FFFFFF');
-  const [backgroundFill, setbackgroundFill] = useState(false);
+  const [field, setField] = useState('');
+  const [fieldModile, setFieldMobile] = useState('');
+  // const controls = useAnimation();
+  // const [strokeColor1, setStrokeColor1] = useState('#FE74EF');
+  // const [fillColor1, setFillColor1] = useState('#FFFFFF');
+  // const [strokeColor2, setStrokeColor2] = useState('#DCF052');
+  // const [fillColor2, setFillColor2] = useState('#FFFFFF');
+  // const [strokeColor3, setStrokeColor3] = useState('#6439FE');
+  // const [fillColor3, setFillColor3] = useState('#FFFFFF');
+  // const [backgroundFill, setbackgroundFill] = useState(false);
+
+  useEffect(() => {
+    const values = ['management', 'frontend', 'backend', 'design'];
+    let index = 0;
+    let intervalId;
+    let timeoutId = setTimeout(() => {
+      intervalId = setInterval(() => {
+        setFieldMobile(values[index]);
+        index = (index + 1) % values.length;
+      }, 2000);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, []);
 
   // useEffect(() => {
   //   let isMounted = true;
@@ -101,26 +120,734 @@ export default function RecruitLanding() {
 
   return (
     <motion.div
-      initial={{
-        backgroundColor: '#ffffff',
-      }}
+      initial={
+        {
+          // backgroundColor: '#000000',
+        }
+      }
       // animate={controls}
-      transition={{
-        delay: 4,
-        ease: 'easeInOut',
-      }}
-      className="flex relative justify-center items-center h-screen w-full md:h-screen bg-[#ffffff]"
+      transition={
+        {
+          // delay: 4,
+          // ease: 'easeInOut',
+        }
+      }
+      className="flex relative justify-center items-center h-screen w-full md:h-screen bg-[#f1f1f1]"
     >
-      <div className="flex flex-col items-center gap-y-6">
-        <Image
-          src="/common/DO-IT_Logo_Black_Blue.svg"
-          alt="DO-IT Logo"
-          width={400}
-          height={80}
-          priority={true}
-          className="w-[200px] md:w-[400px]"
-        />
-        <h1 className="text-3xl md:text-5xl">DO IT 3기 모집 준비중</h1>
+      <motion.div className="absolute top-36 transform md:top-40 z-10">
+        <motion.div className="whitespace-nowrap overflow-hidden">
+          <motion.div
+            initial={{ x: 1000 }}
+            animate={{ x: 0 }}
+            transition={{ delay: 2, duration: 0.4, ease: 'easeInOut' }}
+            className="z-20"
+          >
+            <motion.div
+              initial={{ width: '100%' }}
+              animate={{ width: '0%' }}
+              transition={{
+                delay: 2.4,
+                duration: 0.4,
+                ease: 'easeInOut',
+              }}
+              className="bg-[#2955DC] w-full"
+            >
+              <motion.h2 className="text-5xl 2xl:text-8xl md:text-7xl font-medium relative z-10 transition-colors duration-300 text-[#2955DC]">
+                3RD RECRUIT
+              </motion.h2>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      <motion.div className="absolute bottom-36 transform md:bottom-40 z-10">
+        <motion.div className="whitespace-nowrap overflow-hidden">
+          <motion.div
+            initial={{ x: 1000 }}
+            animate={{ x: 0 }}
+            transition={{ delay: 2.4, duration: 0.4, ease: 'easeInOut' }}
+            className="z-20"
+          >
+            <motion.div
+              initial={{ width: '100%' }}
+              animate={{ width: '0%' }}
+              transition={{
+                delay: 2.8,
+                duration: 0.4,
+                ease: 'easeInOut',
+              }}
+              className="bg-[#000000] w-full"
+            >
+              <motion.h2 className="text-5xl 2xl:text-8xl md:text-7xl font-medium transition-colors duration-300 text-[#000000]">
+                2.28 - 3.7
+              </motion.h2>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      {/* 모바일 */}
+      <div className="flex flex-col lg:hidden p-10 gap-4 w-full">
+        <div className="flex flex-row gap-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+
+              delay: 0.6,
+            }}
+            className="flex"
+          >
+            <Image
+              src={'recruit/3/Management-icon.svg'}
+              alt=""
+              width={100}
+              height={100}
+              className={`object-cover ${
+                fieldModile === 'management' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.7,
+            }}
+            className="flex w-full"
+          >
+            <Image
+              src={'recruit/3/Design.svg'}
+              width={100}
+              height={100}
+              alt=""
+              className={`object-cover w-full ${
+                fieldModile === 'design' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
+        <div className="flex flex-row gap-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+            }}
+            className="flex"
+            onHoverStart={() => setField('frontend')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Front-end-icon.svg'}
+              width={20}
+              height={20}
+              alt=""
+              className={`object-cover w-full ${
+                fieldModile === 'frontend' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.8,
+            }}
+            className="flex"
+          >
+            <Image
+              src={'recruit/3/Management.svg'}
+              width={20}
+              height={20}
+              alt=""
+              className={`object-contain w-full ${
+                fieldModile === 'management' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
+
+        {/* <div className="flex flex-row gap-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.1,
+            }}
+            className="flex"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT1.svg'}
+              alt=""
+              width={20}
+              height={20}
+              className={`object-cover w-full hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 1.1,
+            }}
+            className="flex w-full"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT2.svg'}
+              width={20}
+              height={20}
+              alt=""
+              className={`object-contain w-full hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div> */}
+
+        <div className="flex flex-row gap-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 1,
+            }}
+            className="flex"
+          >
+            <Image
+              src={'recruit/3/Back-end.svg'}
+              alt=""
+              width={20}
+              height={20}
+              className={`object-contain w-full ${
+                fieldModile === 'backend' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+            className="flex"
+          >
+            <Image
+              src={'recruit/3/Design-icon.svg'}
+              width={20}
+              height={20}
+              alt=""
+              className={`object-contain w-full ${
+                fieldModile === 'design' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
+        <div className="flex flex-row gap-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.4,
+            }}
+            className="flex"
+          >
+            <Image
+              src={'recruit/3/Back-end-icon.svg'}
+              width={20}
+              height={20}
+              alt=""
+              className={`object-contain w-full ${
+                fieldModile === 'backend' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.9,
+            }}
+            className="flex"
+          >
+            <Image
+              src={'recruit/3/Front-end.svg'}
+              width={20}
+              height={20}
+              alt=""
+              className={`object-contain w-full ${
+                fieldModile === 'frontend' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
+        {/* <div className="top-40 left-1/2 transform -translate-x-1/2 flex flex-row gap-4 w-full">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+            }}
+            className="flex"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT4.svg'}
+              width={200}
+              height={20}
+              alt=""
+              className={`object-contain hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+            }}
+            className="flex"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT3.svg'}
+              width={60}
+              height={200}
+              alt=""
+              className={`object-contain hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div> */}
+      </div>
+
+      {/* PC */}
+      <div className="hidden flex-col items-center gap-6 lg:flex">
+        <div className="flex flex-row items-center gap-6">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+
+              delay: 0.6,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('management')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Management-icon.svg'}
+              alt=""
+              width={200}
+              height={200}
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'management' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.7,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('design')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Design.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'design' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('frontend')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Front-end-icon.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'frontend' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.8,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('management')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Management.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'management' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
+        <div className="flex flex-row items-center gap-6 w-full">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.1,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT1.svg'}
+              alt=""
+              width={200}
+              height={200}
+              className={`object-contain w-full hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 1.1,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT2.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT3.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('doit')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/DOIT4.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-[1.05] ${
+                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
+        <div className="flex flex-row items-center gap-6 w-full">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 1,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('backend')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Back-end.svg'}
+              alt=""
+              width={200}
+              height={200}
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'backend' ? 'scale-125 z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('design')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Design-icon.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'design' ? 'scale-125 z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.9,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('frontend')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Front-end.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'frontend' ? 'scale-125 z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 200,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.4,
+            }}
+            className="flex relative lg:h-[100px] 2xl:h-[140px]"
+            onHoverStart={() => setField('backend')}
+            onHoverEnd={() => setField('')}
+          >
+            <Image
+              src={'recruit/3/Back-end-icon.svg'}
+              width={200}
+              height={200}
+              alt=""
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'backend' ? 'scale-125 z-40' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+        </div>
       </div>
       {/* <div className="absolute flex flex-col md:flex-row top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-suit">
         <motion.div className="absolute left-1/2 -top-20 transform -translate-x-1/2 md:translate-x-0 md:-top-1/2 md:left-0">
@@ -337,9 +1064,8 @@ export default function RecruitLanding() {
           </motion.div>
         </div>
       </div> */}
-
       {/* 아래 스크롤 아이콘 애니메이션 */}
-      {/* <AnimatePresence>
+      <AnimatePresence>
         <motion.div
           initial={{
             opacity: 0,
@@ -380,7 +1106,7 @@ export default function RecruitLanding() {
             />
           </motion.div>
         </motion.div>
-      </AnimatePresence> */}
+      </AnimatePresence>
     </motion.div>
   );
 }

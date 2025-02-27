@@ -62,9 +62,7 @@ export default function Modal({ onShowModal, selectedApplicant }) {
             </p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
-              학업 외에 병행하고 있거나 향후 계획 중에 있는 활동이 있다면
-              서술해주세요. (동아리, 연구실, 아르바이트, 스터디, 복수전공,
-              연계전공 등) 없을경우, 없음으로 기재해주세요.
+              본인 직무에 맞게 활용해본 툴 혹은 기술스택을 작성해주세요.
             </p>
             <p className="whitespace-pre-wrap">{selectedApplicant.q1}</p>
             <br />
@@ -74,17 +72,23 @@ export default function Modal({ onShowModal, selectedApplicant }) {
             <p className="whitespace-pre-wrap">{selectedApplicant.q2}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
-              희망분야를 선택한 이유와 그 분야로 가기위해 했던 노력을
+              해당 분야를 선택한 이유와 그 분야로 가기위해 했던 노력을
               작성해주세요.
             </p>
             <p className="whitespace-pre-wrap">{selectedApplicant.q3}</p>
             <br />
             <p style={{ fontWeight: '800', fontSize: '16px' }}>
-              누군가와 함께 프로젝트를 진행한 경험이 있으신가요?{' '}
+              누군가와 함께 프로젝트를 진행한 경험이 있으신가요?
+              <br />
               {selectedApplicant.q4Exp ? (
-                <span className="text-blue-500">네</span>
+                <span className="text-blue-500">
+                  네, 어떤 프로젝트에서 어떤 역할을 수행했는지 서술해주세요.
+                </span>
               ) : (
-                <span className="text-red-500">아니요</span>
+                <span className="text-red-500">
+                  아니요, 프로젝트를 잘 마무리 하기 위해 어떤 노력을 할
+                  것인가요?
+                </span>
               )}
             </p>
             <p className="whitespace-pre-wrap">{selectedApplicant.q4}</p>

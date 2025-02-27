@@ -12,6 +12,11 @@ const categories1 = [
     field: 'APP',
     name: '앱',
   },
+  {
+    id: 2,
+    field: 'ANY',
+    name: '상관없음',
+  },
 ];
 
 const categories2 = [
