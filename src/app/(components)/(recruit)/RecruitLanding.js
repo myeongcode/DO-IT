@@ -132,7 +132,8 @@ export default function RecruitLanding() {
           // ease: 'easeInOut',
         }
       }
-      className="flex relative justify-center items-center h-screen w-full md:h-screen bg-[#f1f1f1]"
+      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
+      className="flex relative justify-center items-center w-full md:h-screen bg-[#f1f1f1]"
     >
       <motion.div className="absolute top-36 transform md:top-40 z-10">
         <motion.div className="whitespace-nowrap overflow-hidden">
@@ -152,7 +153,7 @@ export default function RecruitLanding() {
               }}
               className="bg-[#2955DC] w-full"
             >
-              <motion.h2 className="text-5xl 2xl:text-8xl md:text-7xl font-medium relative z-10 transition-colors duration-300 text-[#2955DC]">
+              <motion.h2 className="text-4xl 2xl:text-8xl md:text-7xl font-medium relative z-10 transition-colors duration-300 text-[#2955DC]">
                 3RD RECRUIT
               </motion.h2>
             </motion.div>
@@ -177,7 +178,7 @@ export default function RecruitLanding() {
               }}
               className="bg-[#000000] w-full"
             >
-              <motion.h2 className="text-5xl 2xl:text-8xl md:text-7xl font-medium transition-colors duration-300 text-[#000000]">
+              <motion.h2 className="text-4xl 2xl:text-8xl md:text-7xl font-medium transition-colors duration-300 text-[#000000]">
                 2.28 - 3.7
               </motion.h2>
             </motion.div>
@@ -186,7 +187,7 @@ export default function RecruitLanding() {
       </motion.div>
 
       {/* 모바일 */}
-      <div className="flex flex-col lg:hidden p-10 gap-4 w-full">
+      <div className="flex flex-col lg:hidden p-12 gap-4 w-full">
         <div className="flex flex-row gap-4">
           <motion.div
             initial={{
@@ -209,7 +210,7 @@ export default function RecruitLanding() {
               alt=""
               width={100}
               height={100}
-              className={`object-cover ${
+              className={`object-contain w-full ${
                 fieldModile === 'management' ? 'scale-125 z-10' : ''
               } transition-all duration-200`}
             />
@@ -227,14 +228,14 @@ export default function RecruitLanding() {
               duration: 1,
               delay: 0.7,
             }}
-            className="flex w-full"
+            className="flex"
           >
             <Image
               src={'recruit/3/Design.svg'}
               width={100}
               height={100}
               alt=""
-              className={`object-cover w-full ${
+              className={`object-contain w-full ${
                 fieldModile === 'design' ? 'scale-125 z-10' : ''
               } transition-all duration-200`}
             />
