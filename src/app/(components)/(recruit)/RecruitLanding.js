@@ -132,8 +132,7 @@ export default function RecruitLanding() {
           // ease: 'easeInOut',
         }
       }
-      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
-      className="flex relative justify-center items-center w-full md:h-screen bg-[#f1f1f1]"
+      className="flex relative justify-center h-svh items-center w-full md:h-screen bg-[#f1f1f1]"
     >
       <motion.div className="absolute top-36 transform md:top-40 z-10">
         <motion.div className="whitespace-nowrap overflow-hidden">
@@ -192,6 +191,31 @@ export default function RecruitLanding() {
           <motion.div
             initial={{
               opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.7,
+            }}
+            className="flex w-full"
+          >
+            <Image
+              src={'recruit/3/Design.svg'}
+              width={100}
+              height={100}
+              alt=""
+              className={`object-cover w-full ${
+                fieldModile === 'design' ? 'scale-125 z-10' : ''
+              } transition-all duration-200`}
+            />
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
               x: -200,
             }}
             animate={{
@@ -210,33 +234,8 @@ export default function RecruitLanding() {
               alt=""
               width={100}
               height={100}
-              className={`object-contain w-full ${
+              className={`object-contain ${
                 fieldModile === 'management' ? 'scale-125 z-10' : ''
-              } transition-all duration-200`}
-            />
-          </motion.div>
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -200,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 1,
-              delay: 0.7,
-            }}
-            className="flex"
-          >
-            <Image
-              src={'recruit/3/Design.svg'}
-              width={100}
-              height={100}
-              alt=""
-              className={`object-contain w-full ${
-                fieldModile === 'design' ? 'scale-125 z-10' : ''
               } transition-all duration-200`}
             />
           </motion.div>
