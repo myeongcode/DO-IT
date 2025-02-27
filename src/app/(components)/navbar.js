@@ -247,7 +247,7 @@ export default function Navbar() {
                     fill:
                       pathname === '/recruit'
                         ? !isOpenToggle
-                          ? '#14171A'
+                          ? '#00B8FF'
                           : '#00B8FF'
                         : '#00B8FF',
                   }}
@@ -264,7 +264,7 @@ export default function Navbar() {
                     fill:
                       pathname === '/recruit'
                         ? !isOpenToggle
-                          ? '#14171A'
+                          ? '#00B8FF'
                           : '#00B8FF'
                         : '#00B8FF',
                   }}
@@ -435,7 +435,7 @@ export default function Navbar() {
                     fill: '#00B8FF',
                   }}
                   animate={{
-                    fill: pathname === '/recruit' ? '#14171A' : '#00B8FF',
+                    fill: pathname === '/recruit' ? '#00B8FF' : '#00B8FF',
                   }}
                   transition={{
                     duration: 0.2,
@@ -447,7 +447,7 @@ export default function Navbar() {
                     fill: '#00B8FF',
                   }}
                   animate={{
-                    fill: pathname === '/recruit' ? '#14171A' : '#00B8FF',
+                    fill: pathname === '/recruit' ? '#00B8FF' : '#00B8FF',
                   }}
                   transition={{
                     duration: 0.2,
@@ -484,12 +484,12 @@ export default function Navbar() {
                         ? '#00B8FF'
                         : '#FFFFFF'
                       : item.path.startsWith('/recruit') && isActive
-                      ? '#14171A'
+                      ? '#00B8FF'
                       : item.path.startsWith('/contact') && isActive
                       ? '#00B8FF'
                       : isActive
                       ? '#FFFFFF'
-                      : '#14171A',
+                      : '#00B8FF',
                   }}
                   className="flex flex-col justify-center items-center font-pretendard"
                 >
@@ -502,7 +502,7 @@ export default function Navbar() {
                       animate={{
                         width: '100%',
                         backgroundColor: pathname.startsWith('/recruit')
-                          ? '#14171A'
+                          ? '#00B8FF'
                           : '#00B8FF',
                       }}
                       className="h-[2px]"

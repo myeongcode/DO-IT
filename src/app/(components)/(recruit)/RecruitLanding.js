@@ -132,9 +132,9 @@ export default function RecruitLanding() {
           // ease: 'easeInOut',
         }
       }
-      className="flex relative justify-center h-svh items-center w-full md:h-screen bg-[#f1f1f1]"
+      className="flex relative justify-center h-svh items-center w-full md:h-screen bg-[#1A1A1A]"
     >
-      <motion.div className="absolute top-36 transform md:top-40 z-10">
+      <motion.div className="absolute top-36 transform md:top-32 2xl:top-40 z-10">
         <motion.div className="whitespace-nowrap overflow-hidden">
           <motion.div
             initial={{ x: 1000 }}
@@ -159,7 +159,7 @@ export default function RecruitLanding() {
           </motion.div>
         </motion.div>
       </motion.div>
-      <motion.div className="absolute bottom-36 transform md:bottom-40 z-10">
+      <motion.div className="absolute bottom-36 transform md:bottom-32 2xl:bottom-40 z-10">
         <motion.div className="whitespace-nowrap overflow-hidden">
           <motion.div
             initial={{ x: 1000 }}
@@ -175,9 +175,9 @@ export default function RecruitLanding() {
                 duration: 0.4,
                 ease: 'easeInOut',
               }}
-              className="bg-[#000000] w-full"
+              className="bg-[#FFFFFF] w-full"
             >
-              <motion.h2 className="text-4xl 2xl:text-8xl md:text-7xl font-medium transition-colors duration-300 text-[#000000]">
+              <motion.h2 className="text-4xl 2xl:text-8xl md:text-7xl font-medium transition-colors duration-300 text-[#FFFFFF]">
                 2.28 - 3.7
               </motion.h2>
             </motion.div>
