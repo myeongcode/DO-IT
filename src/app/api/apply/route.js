@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import moment from 'moment-timezone';
 // import { jwtDecode } from 'jwt-decode';
 import jwt from 'jsonwebtoken';
+import dbConnect from '@/app/lib/dbConnect';
 
 export async function GET(request) {
   const token = request.cookies.get('AccessToken')?.value;
@@ -34,6 +35,7 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
+    await dbConnect();
     const body = await request.json();
     const {
       field,
