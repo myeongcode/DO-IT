@@ -643,7 +643,7 @@ export default function RecruitLanding() {
               delay: 0.1,
             }}
             className="flex relative lg:h-[100px] 2xl:h-[140px]"
-            onHoverStart={() => setField('doit')}
+            onHoverStart={() => setField('doit1')}
             onHoverEnd={() => setField('')}
           >
             <Image
@@ -651,8 +651,8 @@ export default function RecruitLanding() {
               alt=""
               width={200}
               height={200}
-              className={`object-contain w-full hover:scale-[1.05] ${
-                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'doit1' ? 'scale-125 z-40' : ''
               } transition-all duration-200`}
             />
           </motion.div>
@@ -670,7 +670,7 @@ export default function RecruitLanding() {
               delay: 1.1,
             }}
             className="flex relative lg:h-[100px] 2xl:h-[140px]"
-            onHoverStart={() => setField('doit')}
+            onHoverStart={() => setField('doit2')}
             onHoverEnd={() => setField('')}
           >
             <Image
@@ -678,8 +678,8 @@ export default function RecruitLanding() {
               width={200}
               height={200}
               alt=""
-              className={`object-contain w-full hover:scale-[1.05] ${
-                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'doit2' ? 'scale-125 z-40' : ''
               } transition-all duration-200`}
             />
           </motion.div>
@@ -697,7 +697,7 @@ export default function RecruitLanding() {
               delay: 0.3,
             }}
             className="flex relative lg:h-[100px] 2xl:h-[140px]"
-            onHoverStart={() => setField('doit')}
+            onHoverStart={() => setField('doit1')}
             onHoverEnd={() => setField('')}
           >
             <Image
@@ -705,8 +705,8 @@ export default function RecruitLanding() {
               width={200}
               height={200}
               alt=""
-              className={`object-contain w-full hover:scale-[1.05] ${
-                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'doit1' ? 'scale-125 z-40' : ''
               } transition-all duration-200`}
             />
           </motion.div>
@@ -724,7 +724,7 @@ export default function RecruitLanding() {
               delay: 0.6,
             }}
             className="flex relative lg:h-[100px] 2xl:h-[140px]"
-            onHoverStart={() => setField('doit')}
+            onHoverStart={() => setField('doit2')}
             onHoverEnd={() => setField('')}
           >
             <Image
@@ -732,8 +732,8 @@ export default function RecruitLanding() {
               width={200}
               height={200}
               alt=""
-              className={`object-contain w-full hover:scale-[1.05] ${
-                field === 'doit' ? 'scale-[1.05] z-40' : ''
+              className={`object-contain w-full hover:scale-125 ${
+                field === 'doit2' ? 'scale-125 z-40' : ''
               } transition-all duration-200`}
             />
           </motion.div>

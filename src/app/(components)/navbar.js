@@ -166,7 +166,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -182,7 +184,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -198,7 +202,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -214,7 +220,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -230,7 +238,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -357,7 +367,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -373,7 +385,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -389,7 +403,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -405,7 +421,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
@@ -421,7 +439,9 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? '#14171A'
+                        ? pathname.startsWith('/recruit')
+                          ? '#00B8FF'
+                          : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
