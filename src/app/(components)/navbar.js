@@ -119,9 +119,11 @@ export default function Navbar() {
               pathname === '/' ? 'rgb(255, 255, 255, 0)' : 'rgb(0, 0, 0, 0)',
           },
           hidden: {
-            backgroundColor: pathname.startsWith('/projects')
-              ? '#0000004D'
-              : '#FFFFFF4D',
+            backgroundColor:
+              pathname.startsWith('/projects') ||
+              pathname.startsWith('/recruit')
+                ? '#0000004D'
+                : '#FFFFFF4D',
             boxShadow: `0px 0px 0px ${
               pathname.startsWith('/projects') ? '#CECECE' : '#313131'
             }`,
@@ -166,8 +168,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -184,8 +190,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -202,8 +212,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -220,8 +234,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -238,8 +256,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -318,9 +340,11 @@ export default function Navbar() {
               pathname === '/' ? 'rgb(255, 255, 255, 0)' : 'rgb(0, 0, 0, 0)',
           },
           hidden: {
-            backgroundColor: pathname.startsWith('/projects')
-              ? '#0000004D'
-              : '#FFFFFF4D',
+            backgroundColor:
+              pathname.startsWith('/projects') ||
+              pathname.startsWith('/recruit')
+                ? '#0000004D'
+                : '#FFFFFF4D',
             boxShadow: `0px 0px 0px ${
               pathname.startsWith('/projects') ? '#CECECE' : '#313131'
             }`,
@@ -361,21 +385,21 @@ export default function Navbar() {
                 className="cursor-pointer transition duration-200 ease-linear hover:drop-shadow-[0_0_2px_rgb(163,163,163)]"
               >
                 <motion.path
-                  initial={{
-                    fill: '#14171A',
-                  }}
+                  initial={{ fill: '#14171A' }}
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
                   }}
-                  transition={{
-                    duration: 0.2,
-                  }}
+                  transition={{ duration: 0.2 }}
                   d="M86.9326 9.92935H81.2217V24.9074H86.9326V9.92935Z"
                 />
                 <motion.path
@@ -385,8 +409,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -403,8 +431,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -421,8 +453,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -439,8 +475,12 @@ export default function Navbar() {
                   animate={{
                     fill: !pathname.startsWith('/projects')
                       ? !isOpenToggle
-                        ? pathname.startsWith('/recruit')
-                          ? '#00B8FF'
+                        ? pathname === '/recruit/apply'
+                          ? '#14171A'
+                          : pathname.startsWith('/recruit')
+                          ? '#ffffff'
+                          : pathname.endsWith('/apply')
+                          ? '#14171A'
                           : '#14171A'
                         : '#ffffff'
                       : '#ffffff',
@@ -499,17 +539,22 @@ export default function Navbar() {
                 <motion.li
                   key={item.path}
                   animate={{
-                    color: isProjectsPath
-                      ? isActive
+                    color:
+                      isActive && pathname.startsWith('/projects')
                         ? '#00B8FF'
-                        : '#FFFFFF'
-                      : item.path.startsWith('/recruit') && isActive
-                      ? '#00B8FF'
-                      : item.path.startsWith('/contact') && isActive
-                      ? '#00B8FF'
-                      : isActive
-                      ? '#FFFFFF'
-                      : '#00B8FF',
+                        : !pathname.startsWith('/projects')
+                        ? pathname.startsWith('/contact') && isActive
+                          ? '#00B8FF'
+                          : pathname === '/recruit/apply'
+                          ? isActive
+                            ? '#00B8FF'
+                            : '#14171A'
+                          : pathname.startsWith('/recruit') && isActive
+                          ? '#00B8FF'
+                          : pathname.startsWith('/recruit')
+                          ? '#FFFFFF'
+                          : '#14171A'
+                        : '#FFFFFF',
                   }}
                   className="flex flex-col justify-center items-center font-pretendard"
                 >
