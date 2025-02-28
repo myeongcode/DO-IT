@@ -132,7 +132,7 @@ export default function RecruitLanding() {
           // ease: 'easeInOut',
         }
       }
-      className="flex relative justify-center h-svh items-center w-full md:h-screen bg-[#1A1A1A]"
+      className="flex relative justify-center h-screen items-center w-full md:h-screen bg-[#1A1A1A]"
     >
       <motion.div className="absolute top-36 transform md:top-32 2xl:top-40 z-10">
         <motion.div className="whitespace-nowrap overflow-hidden">
