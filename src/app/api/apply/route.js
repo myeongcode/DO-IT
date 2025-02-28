@@ -16,6 +16,7 @@ export async function GET(request) {
   }
 
   try {
+    await dbConnect();
     const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
     if (decoded.length < 0) {
       return;
